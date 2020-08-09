@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+issueTrackerURL="http://my.issue.tracker/"
+[[mods]]
+modId="cyber_craft"
+version="1.15.2-0.1.0"
+displayName="CyberCraft"
+updateJSONURL="http://myurl.me/"
+displayURL="http://example.com/"
+logoFile="examplemod.png"
+credits="How_Ichigo - CalvinKZ - Cold_Light"
+authors="Project HKL"
+description='''
+CyberCraft is a mod that will forever change the way you play Minecraft.
+This is CyberCraft's alpha version.
+We will keep adding things into this mod to make it more playable.
+Please stay tune!
+'''
+[[dependencies.examplemod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[31,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"
