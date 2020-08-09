@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=south": { "model": "cyber_craft:block/white_road_line_side" },
+    "facing=west": { "model": "cyber_craft:block/white_road_line_side", "y":  90},
+    "facing=north": { "model": "cyber_craft:block/white_road_line_side", "y":  180},
+    "facing=east": { "model": "cyber_craft:block/white_road_line_side", "y":  270}
+  }
+}
