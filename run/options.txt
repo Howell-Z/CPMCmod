@@ -21,7 +21,7 @@ toggleSprint:false
 mouseSensitivity:0.5
 fov:0.0
 gamma:1.0
-renderDistance:12
+renderDistance:5
 guiScale:0
 particles:0
 maxFps:120
@@ -30,7 +30,7 @@ fancyGraphics:true
 ao:2
 biomeBlendRadius:2
 renderClouds:true
-resourcePacks:[]
+resourcePacks:["vanilla","mod_resources","file/CPMMmod_ResourcePack_0.0.1"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:en_us
@@ -39,7 +39,7 @@ chatOpacity:1.0
 textBackgroundOpacity:0.5
 backgroundForChatOnly:true
 hideServerAddress:false
-advancedItemTooltips:false
+advancedItemTooltips:true
 pauseOnLostFocus:true
 overrideWidth:0
 overrideHeight:0
