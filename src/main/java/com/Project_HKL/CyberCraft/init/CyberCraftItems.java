@@ -13,8 +13,8 @@ public class CyberCraftItems
             () -> new BlockItemBase(CyberCraftBlocks.ASPHALT_ROAD.get()));
     public static final RegistryObject<Item> WHITE_ROAD_LINE_ITEM = ITEMS.register("white_road_line",
             () -> new BlockItemBase(CyberCraftBlocks.WHITE_ROAD_LINE.get()));
-    public static final RegistryObject<Item> WHITE_ROAD_LINE_SIDE_ITEM = ITEMS.register("white_road_line_side",
-            () -> new BlockItemBase(CyberCraftBlocks.WHITE_ROAD_LINE_SIDE.get()));
     public static final RegistryObject<Item> YELLOW_ROAD_LINE_ITEM = ITEMS.register("yellow_road_line",
             () -> new BlockItemBase(CyberCraftBlocks.YELLOW_ROAD_LINE.get()));
+    public static final RegistryObject<Item> WHITE_DOUBLE_ROAD_LINES_ITEM = ITEMS.register("white_double_road_lines",
+            () -> new BlockItemBase(CyberCraftBlocks.WHITE_DOUBLE_ROAD_LINES.get()));
 }
