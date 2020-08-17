@@ -3,5 +3,7 @@
   "block.cyber_craft.asphalt_road": "Asphalt Road",
   "block.cyber_craft.white_road_line": "White Road Line",
   "block.cyber_craft.yellow_road_line": "Yellow Road Line",
-  "block.cyber_craft.white_double_road_lines": "White Double Road Lines"
+  "block.cyber_craft.white_double_road_lines": "White Double Road Lines",
+  "block.cyber_craft.white_road_line_straight": "White Straight Road Line(No connect textures)",
+  "block.cyber_craft.test": "Test"
 }

@@ -17,4 +17,6 @@ public class CyberCraftItems
             () -> new BlockItemBase(CyberCraftBlocks.YELLOW_ROAD_LINE.get()));
     public static final RegistryObject<Item> WHITE_DOUBLE_ROAD_LINES_ITEM = ITEMS.register("white_double_road_lines",
             () -> new BlockItemBase(CyberCraftBlocks.WHITE_DOUBLE_ROAD_LINES.get()));
+    public static final RegistryObject<Item> WHITE_ROAD_LINE_STRAIGHT_ITEM = ITEMS.register("white_road_line_straight",
+            () -> new BlockItemBase(CyberCraftBlocks.WHITE_ROAD_LINE_STRAIGHT.get()));
 }

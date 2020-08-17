@@ -3382,12 +3382,12 @@ net/minecraft/advancements/criterion/BeeNestDestroyedTrigger net/minecraft/advan
 	getId ()Lnet/minecraft/util/ResourceLocation; func_192163_a
 	test (Lnet/minecraft/entity/player/ServerPlayerEntity;Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemStack;I)V func_226223_a_
 net/minecraft/advancements/criterion/BeeNestDestroyedTrigger$Instance net/minecraft/advancements/criterion/BeeNestDestroyedTrigger$Instance
-	field_226225_a_ field_226225_a_
-	field_226226_b_ field_226226_b_
-	field_226227_c_ field_226227_c_
-	func_226228_a_ (Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemStack;I)Z func_226228_a_
+	block field_226225_a_
+	bound field_226227_c_
+	predicate field_226226_b_
 	func_226229_a_ (Lnet/minecraft/block/Block;Lnet/minecraft/advancements/criterion/ItemPredicate$Builder;Lnet/minecraft/advancements/criterion/MinMaxBounds$IntBound;)Lnet/minecraft/advancements/criterion/BeeNestDestroyedTrigger$Instance; func_226229_a_
 	serialize ()Lcom/google/gson/JsonElement; func_200288_b
+	test (Lnet/minecraft/block/Block;Lnet/minecraft/item/ItemStack;I)Z func_226228_a_
 net/minecraft/advancements/criterion/BlockPredicate net/minecraft/advancements/criterion/BlockPredicate
 	field_226231_a_ field_226231_a_
 	field_226232_b_ field_226232_b_
@@ -4154,10 +4154,10 @@ net/minecraft/advancements/criterion/ShotCrossbowTrigger net/minecraft/advanceme
 net/minecraft/advancements/criterion/ShotCrossbowTrigger$Instance net/minecraft/advancements/criterion/ShotCrossbowTrigger$Instance
 	itemPredicate field_215123_a
 	create (Lnet/minecraft/util/IItemProvider;)Lnet/minecraft/advancements/criterion/ShotCrossbowTrigger$Instance; func_215122_a
-	func_215121_a (Lnet/minecraft/item/ItemStack;)Z func_215121_a
 	serialize ()Lcom/google/gson/JsonElement; func_200288_b
+	test (Lnet/minecraft/item/ItemStack;)Z func_215121_a
 net/minecraft/advancements/criterion/SlideDownBlockTrigger net/minecraft/advancements/criterion/SlideDownBlockTrigger
-	field_227147_a_ field_227147_a_
+	ID field_227147_a_
 	deserializeInstance (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lnet/minecraft/advancements/ICriterionInstance; func_192166_a
 	deserializeInstance (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;)Lnet/minecraft/advancements/criterion/SlideDownBlockTrigger$Instance; func_192166_a
 	func_227148_a_ (Lnet/minecraft/block/Block;Ljava/lang/String;)V func_227148_a_
@@ -4171,8 +4171,8 @@ net/minecraft/advancements/criterion/SlideDownBlockTrigger$Instance net/minecraf
 	field_227154_a_ field_227154_a_
 	field_227155_b_ field_227155_b_
 	func_227156_a_ (Lnet/minecraft/block/Block;)Lnet/minecraft/advancements/criterion/SlideDownBlockTrigger$Instance; func_227156_a_
-	func_227157_a_ (Lnet/minecraft/block/BlockState;)Z func_227157_a_
 	serialize ()Lcom/google/gson/JsonElement; func_200288_b
+	test (Lnet/minecraft/block/BlockState;)Z func_227157_a_
 net/minecraft/advancements/criterion/StatePropertiesPredicate net/minecraft/advancements/criterion/StatePropertiesPredicate
 	EMPTY field_227178_a_
 	matchers field_227179_b_
@@ -4281,8 +4281,8 @@ net/minecraft/advancements/criterion/VillagerTradeTrigger$Instance net/minecraft
 	item field_192287_b
 	villager field_192286_a
 	any ()Lnet/minecraft/advancements/criterion/VillagerTradeTrigger$Instance; func_203939_c
-	func_215125_a (Lnet/minecraft/entity/player/ServerPlayerEntity;Lnet/minecraft/entity/merchant/villager/AbstractVillagerEntity;Lnet/minecraft/item/ItemStack;)Z func_215125_a
 	serialize ()Lcom/google/gson/JsonElement; func_200288_b
+	test (Lnet/minecraft/entity/player/ServerPlayerEntity;Lnet/minecraft/entity/merchant/villager/AbstractVillagerEntity;Lnet/minecraft/item/ItemStack;)Z func_215125_a
 net/minecraft/block/AbstractBannerBlock net/minecraft/block/AbstractBannerBlock
 	color field_196286_a
 	canSpawnInBlock ()Z func_181623_g
@@ -4329,7 +4329,7 @@ net/minecraft/block/AbstractButtonBlock$1 net/minecraft/block/AbstractButtonBloc
 	field_208106_b field_208106_b
 net/minecraft/block/AbstractChestBlock net/minecraft/block/AbstractChestBlock
 	tileEntityType field_226859_a_
-	func_225536_a_ (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Z)Lnet/minecraft/tileentity/TileEntityMerger$ICallbackWrapper; func_225536_a_
+	combine (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Z)Lnet/minecraft/tileentity/TileEntityMerger$ICallbackWrapper; func_225536_a_
 net/minecraft/block/AbstractCoralPlantBlock net/minecraft/block/AbstractCoralPlantBlock
 	WATERLOGGED field_212560_b
 	field_212559_a field_212559_a
@@ -4482,7 +4482,7 @@ net/minecraft/block/BambooBlock net/minecraft/block/BambooBlock
 	tick (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/server/ServerWorld;Lnet/minecraft/util/math/BlockPos;Ljava/util/Random;)V func_225534_a_
 	updatePostPlacement (Lnet/minecraft/block/BlockState;Lnet/minecraft/util/Direction;Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState; func_196271_a
 net/minecraft/block/BambooSaplingBlock net/minecraft/block/BambooSaplingBlock
-	field_220088_a field_220088_a
+	SHAPE field_220088_a
 	canGrow (Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Z)Z func_176473_a
 	canUseBonemeal (Lnet/minecraft/world/World;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)Z func_180670_a
 	func_220087_a (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)V func_220087_a
@@ -4613,8 +4613,8 @@ net/minecraft/block/BeetrootBlock net/minecraft/block/BeetrootBlock
 	tick (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/server/ServerWorld;Lnet/minecraft/util/math/BlockPos;Ljava/util/Random;)V func_225534_a_
 net/minecraft/block/BellBlock net/minecraft/block/BellBlock
 	ATTACHMENT field_220134_b
+	HORIZONTAL_FACING field_220133_a
 	POWERED field_226883_b_
-	field_220133_a field_220133_a
 	field_220135_c field_220135_c
 	field_220136_d field_220136_d
 	field_220137_e field_220137_e
@@ -5705,8 +5705,8 @@ net/minecraft/block/BushBlock net/minecraft/block/BushBlock
 	updatePostPlacement (Lnet/minecraft/block/BlockState;Lnet/minecraft/util/Direction;Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState; func_196271_a
 net/minecraft/block/CactusBlock net/minecraft/block/CactusBlock
 	AGE field_176587_a
-	field_196400_b field_196400_b
-	field_196401_c field_196401_c
+	COLLISION_SHAPE field_196400_b
+	OUTLINE_SHAPE field_196401_c
 	allowsMovement (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/pathfinding/PathType;)Z func_196266_a
 	fillStateContainer (Lnet/minecraft/state/StateContainer$Builder;)V func_206840_a
 	getCollisionShape (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/shapes/ISelectionContext;)Lnet/minecraft/util/math/shapes/VoxelShape; func_220071_b
@@ -5816,9 +5816,9 @@ net/minecraft/block/ChestBlock net/minecraft/block/ChestBlock
 	field_220109_i field_220109_i
 	field_220110_j field_220110_j
 	allowsMovement (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/pathfinding/PathType;)Z func_196266_a
+	combine (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Z)Lnet/minecraft/tileentity/TileEntityMerger$ICallbackWrapper; func_225536_a_
 	createNewTileEntity (Lnet/minecraft/world/IBlockReader;)Lnet/minecraft/tileentity/TileEntity; func_196283_a_
 	fillStateContainer (Lnet/minecraft/state/StateContainer$Builder;)V func_206840_a
-	func_225536_a_ (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Z)Lnet/minecraft/tileentity/TileEntityMerger$ICallbackWrapper; func_225536_a_
 	func_226916_a_ (Lnet/minecraft/block/ChestBlock;Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Z)Lnet/minecraft/inventory/IInventory; func_226916_a_
 	func_226917_a_ (Lnet/minecraft/tileentity/IChestLid;)Lnet/minecraft/tileentity/TileEntityMerger$ICallback; func_226917_a_
 	func_226918_c_ (Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;)Z func_226918_c_
@@ -5876,7 +5876,7 @@ net/minecraft/block/ChestBlock$4 net/minecraft/block/ChestBlock$4
 	field_226922_a_ field_226922_a_
 net/minecraft/block/ChorusFlowerBlock net/minecraft/block/ChorusFlowerBlock
 	AGE field_185607_a
-	field_196405_b field_196405_b
+	plantBlock field_196405_b
 	areAllNeighborsEmpty (Lnet/minecraft/world/IWorldReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/Direction;)Z func_185604_a
 	fillStateContainer (Lnet/minecraft/state/StateContainer$Builder;)V func_206840_a
 	generatePlant (Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;Ljava/util/Random;I)V func_185603_a
@@ -5950,8 +5950,8 @@ net/minecraft/block/ComparatorBlock net/minecraft/block/ComparatorBlock
 net/minecraft/block/ComposterBlock net/minecraft/block/ComposterBlock
 	CHANCES field_220299_b
 	LEVEL field_220298_a
-	field_220300_c field_220300_c
-	field_220301_d field_220301_d
+	OUT_SHAPE field_220300_c
+	SHAPE field_220301_d
 	addItem (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/item/ItemStack;)Z func_220293_b
 	allowsMovement (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/pathfinding/PathType;)Z func_196266_a
 	clear (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;)V func_220294_d
@@ -6046,7 +6046,7 @@ net/minecraft/block/CoralWallFanBlock net/minecraft/block/CoralWallFanBlock
 	tick (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/server/ServerWorld;Lnet/minecraft/util/math/BlockPos;Ljava/util/Random;)V func_225534_a_
 	updatePostPlacement (Lnet/minecraft/block/BlockState;Lnet/minecraft/util/Direction;Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState; func_196271_a
 net/minecraft/block/CraftingTableBlock net/minecraft/block/CraftingTableBlock
-	field_220271_a field_220271_a
+	CONTAINER_NAME field_220271_a
 	func_220270_a (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;ILnet/minecraft/entity/player/PlayerInventory;Lnet/minecraft/entity/player/PlayerEntity;)Lnet/minecraft/inventory/container/Container; func_220270_a
 	getContainer (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/inventory/container/INamedContainerProvider; func_220052_b
 	onBlockActivated (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/math/BlockRayTraceResult;)Lnet/minecraft/util/ActionResultType; func_225533_a_
@@ -6265,15 +6265,15 @@ net/minecraft/block/EndRodBlock net/minecraft/block/EndRodBlock
 net/minecraft/block/EndRodBlock$1 net/minecraft/block/EndRodBlock$1
 	field_185790_a field_185790_a
 net/minecraft/block/EnderChestBlock net/minecraft/block/EnderChestBlock
+	CONTAINER_NAME field_220115_d
 	FACING field_176437_a
 	SHAPE field_196324_b
 	WATERLOGGED field_204615_b
-	field_220115_d field_220115_d
 	allowsMovement (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/pathfinding/PathType;)Z func_196266_a
 	animateTick (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Ljava/util/Random;)V func_180655_c
+	combine (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Z)Lnet/minecraft/tileentity/TileEntityMerger$ICallbackWrapper; func_225536_a_
 	createNewTileEntity (Lnet/minecraft/world/IBlockReader;)Lnet/minecraft/tileentity/TileEntity; func_196283_a_
 	fillStateContainer (Lnet/minecraft/state/StateContainer$Builder;)V func_206840_a
-	func_225536_a_ (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Z)Lnet/minecraft/tileentity/TileEntityMerger$ICallbackWrapper; func_225536_a_
 	func_226928_a_ (Lnet/minecraft/inventory/EnderChestInventory;ILnet/minecraft/entity/player/PlayerInventory;Lnet/minecraft/entity/player/PlayerEntity;)Lnet/minecraft/inventory/container/Container; func_226928_a_
 	func_226929_c_ ()Lnet/minecraft/tileentity/TileEntityType; func_226929_c_
 	getFluidState (Lnet/minecraft/block/BlockState;)Lnet/minecraft/fluid/IFluidState; func_204507_t
@@ -6388,8 +6388,8 @@ net/minecraft/block/FlowerBlock net/minecraft/block/FlowerBlock
 	getStewEffect ()Lnet/minecraft/potion/Effect; func_220094_d
 	getStewEffectDuration ()I func_220095_e
 net/minecraft/block/FlowerPotBlock net/minecraft/block/FlowerPotBlock
+	POTTED_CONTENT field_196451_b
 	SHAPE field_196450_a
-	field_196451_b field_196451_b
 	flower field_196452_c
 	func_220276_d ()Lnet/minecraft/block/Block; func_220276_d
 	getItem (Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)Lnet/minecraft/item/ItemStack; func_185473_a
@@ -6559,7 +6559,7 @@ net/minecraft/block/GrindstoneBlock$1 net/minecraft/block/GrindstoneBlock$1
 net/minecraft/block/HayBlock net/minecraft/block/HayBlock
 	onFallenUpon (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/Entity;F)V func_180658_a
 net/minecraft/block/HoneyBlock net/minecraft/block/HoneyBlock
-	field_226930_a_ field_226930_a_
+	SHAPES field_226930_a_
 	func_226931_a_ (Lnet/minecraft/entity/Entity;)V func_226931_a_
 	func_226932_a_ (Lnet/minecraft/entity/Entity;I)V func_226932_a_
 	func_226933_a_ (Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/BlockPos;)V func_226933_a_
@@ -6572,6 +6572,7 @@ net/minecraft/block/HoneyBlock net/minecraft/block/HoneyBlock
 	onEntityCollision (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/Entity;)V func_196262_a
 	onFallenUpon (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/Entity;F)V func_180658_a
 net/minecraft/block/HopperBlock net/minecraft/block/HopperBlock
+	BASE_SHAPE field_196326_A
 	DOWN_RAYTRACE_SHAPE field_199602_G
 	DOWN_SHAPE field_196333_G
 	EAST_RAYTRACE_SHAPE field_199603_H
@@ -6587,7 +6588,6 @@ net/minecraft/block/HopperBlock net/minecraft/block/HopperBlock
 	SOUTH_SHAPE field_196336_J
 	WEST_RAYTRACE_SHAPE field_199606_K
 	WEST_SHAPE field_196337_K
-	field_196326_A field_196326_A
 	allowsMovement (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/pathfinding/PathType;)Z func_196266_a
 	createNewTileEntity (Lnet/minecraft/world/IBlockReader;)Lnet/minecraft/tileentity/TileEntity; func_196283_a_
 	fillStateContainer (Lnet/minecraft/state/StateContainer$Builder;)V func_206840_a
@@ -6717,11 +6717,11 @@ net/minecraft/block/LadderBlock$1 net/minecraft/block/LadderBlock$1
 	field_180190_a field_180190_a
 net/minecraft/block/LanternBlock net/minecraft/block/LanternBlock
 	HANGING field_220278_a
+	HANGING_SHAPES field_220280_c
 	field_220279_b field_220279_b
-	field_220280_c field_220280_c
 	allowsMovement (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/pathfinding/PathType;)Z func_196266_a
 	fillStateContainer (Lnet/minecraft/state/StateContainer$Builder;)V func_206840_a
-	func_220277_j (Lnet/minecraft/block/BlockState;)Lnet/minecraft/util/Direction; func_220277_j
+	getBlockConnected (Lnet/minecraft/block/BlockState;)Lnet/minecraft/util/Direction; func_220277_j
 	getPushReaction (Lnet/minecraft/block/BlockState;)Lnet/minecraft/block/material/PushReaction; func_149656_h
 	getShape (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/shapes/ISelectionContext;)Lnet/minecraft/util/math/shapes/VoxelShape; func_220053_a
 	getStateForPlacement (Lnet/minecraft/item/BlockItemUseContext;)Lnet/minecraft/block/BlockState; func_196258_a
@@ -6743,18 +6743,18 @@ net/minecraft/block/LeavesBlock net/minecraft/block/LeavesBlock
 	updateDistance (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState; func_208493_b
 	updatePostPlacement (Lnet/minecraft/block/BlockState;Lnet/minecraft/util/Direction;Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState; func_196271_a
 net/minecraft/block/LecternBlock net/minecraft/block/LecternBlock
+	BASE_SHAPE field_220159_d
+	COLLISION_SHAPE field_220164_h
+	COMMON_SHAPE field_220161_f
+	EAST_SHAPE field_220167_k
 	FACING field_220156_a
 	HAS_BOOK field_220158_c
+	NORTH_SHAPE field_220166_j
+	POST_SHAPE field_220160_e
 	POWERED field_220157_b
-	field_220159_d field_220159_d
-	field_220160_e field_220160_e
-	field_220161_f field_220161_f
-	field_220162_g field_220162_g
-	field_220163_w field_220163_w
-	field_220164_h field_220164_h
-	field_220165_i field_220165_i
-	field_220166_j field_220166_j
-	field_220167_k field_220167_k
+	SOUTH_SHAPE field_220163_w
+	TOP_PLATE_SHAPE field_220162_g
+	WEST_SHAPE field_220165_i
 	allowsMovement (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/pathfinding/PathType;)Z func_196266_a
 	canProvidePower (Lnet/minecraft/block/BlockState;)Z func_149744_f
 	createNewTileEntity (Lnet/minecraft/world/IBlockReader;)Lnet/minecraft/tileentity/TileEntity; func_196283_a_
@@ -6799,12 +6799,12 @@ net/minecraft/block/LeverBlock net/minecraft/block/LeverBlock
 	animateTick (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Ljava/util/Random;)V func_180655_c
 	canProvidePower (Lnet/minecraft/block/BlockState;)Z func_149744_f
 	fillStateContainer (Lnet/minecraft/state/StateContainer$Builder;)V func_206840_a
-	func_226939_d_ (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState; func_226939_d_
 	getShape (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/shapes/ISelectionContext;)Lnet/minecraft/util/math/shapes/VoxelShape; func_220053_a
 	getStrongPower (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/Direction;)I func_176211_b
 	getWeakPower (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/Direction;)I func_180656_a
 	onBlockActivated (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;Lnet/minecraft/util/math/BlockRayTraceResult;)Lnet/minecraft/util/ActionResultType; func_225533_a_
 	onReplaced (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Z)V func_196243_a
+	setPowered (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState; func_226939_d_
 	updateNeighbors (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)V func_196378_d
 net/minecraft/block/LeverBlock$1 net/minecraft/block/LeverBlock$1
 	field_180165_a field_180165_a
@@ -6819,7 +6819,7 @@ net/minecraft/block/LogBlock net/minecraft/block/LogBlock
 	verticalColor field_196504_b
 	getMaterialColor (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/material/MaterialColor; func_180659_g
 net/minecraft/block/LoomBlock net/minecraft/block/LoomBlock
-	field_220255_a field_220255_a
+	CONTAINER_NAME field_220255_a
 	fillStateContainer (Lnet/minecraft/state/StateContainer$Builder;)V func_206840_a
 	func_220254_a (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;ILnet/minecraft/entity/player/PlayerInventory;Lnet/minecraft/entity/player/PlayerEntity;)Lnet/minecraft/inventory/container/Container; func_220254_a
 	getContainer (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/inventory/container/INamedContainerProvider; func_220052_b
@@ -6861,9 +6861,9 @@ net/minecraft/block/MushroomBlock net/minecraft/block/MushroomBlock
 	SHAPE field_196385_a
 	canGrow (Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Z)Z func_176473_a
 	canUseBonemeal (Lnet/minecraft/world/World;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)Z func_180670_a
-	func_226940_a_ (Lnet/minecraft/world/server/ServerWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Ljava/util/Random;)Z func_226940_a_
 	getShape (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/shapes/ISelectionContext;)Lnet/minecraft/util/math/shapes/VoxelShape; func_220053_a
 	grow (Lnet/minecraft/world/server/ServerWorld;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)V func_225535_a_
+	grow (Lnet/minecraft/world/server/ServerWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Ljava/util/Random;)Z func_226940_a_
 	isValidGround (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;)Z func_200014_a_
 	isValidPosition (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IWorldReader;Lnet/minecraft/util/math/BlockPos;)Z func_196260_a
 	needsPostProcessing (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;)Z func_201783_b
@@ -7045,8 +7045,8 @@ net/minecraft/block/PoweredRailBlock net/minecraft/block/PoweredRailBlock
 	SHAPE field_176568_b
 	fillStateContainer (Lnet/minecraft/state/StateContainer$Builder;)V func_206840_a
 	findPoweredRailSignal (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;ZI)Z func_176566_a
-	func_208071_a (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;ZILnet/minecraft/state/properties/RailShape;)Z func_208071_a
 	getShapeProperty ()Lnet/minecraft/state/IProperty; func_176560_l
+	isSamePoweredRail (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;ZILnet/minecraft/state/properties/RailShape;)Z func_208071_a
 	mirror (Lnet/minecraft/block/BlockState;Lnet/minecraft/util/Mirror;)Lnet/minecraft/block/BlockState; func_185471_a
 	rotate (Lnet/minecraft/block/BlockState;Lnet/minecraft/util/Rotation;)Lnet/minecraft/block/BlockState; func_185499_a
 	updateState (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/Block;)V func_189541_b
@@ -7100,12 +7100,12 @@ net/minecraft/block/RailState net/minecraft/block/RailState
 	func_196905_c (Lnet/minecraft/block/RailState;)Z func_196905_c
 	func_208510_c (Lnet/minecraft/block/RailState;)V func_208510_c
 	func_208512_d (Lnet/minecraft/util/math/BlockPos;)Z func_208512_d
-	func_226941_a_ (ZZLnet/minecraft/state/properties/RailShape;)Lnet/minecraft/block/RailState; func_226941_a_
 	getConnectedRails ()Ljava/util/List; func_196907_a
 	getNewState ()Lnet/minecraft/block/BlockState; func_196916_c
 	isAdjacentRail (Lnet/minecraft/util/math/BlockPos;)Z func_196902_d
 	isConnectedTo (Lnet/minecraft/block/RailState;)Z func_196919_b
 	isConnectedTo (Lnet/minecraft/util/math/BlockPos;)Z func_196904_b
+	placeRail (ZZLnet/minecraft/state/properties/RailShape;)Lnet/minecraft/block/RailState; func_226941_a_
 	reset (Lnet/minecraft/state/properties/RailShape;)V func_208509_a
 net/minecraft/block/RailState$1 net/minecraft/block/RailState$1
 	field_208116_a field_208116_a
@@ -7264,16 +7264,16 @@ net/minecraft/block/SaplingBlock net/minecraft/block/SaplingBlock
 	canGrow (Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Z)Z func_176473_a
 	canUseBonemeal (Lnet/minecraft/world/World;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)Z func_180670_a
 	fillStateContainer (Lnet/minecraft/state/StateContainer$Builder;)V func_206840_a
-	func_226942_a_ (Lnet/minecraft/world/server/ServerWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Ljava/util/Random;)V func_226942_a_
 	getShape (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/shapes/ISelectionContext;)Lnet/minecraft/util/math/shapes/VoxelShape; func_220053_a
 	grow (Lnet/minecraft/world/server/ServerWorld;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)V func_225535_a_
+	placeTree (Lnet/minecraft/world/server/ServerWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Ljava/util/Random;)V func_226942_a_
 	tick (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/server/ServerWorld;Lnet/minecraft/util/math/BlockPos;Ljava/util/Random;)V func_225534_a_
 net/minecraft/block/ScaffoldingBlock net/minecraft/block/ScaffoldingBlock
+	BOTTOM field_220120_c
+	BOTTOM_SHAPE field_220122_e
+	DISTANCE field_220118_a
+	NORMAL_SHAPE field_220121_d
 	WATERLOGGED field_220119_b
-	field_220118_a field_220118_a
-	field_220120_c field_220120_c
-	field_220121_d field_220121_d
-	field_220122_e field_220122_e
 	field_220123_f field_220123_f
 	field_220124_g field_220124_g
 	fillStateContainer (Lnet/minecraft/state/StateContainer$Builder;)V func_206840_a
@@ -7735,7 +7735,7 @@ net/minecraft/block/TripWireBlock net/minecraft/block/TripWireBlock
 	TRIP_WRITE_ATTACHED_AABB field_185748_C
 	WEST field_176292_R
 	field_196537_E field_196537_E
-	field_196538_F field_196538_F
+	hook field_196538_F
 	fillStateContainer (Lnet/minecraft/state/StateContainer$Builder;)V func_206840_a
 	getShape (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/shapes/ISelectionContext;)Lnet/minecraft/util/math/shapes/VoxelShape; func_220053_a
 	getStateForPlacement (Lnet/minecraft/item/BlockItemUseContext;)Lnet/minecraft/block/BlockState; func_196258_a
@@ -8782,22 +8782,22 @@ net/minecraft/client/audio/ALUtils net/minecraft/client/audio/ALUtils
 	LOGGER field_216484_a
 	checkALCError (JLjava/lang/String;)Z func_216481_a
 	checkALError (Ljava/lang/String;)Z func_216483_a
-	func_216482_a (I)Ljava/lang/String; func_216482_a
 	getFormat (Ljavax/sound/sampled/AudioFormat;)I func_216479_a
-	initErrorMessage (I)Ljava/lang/String; func_216480_b
+	toALCErrorString (I)Ljava/lang/String; func_216480_b
+	toALErrorString (I)Ljava/lang/String; func_216482_a
 net/minecraft/client/audio/AudioStreamBuffer net/minecraft/client/audio/AudioStreamBuffer
 	audioFormat field_216476_b
-	field_216475_a field_216475_a
-	field_216477_c field_216477_c
-	field_216478_d field_216478_d
-	func_216472_c ()Ljava/util/OptionalInt; func_216472_c
-	func_216473_a ()Ljava/util/OptionalInt; func_216473_a
-	func_216474_b ()V func_216474_b
+	buffer field_216478_d
+	hasBuffer field_216477_c
+	inputBuffer field_216475_a
+	deleteBuffer ()V func_216474_b
+	getBuffer ()Ljava/util/OptionalInt; func_216473_a
+	getUntrackedBuffer ()Ljava/util/OptionalInt; func_216472_c
 net/minecraft/client/audio/AudioStreamManager net/minecraft/client/audio/AudioStreamManager
 	bufferCache field_217919_b
 	resourceManager field_217918_a
-	func_217908_a (Ljava/util/Collection;)Ljava/util/concurrent/CompletableFuture; func_217908_a
-	func_217909_a (Lnet/minecraft/util/ResourceLocation;)Ljava/util/concurrent/CompletableFuture; func_217909_a
+	createResource (Lnet/minecraft/util/ResourceLocation;)Ljava/util/concurrent/CompletableFuture; func_217909_a
+	createStreamingResource (Lnet/minecraft/util/ResourceLocation;)Ljava/util/concurrent/CompletableFuture; func_217917_b
 	func_217910_a (Ljava/util/concurrent/CompletableFuture;)V func_217910_a
 	func_217911_a (Lnet/minecraft/client/audio/Sound;)Ljava/util/concurrent/CompletableFuture; func_217911_a
 	func_217912_a ()V func_217912_a
@@ -8805,26 +8805,26 @@ net/minecraft/client/audio/AudioStreamManager net/minecraft/client/audio/AudioSt
 	func_217914_e (Lnet/minecraft/util/ResourceLocation;)Lnet/minecraft/client/audio/AudioStreamBuffer; func_217914_e
 	func_217915_c (Lnet/minecraft/util/ResourceLocation;)Lnet/minecraft/client/audio/IAudioStream; func_217915_c
 	func_217916_a (I)[Ljava/util/concurrent/CompletableFuture; func_217916_a
-	func_217917_b (Lnet/minecraft/util/ResourceLocation;)Ljava/util/concurrent/CompletableFuture; func_217917_b
+	preload (Ljava/util/Collection;)Ljava/util/concurrent/CompletableFuture; func_217908_a
 net/minecraft/client/audio/BeeAngrySound net/minecraft/client/audio/BeeAngrySound
-	func_225642_o_ ()Lnet/minecraft/client/audio/TickableSound; func_225642_o_
-	func_225643_p_ ()Z func_225643_p_
+	getNextSound ()Lnet/minecraft/client/audio/TickableSound; func_225642_o_
+	shouldSwitchSound ()Z func_225643_p_
 net/minecraft/client/audio/BeeFlightSound net/minecraft/client/audio/BeeFlightSound
-	func_225642_o_ ()Lnet/minecraft/client/audio/TickableSound; func_225642_o_
-	func_225643_p_ ()Z func_225643_p_
+	getNextSound ()Lnet/minecraft/client/audio/TickableSound; func_225642_o_
+	shouldSwitchSound ()Z func_225643_p_
 net/minecraft/client/audio/BeeSound net/minecraft/client/audio/BeeSound
-	field_229357_o_ field_229357_o_
-	field_229358_p_ field_229358_p_
+	beeInstance field_229357_o_
+	hasSwitchedSound field_229358_p_
 	canBeSilent ()Z func_211503_n
-	func_225642_o_ ()Lnet/minecraft/client/audio/TickableSound; func_225642_o_
-	func_225643_p_ ()Z func_225643_p_
 	getMaxPitch ()F func_229360_t_
 	getMinPitch ()F func_229359_s_
+	getNextSound ()Lnet/minecraft/client/audio/TickableSound; func_225642_o_
+	shouldSwitchSound ()Z func_225643_p_
 	tick ()V func_73660_a
 net/minecraft/client/audio/BubbleColumnAmbientSoundHandler net/minecraft/client/audio/BubbleColumnAmbientSoundHandler
-	field_217865_b field_217865_b
-	field_217866_c field_217866_c
+	firstTick field_217866_c
 	player field_217864_a
+	prevTickInColumn field_217865_b
 	tick ()V func_204253_a
 net/minecraft/client/audio/ChannelManager net/minecraft/client/audio/ChannelManager
 	channels field_217905_a
@@ -8898,10 +8898,10 @@ net/minecraft/client/audio/ITickableSound net/minecraft/client/audio/ITickableSo
 	tick ()V func_73660_a
 net/minecraft/client/audio/Listener net/minecraft/client/audio/Listener
 	gain field_216471_b
-	func_227580_a_ (Lnet/minecraft/client/renderer/Vector3f;Lnet/minecraft/client/renderer/Vector3f;)V func_227580_a_
 	getGain ()F func_216467_a
 	init ()V func_216468_b
 	setGain (F)V func_216466_a
+	setOrientation (Lnet/minecraft/client/renderer/Vector3f;Lnet/minecraft/client/renderer/Vector3f;)V func_227580_a_
 	setPosition (Lnet/minecraft/util/math/Vec3d;)V func_216465_a
 net/minecraft/client/audio/LocatableSound net/minecraft/client/audio/LocatableSound
 	attenuationType field_147666_i
@@ -8964,28 +8964,28 @@ net/minecraft/client/audio/MusicTicker$MusicType net/minecraft/client/audio/Musi
 	valueOf (Ljava/lang/String;)Lnet/minecraft/client/audio/MusicTicker$MusicType; valueOf
 	values ()[Lnet/minecraft/client/audio/MusicTicker$MusicType; values
 net/minecraft/client/audio/OggAudioStream net/minecraft/client/audio/OggAudioStream
-	field_216461_a field_216461_a
-	field_216462_b field_216462_b
-	field_216463_c field_216463_c
-	field_216464_d field_216464_d
+	buffer field_216464_d
+	format field_216462_b
+	pointer field_216461_a
+	stream field_216463_c
 	close ()V close
 	func_216453_b ()Ljava/nio/ByteBuffer; func_216453_b
 	func_216455_a (I)Ljava/nio/ByteBuffer; func_216455_a
-	func_216456_c ()Z func_216456_c
 	func_216457_a (Ljava/nio/FloatBuffer;Lnet/minecraft/client/audio/OggAudioStream$Buffer;)V func_216457_a
 	func_216458_a (Ljava/nio/FloatBuffer;Ljava/nio/FloatBuffer;Lnet/minecraft/client/audio/OggAudioStream$Buffer;)V func_216458_a
 	func_216459_d ()V func_216459_d
-	func_216460_a (Lnet/minecraft/client/audio/OggAudioStream$Buffer;)Z func_216460_a
 	getAudioFormat ()Ljavax/sound/sampled/AudioFormat; func_216454_a
+	readOgg (Lnet/minecraft/client/audio/OggAudioStream$Buffer;)Z func_216460_a
+	readToBuffer ()Z func_216456_c
 net/minecraft/client/audio/OggAudioStream$Buffer net/minecraft/client/audio/OggAudioStream$Buffer
-	field_216449_a field_216449_a
-	field_216450_b field_216450_b
-	field_216451_c field_216451_c
+	buffers field_216449_a
+	capacity field_216450_b
 	field_216452_d field_216452_d
-	func_216445_a ()Ljava/nio/ByteBuffer; func_216445_a
-	func_216446_a (F)V func_216446_a
-	func_216447_b ()V func_216447_b
+	filledBytes field_216451_c
+	createBuffer ()V func_216447_b
 	func_216448_a (Lnet/minecraft/client/audio/OggAudioStream$Buffer;)I func_216448_a
+	read ()Ljava/nio/ByteBuffer; func_216445_a
+	write (F)V func_216446_a
 net/minecraft/client/audio/RidingMinecartTickableSound net/minecraft/client/audio/RidingMinecartTickableSound
 	minecart field_147671_l
 	player field_147672_k
@@ -9030,11 +9030,10 @@ net/minecraft/client/audio/SoundEngine net/minecraft/client/audio/SoundEngine
 	LOG_MARKER field_148623_a
 	UNABLE_TO_PLAY field_188775_c
 	audioStreamManager field_217939_i
+	categorySounds field_217943_n
 	channelManager field_217941_k
 	delayedSounds field_148626_m
 	executor field_217940_j
-	field_217943_n field_217943_n
-	field_229361_s_ field_229361_s_
 	listener field_217938_h
 	listeners field_188777_o
 	loaded field_148617_f
@@ -9045,6 +9044,7 @@ net/minecraft/client/audio/SoundEngine net/minecraft/client/audio/SoundEngine
 	sndSystem field_217937_g
 	soundsToPreload field_204261_q
 	tickableSounds field_148625_l
+	tickableSoundsToPlayOnNextTick field_229361_s_
 	ticks field_148618_g
 	addListener (Lnet/minecraft/client/audio/ISoundEventListener;)V func_188774_a
 	enqueuePreload (Lnet/minecraft/client/audio/Sound;)V func_204259_a
@@ -9060,7 +9060,6 @@ net/minecraft/client/audio/SoundEngine net/minecraft/client/audio/SoundEngine
 	func_217935_a (Lnet/minecraft/client/audio/IAudioStream;Lnet/minecraft/client/audio/SoundSource;)V func_217935_a
 	func_217936_a (Ljava/util/stream/Stream;)V func_217936_a
 	func_229362_a_ (Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/client/renderer/Vector3f;Lnet/minecraft/client/renderer/Vector3f;)V func_229362_a_
-	func_229363_a_ (Lnet/minecraft/client/audio/ITickableSound;)V func_229363_a_
 	getClampedPitch (Lnet/minecraft/client/audio/ISound;)F func_188772_d
 	getClampedVolume (Lnet/minecraft/client/audio/ISound;)F func_188770_e
 	getDebugString ()Ljava/lang/String; func_217932_f
@@ -9070,6 +9069,7 @@ net/minecraft/client/audio/SoundEngine net/minecraft/client/audio/SoundEngine
 	pause ()V func_148610_e
 	play (Lnet/minecraft/client/audio/ISound;)V func_148611_c
 	playDelayed (Lnet/minecraft/client/audio/ISound;I)V func_148599_a
+	playOnNextTick (Lnet/minecraft/client/audio/ITickableSound;)V func_229363_a_
 	reload ()V func_148596_a
 	removeListener (Lnet/minecraft/client/audio/ISoundEventListener;)V func_188773_b
 	resume ()V func_148604_f
@@ -9114,17 +9114,17 @@ net/minecraft/client/audio/SoundHandler net/minecraft/client/audio/SoundHandler
 	apply (Ljava/lang/Object;Lnet/minecraft/resources/IResourceManager;Lnet/minecraft/profiler/IProfiler;)V func_212853_a_
 	apply (Lnet/minecraft/client/audio/SoundHandler$Loader;Lnet/minecraft/resources/IResourceManager;Lnet/minecraft/profiler/IProfiler;)V func_212853_a_
 	func_215291_g ()Lorg/apache/logging/log4j/Logger; func_215291_g
-	func_215292_b (Lnet/minecraft/client/audio/Sound;Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/resources/IResourceManager;)Z func_215292_b
 	func_215295_a (Lnet/minecraft/client/audio/Sound;Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/resources/IResourceManager;)Z func_215295_a
-	func_229364_a_ (Lnet/minecraft/client/audio/ITickableSound;)V func_229364_a_
 	getAccessor (Lnet/minecraft/util/ResourceLocation;)Lnet/minecraft/client/audio/SoundEventAccessor; func_184398_a
 	getAvailableSounds ()Ljava/util/Collection; func_195477_a
 	getDebugString ()Ljava/lang/String; func_215293_f
 	getSoundMap (Ljava/io/InputStream;)Ljava/util/Map; func_175085_a
 	isPlaying (Lnet/minecraft/client/audio/ISound;)Z func_215294_c
+	isValidSound (Lnet/minecraft/client/audio/Sound;Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/resources/IResourceManager;)Z func_215292_b
 	pause ()V func_147689_b
 	play (Lnet/minecraft/client/audio/ISound;)V func_147682_a
 	playDelayed (Lnet/minecraft/client/audio/ISound;I)V func_147681_a
+	playOnNextTick (Lnet/minecraft/client/audio/ITickableSound;)V func_229364_a_
 	prepare (Lnet/minecraft/resources/IResourceManager;Lnet/minecraft/profiler/IProfiler;)Ljava/lang/Object; func_212854_a_
 	prepare (Lnet/minecraft/resources/IResourceManager;Lnet/minecraft/profiler/IProfiler;)Lnet/minecraft/client/audio/SoundHandler$Loader; func_212854_a_
 	removeListener (Lnet/minecraft/client/audio/ISoundEventListener;)V func_184400_b
@@ -9171,69 +9171,69 @@ net/minecraft/client/audio/SoundListSerializer net/minecraft/client/audio/SoundL
 	deserializeType (Lcom/google/gson/JsonObject;Lnet/minecraft/client/audio/Sound$Type;)Lnet/minecraft/client/audio/Sound$Type; func_188732_a
 net/minecraft/client/audio/SoundSource net/minecraft/client/audio/SoundSource
 	LOGGER field_216440_a
-	field_216441_b field_216441_b
 	field_216443_d field_216443_d
 	field_216444_e field_216444_e
+	id field_216441_b
 	playing field_216442_c
 	allocateNewSource ()Lnet/minecraft/client/audio/SoundSource; func_216426_a
+	close ()V func_216436_b
 	func_216417_a (Ljavax/sound/sampled/AudioFormat;I)I func_216417_a
-	func_216419_h ()V func_216419_h
 	func_216421_a (I)V func_216421_a
-	func_216423_c (F)V func_216423_c
 	func_216424_b (I)V func_216424_b
-	func_216427_k ()I func_216427_k
 	func_216429_a (Lnet/minecraft/client/audio/AudioStreamBuffer;)V func_216429_a
 	func_216431_c (I)V func_216431_c
-	func_216432_b (Z)V func_216432_b
 	func_216433_a (Lnet/minecraft/client/audio/IAudioStream;)V func_216433_a
-	func_216434_i ()V func_216434_i
-	func_216436_b ()V func_216436_b
 	getState ()I func_216428_j
 	isStopped ()Z func_216435_g
 	pause ()V func_216439_d
 	play ()V func_216438_c
+	removeProcessedBuffers ()I func_216427_k
 	resume ()V func_216437_e
 	setGain (F)V func_216430_b
+	setLinearAttenuation (F)V func_216423_c
 	setLooping (Z)V func_216425_a
+	setNoAttenuation ()V func_216419_h
 	setPitch (F)V func_216422_a
+	setRelative (Z)V func_216432_b
 	stop ()V func_216418_f
+	tick ()V func_216434_i
 	updateSource (Lnet/minecraft/util/math/Vec3d;)V func_216420_a
 net/minecraft/client/audio/SoundSystem net/minecraft/client/audio/SoundSystem
 	DUMMY_HANDLER field_216413_d
 	LOGGER field_216410_a
-	field_216411_b field_216411_b
-	field_216412_c field_216412_c
-	field_216416_g field_216416_g
+	context field_216412_c
+	device field_216411_b
+	listener field_216416_g
 	staticHandler field_216414_e
 	streamingHandler field_216415_f
-	func_216404_a ()V func_216404_a
-	func_216405_e ()I func_216405_e
-	func_216406_f ()J func_216406_f
-	func_216409_b ()V func_216409_b
 	getDebugString ()Ljava/lang/String; func_216402_d
 	getListener ()Lnet/minecraft/client/audio/Listener; func_216407_c
+	getMaxChannels ()I func_216405_e
 	getSource (Lnet/minecraft/client/audio/SoundSystem$Mode;)Lnet/minecraft/client/audio/SoundSource; func_216403_a
+	init ()V func_216404_a
+	openDevice ()J func_216406_f
 	release (Lnet/minecraft/client/audio/SoundSource;)V func_216408_a
+	unload ()V func_216409_b
 net/minecraft/client/audio/SoundSystem$1 net/minecraft/client/audio/SoundSystem$1
-	func_216395_c ()I func_216395_c
-	func_216396_a (Lnet/minecraft/client/audio/SoundSource;)Z func_216396_a
-	func_216397_d ()I func_216397_d
-	func_216399_b ()V func_216399_b
+	freeSource (Lnet/minecraft/client/audio/SoundSource;)Z func_216396_a
+	getActiveSoundSourceCount ()I func_216397_d
+	getMaxSoundSources ()I func_216395_c
 	getSource ()Lnet/minecraft/client/audio/SoundSource; func_216398_a
+	unload ()V func_216399_b
 net/minecraft/client/audio/SoundSystem$HandlerImpl net/minecraft/client/audio/SoundSystem$HandlerImpl
-	field_216400_a field_216400_a
-	field_216401_b field_216401_b
-	func_216395_c ()I func_216395_c
-	func_216396_a (Lnet/minecraft/client/audio/SoundSource;)Z func_216396_a
-	func_216397_d ()I func_216397_d
-	func_216399_b ()V func_216399_b
+	activeSoundSources field_216401_b
+	maxSoundSources field_216400_a
+	freeSource (Lnet/minecraft/client/audio/SoundSource;)Z func_216396_a
+	getActiveSoundSourceCount ()I func_216397_d
+	getMaxSoundSources ()I func_216395_c
 	getSource ()Lnet/minecraft/client/audio/SoundSource; func_216398_a
+	unload ()V func_216399_b
 net/minecraft/client/audio/SoundSystem$IHandler net/minecraft/client/audio/SoundSystem$IHandler
-	func_216395_c ()I func_216395_c
-	func_216396_a (Lnet/minecraft/client/audio/SoundSource;)Z func_216396_a
-	func_216397_d ()I func_216397_d
-	func_216399_b ()V func_216399_b
+	freeSource (Lnet/minecraft/client/audio/SoundSource;)Z func_216396_a
+	getActiveSoundSourceCount ()I func_216397_d
+	getMaxSoundSources ()I func_216395_c
 	getSource ()Lnet/minecraft/client/audio/SoundSource; func_216398_a
+	unload ()V func_216399_b
 net/minecraft/client/audio/SoundSystem$Mode net/minecraft/client/audio/SoundSystem$Mode
 	$VALUES $VALUES
 	STATIC STATIC
@@ -9441,12 +9441,11 @@ net/minecraft/client/gui/ClientBossInfo net/minecraft/client/gui/ClientBossInfo
 net/minecraft/client/gui/ClientBossInfo$1 net/minecraft/client/gui/ClientBossInfo$1
 	field_186733_a field_186733_a
 net/minecraft/client/gui/CommandSuggestionHelper net/minecraft/client/gui/CommandSuggestionHelper
-	field_228092_a_ field_228092_a_
-	field_228093_b_ field_228093_b_
+	WHITESPACE_PATTERN field_228092_a_
+	commandsOnly field_228097_f_
 	field_228094_c_ field_228094_c_
 	field_228095_d_ field_228095_d_
 	field_228096_e_ field_228096_e_
-	field_228097_f_ field_228097_f_
 	field_228098_g_ field_228098_g_
 	field_228099_h_ field_228099_h_
 	field_228100_i_ field_228100_i_
@@ -9455,11 +9454,12 @@ net/minecraft/client/gui/CommandSuggestionHelper net/minecraft/client/gui/Comman
 	field_228103_l_ field_228103_l_
 	field_228104_m_ field_228104_m_
 	field_228105_n_ field_228105_n_
-	field_228106_o_ field_228106_o_
-	field_228107_p_ field_228107_p_
-	field_228108_q_ field_228108_q_
 	field_228109_r_ field_228109_r_
 	field_228110_s_ field_228110_s_
+	mc field_228093_b_
+	parseResults field_228106_o_
+	suggestions field_228108_q_
+	suggestionsFuture field_228107_p_
 	func_228116_a_ (Lcom/mojang/brigadier/ParseResults;Ljava/lang/String;I)Ljava/lang/String; func_228116_a_
 	func_228117_a_ (Lnet/minecraft/client/gui/CommandSuggestionHelper;)Z func_228117_a_
 	func_228118_a_ (Lnet/minecraft/client/gui/CommandSuggestionHelper;Lnet/minecraft/client/gui/CommandSuggestionHelper$Suggestions;)Lnet/minecraft/client/gui/CommandSuggestionHelper$Suggestions; func_228118_a_
@@ -9500,13 +9500,13 @@ net/minecraft/client/gui/CommandSuggestionHelper$Suggestions net/minecraft/clien
 	func_228146_a_ ()V func_228146_a_
 	func_228147_a_ (D)Z func_228147_a_
 	func_228148_a_ (I)V func_228148_a_
-	func_228149_a_ (II)V func_228149_a_
 	func_228150_a_ (III)Z func_228150_a_
 	func_228151_a_ (Lnet/minecraft/client/gui/CommandSuggestionHelper$Suggestions;)Ljava/lang/String; func_228151_a_
 	func_228152_b_ ()V func_228152_b_
 	func_228153_b_ (I)V func_228153_b_
-	func_228154_b_ (III)Z func_228154_b_
 	func_228155_c_ ()Ljava/lang/String; func_228155_c_
+	onKeyPressed (III)Z func_228154_b_
+	render (II)V func_228149_a_
 net/minecraft/client/gui/DisplayEffectsScreen net/minecraft/client/gui/DisplayEffectsScreen
 	hasActivePotionEffects field_147045_u
 	drawActivePotionEffects ()V func_147044_g
@@ -10071,21 +10071,21 @@ net/minecraft/client/gui/fonts/IGlyphInfo net/minecraft/client/gui/fonts/IGlyphI
 	isColored ()Z func_211579_f
 	uploadGlyph (II)V func_211573_a
 net/minecraft/client/gui/fonts/TextInputUtil net/minecraft/client/gui/fonts/TextInputUtil
-	field_216905_f field_216905_f
-	field_216906_g field_216906_g
+	endIndex field_216905_f
 	fontRenderer field_216901_b
 	minecraft field_216900_a
+	startIndex field_216906_g
 	textConsumer field_216903_d
 	textSupplier field_216902_c
 	textWidth field_216904_e
-	func_216892_a (Ljava/lang/String;)V func_216892_a
-	func_216893_f ()V func_216893_f
-	func_216894_a (C)Z func_216894_a
-	func_216895_e ()Ljava/lang/String; func_216895_e
-	func_216896_c ()I func_216896_c
-	func_216897_a (I)Z func_216897_a
-	func_216898_d ()I func_216898_d
-	func_216899_b ()V func_216899_b
+	getEndIndex ()I func_216896_c
+	getSelectedText ()Ljava/lang/String; func_216895_e
+	getStartIndex ()I func_216898_d
+	putChar (C)Z func_216894_a
+	putCursorAtEnd ()V func_216899_b
+	putText (Ljava/lang/String;)V func_216892_a
+	removeSelectedText ()V func_216893_f
+	specialKeyPressed (I)Z func_216897_a
 net/minecraft/client/gui/fonts/TexturedGlyph net/minecraft/client/gui/fonts/TexturedGlyph
 	maxX field_211241_g
 	maxY field_211243_i
@@ -10573,9 +10573,9 @@ net/minecraft/client/gui/screen/AbstractCommandBlockScreen net/minecraft/client/
 	cancelButton field_195241_h
 	commandTextField field_195237_a
 	doneButton field_195240_g
-	field_195238_s field_195238_s
-	field_228184_g_ field_228184_g_
 	resultTextField field_195239_f
+	suggestionHelper field_228184_g_
+	trackOutput field_195238_s
 	trackOutputButton field_195242_i
 	func_195234_k ()V func_195234_k
 	func_195235_a (Lnet/minecraft/tileentity/CommandBlockLogic;)V func_195235_a
@@ -11068,7 +11068,7 @@ net/minecraft/client/gui/screen/EditMinecartCommandBlockScreen net/minecraft/cli
 	init ()V init
 net/minecraft/client/gui/screen/EditSignScreen net/minecraft/client/gui/screen/EditSignScreen
 	editLine field_146851_h
-	field_228191_a_ field_228191_a_
+	signModel field_228191_a_
 	textInputUtil field_214267_d
 	tileSign field_146848_f
 	updateCounter field_146849_g
@@ -11247,7 +11247,7 @@ net/minecraft/client/gui/screen/FlatPresetsScreen$SlotList$PresetEntry net/minec
 	mouseClicked (DDI)Z mouseClicked
 	render (IIIIIIIZF)V render
 net/minecraft/client/gui/screen/GrindstoneScreen net/minecraft/client/gui/screen/GrindstoneScreen
-	field_214110_k field_214110_k
+	GRINDSTONE_GUI_TEXTURES field_214110_k
 	drawGuiContainerBackgroundLayer (FII)V func_146976_a
 	drawGuiContainerForegroundLayer (II)V func_146979_b
 	render (IIF)V render
@@ -11273,11 +11273,11 @@ net/minecraft/client/gui/screen/IngameMenuScreen net/minecraft/client/gui/screen
 	render (IIF)V render
 	tick ()V tick
 net/minecraft/client/gui/screen/JigsawScreen net/minecraft/client/gui/screen/JigsawScreen
+	attachementTypeField field_214260_b
+	doneButton field_214263_e
 	field_214259_a field_214259_a
-	field_214260_b field_214260_b
-	field_214261_c field_214261_c
-	field_214262_d field_214262_d
-	field_214263_e field_214263_e
+	finalStateField field_214262_d
+	targetPoolField field_214261_c
 	func_214251_a (Ljava/lang/String;)V func_214251_a
 	func_214252_a (Lnet/minecraft/client/gui/widget/button/Button;)V func_214252_a
 	func_214253_a ()V func_214253_a
@@ -11345,22 +11345,22 @@ net/minecraft/client/gui/screen/LecternScreen$1 net/minecraft/client/gui/screen/
 	sendSlotContents (Lnet/minecraft/inventory/container/Container;ILnet/minecraft/item/ItemStack;)V func_71111_a
 	sendWindowProperty (Lnet/minecraft/inventory/container/Container;II)V func_71112_a
 net/minecraft/client/gui/screen/LoomScreen net/minecraft/client/gui/screen/LoomScreen
-	field_214113_k field_214113_k
+	LOOM_GUI_TEXTURES field_214113_k
+	bannerStack field_214119_q
+	displayPatternsIn field_214123_u
+	dyeStack field_214120_r
 	field_214114_l field_214114_l
-	field_214119_q field_214119_q
-	field_214120_r field_214120_r
-	field_214121_s field_214121_s
-	field_214123_u field_214123_u
 	field_214124_v field_214124_v
 	field_214125_w field_214125_w
 	field_214126_x field_214126_x
-	field_214127_y field_214127_y
-	field_214128_z field_214128_z
-	field_228188_m_ field_228188_m_
 	field_230155_n_ field_230155_n_
+	indexStarting field_214128_z
+	isScrolling field_214127_y
+	modelRender field_228188_m_
+	patternStack field_214121_s
+	containerChange ()V func_214111_b
 	drawGuiContainerBackgroundLayer (FII)V func_146976_a
 	drawGuiContainerForegroundLayer (II)V func_146979_b
-	func_214111_b ()V func_214111_b
 	func_228190_b_ (III)V func_228190_b_
 	hasClickedOutside (DDIII)Z func_195361_a
 	mouseClicked (DDI)Z mouseClicked
@@ -11483,12 +11483,12 @@ net/minecraft/client/gui/screen/OptimizeWorldScreen net/minecraft/client/gui/scr
 net/minecraft/client/gui/screen/OptionsScreen net/minecraft/client/gui/screen/OptionsScreen
 	SCREEN_OPTIONS field_146440_f
 	difficultyButton field_175357_i
-	field_213062_f field_213062_f
 	lastScreen field_146441_g
 	lockButton field_175356_r
 	settings field_146443_h
+	worldDifficulty field_213062_f
+	accept (Z)V func_213050_a
 	func_213049_d (Lnet/minecraft/client/gui/widget/button/Button;)V func_213049_d
-	func_213050_a (Z)V func_213050_a
 	func_213051_l (Lnet/minecraft/client/gui/widget/button/Button;)V func_213051_l
 	func_213052_f (Lnet/minecraft/client/gui/widget/button/Button;)V func_213052_f
 	func_213053_e (Lnet/minecraft/client/gui/widget/button/Button;)V func_213053_e
@@ -11626,8 +11626,8 @@ net/minecraft/client/gui/screen/Screen net/minecraft/client/gui/screen/Screen
 net/minecraft/client/gui/screen/ServerListScreen net/minecraft/client/gui/screen/ServerListScreen
 	field_195170_a field_195170_a
 	field_213027_d field_213027_d
-	field_228178_e_ field_228178_e_
 	ipEdit field_146302_g
+	previousScreen field_228178_e_
 	serverData field_146301_f
 	func_195167_h ()V func_195167_h
 	func_195168_i ()V func_195168_i
@@ -11650,7 +11650,6 @@ net/minecraft/client/gui/screen/ServerSelectionList net/minecraft/client/gui/scr
 	owner field_148200_k
 	serverListInternet field_148198_l
 	serverListLan field_148199_m
-	func_195094_h ()V func_195094_h
 	func_214351_c ()Lnet/minecraft/util/ResourceLocation; func_214351_c
 	func_214352_a ()Ljava/util/concurrent/ThreadPoolExecutor; func_214352_a
 	func_214353_d ()Lorg/apache/logging/log4j/Logger; func_214353_d
@@ -11663,6 +11662,7 @@ net/minecraft/client/gui/screen/ServerSelectionList net/minecraft/client/gui/scr
 	isFocused ()Z isFocused
 	keyPressed (III)Z keyPressed
 	moveSelection (I)V moveSelection
+	setList ()V func_195094_h
 	setSelected (Lnet/minecraft/client/gui/screen/ServerSelectionList$Entry;)V setSelected
 	setSelected (Lnet/minecraft/client/gui/widget/list/AbstractList$AbstractListEntry;)V setSelected
 	updateNetworkServers (Ljava/util/List;)V func_148194_a
@@ -11821,9 +11821,9 @@ net/minecraft/client/gui/screen/VideoSettingsScreen net/minecraft/client/gui/scr
 	render (IIF)V render
 net/minecraft/client/gui/screen/WinGameScreen net/minecraft/client/gui/screen/WinGameScreen
 	LOGGER field_146580_a
+	MINECRAFT_EDITION field_194401_g
 	MINECRAFT_LOGO field_146576_f
 	VIGNETTE_TEXTURE field_146577_g
-	field_194401_g field_194401_g
 	lines field_146582_i
 	onFinished field_193981_i
 	poem field_193980_h
@@ -11909,9 +11909,9 @@ net/minecraft/client/gui/screen/WorldSelectionList$Entry net/minecraft/client/gu
 net/minecraft/client/gui/screen/WorldSelectionScreen net/minecraft/client/gui/screen/WorldSelectionScreen
 	copyButton field_184865_t
 	deleteButton field_146642_y
-	field_212352_g field_212352_g
 	prevScreen field_184864_a
 	renameButton field_146630_A
+	searchField field_212352_g
 	selectButton field_146641_z
 	selectionList field_184866_u
 	worldVersTooltip field_184869_h
@@ -11935,7 +11935,7 @@ net/minecraft/client/gui/screen/WorldSelectionScreen net/minecraft/client/gui/sc
 	setVersionTooltip (Ljava/lang/String;)V func_184861_a
 	tick ()V tick
 net/minecraft/client/gui/screen/inventory/AbstractFurnaceScreen net/minecraft/client/gui/screen/inventory/AbstractFurnaceScreen
-	field_214089_l field_214089_l
+	BUTTON_TEXTURE field_214089_l
 	guiTexture field_214091_n
 	recipeGui field_214088_k
 	widthTooNarrowIn field_214090_m
@@ -12080,7 +12080,6 @@ net/minecraft/client/gui/screen/inventory/ContainerScreen net/minecraft/client/g
 	drawGuiContainerForegroundLayer (II)V func_146979_b
 	drawItemStack (Lnet/minecraft/item/ItemStack;IILjava/lang/String;)V func_146982_a
 	drawSlot (Lnet/minecraft/inventory/container/Slot;)V func_146977_a
-	func_195363_d (II)Z func_195363_d
 	getContainer ()Lnet/minecraft/inventory/container/Container; func_212873_a_
 	getSelectedSlot (DD)Lnet/minecraft/inventory/container/Slot; func_195360_a
 	handleMouseClick (Lnet/minecraft/inventory/container/Slot;IILnet/minecraft/inventory/container/ClickType;)V func_184098_a
@@ -12089,6 +12088,7 @@ net/minecraft/client/gui/screen/inventory/ContainerScreen net/minecraft/client/g
 	isPauseScreen ()Z isPauseScreen
 	isPointInRegion (IIIIDD)Z func_195359_a
 	isSlotSelected (Lnet/minecraft/inventory/container/Slot;DD)Z func_195362_a
+	itemStackMoved (II)Z func_195363_d
 	keyPressed (III)Z keyPressed
 	mouseClicked (DDI)Z mouseClicked
 	mouseDragged (DDIDD)Z mouseDragged
@@ -12182,7 +12182,7 @@ net/minecraft/client/gui/screen/inventory/CreativeScreen$CreativeSlot net/minecr
 	access$100 (Lnet/minecraft/client/gui/screen/inventory/CreativeScreen$CreativeSlot;)Lnet/minecraft/inventory/container/Slot; access$100
 	canTakeStack (Lnet/minecraft/entity/player/PlayerEntity;)Z func_82869_a
 	decrStackSize (I)Lnet/minecraft/item/ItemStack; func_75209_a
-	func_225517_c_ ()Lcom/mojang/datafixers/util/Pair; func_225517_c_
+	getBackground ()Lcom/mojang/datafixers/util/Pair; func_225517_c_
 	getHasStack ()Z func_75216_d
 	getItemStackLimit (Lnet/minecraft/item/ItemStack;)I func_178170_b
 	getSlotStackLimit ()I func_75219_a
@@ -13175,7 +13175,6 @@ net/minecraft/client/network/play/ClientPlayNetHandler net/minecraft/client/netw
 	func_217276_a (Ljava/lang/Throwable;)Ljava/lang/Void; func_217276_a
 	func_217278_a (Lnet/minecraft/client/util/ClientRecipeBook;Lnet/minecraft/item/crafting/IRecipe;)V func_217278_a
 	func_217281_m ()V func_217281_m
-	func_217282_a (Lnet/minecraft/entity/player/PlayerEntity;)Lnet/minecraft/item/ItemStack; func_217282_a
 	func_217285_a (Lnet/minecraft/inventory/container/Container;Lnet/minecraft/item/crafting/IRecipe;)V func_217285_a
 	func_217286_a (Ljava/lang/String;Ljava/lang/String;)V func_217286_a
 	getAdvancementManager ()Lnet/minecraft/client/multiplayer/ClientAdvancementManager; func_191982_f
@@ -13190,6 +13189,7 @@ net/minecraft/client/network/play/ClientPlayNetHandler net/minecraft/client/netw
 	getSessionId ()Ljava/util/UUID; func_217277_l
 	getSuggestionProvider ()Lnet/minecraft/client/multiplayer/ClientSuggestionProvider; func_195513_b
 	getTags ()Lnet/minecraft/tags/NetworkTagManager; func_199724_l
+	getTotemItem (Lnet/minecraft/entity/player/PlayerEntity;)Lnet/minecraft/item/ItemStack; func_217282_a
 	getWorld ()Lnet/minecraft/client/world/ClientWorld; func_195514_j
 	handleAcknowledgePlayerDigging (Lnet/minecraft/network/play/server/SPlayerDiggingPacket;)V func_225312_a
 	handleAdvancementInfo (Lnet/minecraft/network/play/server/SAdvancementInfoPacket;)V func_191981_a
@@ -13851,7 +13851,7 @@ net/minecraft/client/particle/Particle net/minecraft/client/particle/Particle
 	getRenderType ()Lnet/minecraft/client/particle/IParticleRenderType; func_217558_b
 	isAlive ()Z func_187113_k
 	move (DDD)V func_187110_a
-	multipleParticleScaleBy (F)Lnet/minecraft/client/particle/Particle; func_70541_f
+	multiplyParticleScaleBy (F)Lnet/minecraft/client/particle/Particle; func_70541_f
 	multiplyVelocity (F)Lnet/minecraft/client/particle/Particle; func_70543_e
 	renderParticle (Lcom/mojang/blaze3d/vertex/IVertexBuilder;Lnet/minecraft/client/renderer/ActiveRenderInfo;F)V func_225606_a_
 	resetPositionToBB ()V func_187118_j
@@ -14068,7 +14068,7 @@ net/minecraft/client/particle/TexturedParticle net/minecraft/client/particle/Tex
 	getMinU ()F func_217563_c
 	getMinV ()F func_217562_e
 	getScale (F)F func_217561_b
-	multipleParticleScaleBy (F)Lnet/minecraft/client/particle/Particle; func_70541_f
+	multiplyParticleScaleBy (F)Lnet/minecraft/client/particle/Particle; func_70541_f
 	renderParticle (Lcom/mojang/blaze3d/vertex/IVertexBuilder;Lnet/minecraft/client/renderer/ActiveRenderInfo;F)V func_225606_a_
 net/minecraft/client/particle/TexturesParticle net/minecraft/client/particle/TexturesParticle
 	textures field_217598_a
@@ -14131,7 +14131,7 @@ net/minecraft/client/renderer/ActiveRenderInfo net/minecraft/client/renderer/Act
 	movePosition (DDD)V func_216782_a
 	setDirection (FF)V func_216776_a
 	setPosition (DDD)V func_216775_b
-	setPostion (Lnet/minecraft/util/math/Vec3d;)V func_216774_a
+	setPosition (Lnet/minecraft/util/math/Vec3d;)V func_216774_a
 	update (Lnet/minecraft/world/IBlockReader;Lnet/minecraft/entity/Entity;ZZF)V func_216772_a
 net/minecraft/client/renderer/Atlases net/minecraft/client/renderer/Atlases
 	BANNER_ATLAS field_228744_c_
@@ -16680,7 +16680,7 @@ net/minecraft/client/renderer/entity/VexRenderer net/minecraft/client/renderer/e
 	preRenderCallback (Lnet/minecraft/entity/LivingEntity;Lcom/mojang/blaze3d/matrix/MatrixStack;F)V func_225620_a_
 	preRenderCallback (Lnet/minecraft/entity/monster/VexEntity;Lcom/mojang/blaze3d/matrix/MatrixStack;F)V func_225620_a_
 net/minecraft/client/renderer/entity/VillagerRenderer net/minecraft/client/renderer/entity/VillagerRenderer
-	field_217779_a field_217779_a
+	VILLAGER_TEXTURES field_217779_a
 	getEntityTexture (Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/ResourceLocation; func_110775_a
 	getEntityTexture (Lnet/minecraft/entity/merchant/villager/VillagerEntity;)Lnet/minecraft/util/ResourceLocation; func_110775_a
 	preRenderCallback (Lnet/minecraft/entity/LivingEntity;Lcom/mojang/blaze3d/matrix/MatrixStack;F)V func_225620_a_
@@ -17078,18 +17078,18 @@ net/minecraft/client/renderer/entity/model/BoatModel net/minecraft/client/render
 	setRotationAngles (Lnet/minecraft/entity/Entity;FFFFF)V func_225597_a_
 	setRotationAngles (Lnet/minecraft/entity/item/BoatEntity;FFFFF)V func_225597_a_
 net/minecraft/client/renderer/entity/model/BookModel net/minecraft/client/renderer/entity/model/BookModel
+	bookParts field_228246_h_
 	bookSpine field_78097_g
 	coverLeft field_78100_b
 	coverRight field_78102_a
-	field_228246_h_ field_228246_h_
 	flippingPageLeft field_78096_f
 	flippingPageRight field_78099_e
 	pagesLeft field_78098_d
 	pagesRight field_78101_c
-	func_228247_a_ (FFFF)V func_228247_a_
 	func_228248_a_ (Lcom/mojang/blaze3d/matrix/MatrixStack;Lcom/mojang/blaze3d/vertex/IVertexBuilder;IIFFFFLnet/minecraft/client/renderer/model/ModelRenderer;)V func_228248_a_
-	func_228249_b_ (Lcom/mojang/blaze3d/matrix/MatrixStack;Lcom/mojang/blaze3d/vertex/IVertexBuilder;IIFFFF)V func_228249_b_
 	render (Lcom/mojang/blaze3d/matrix/MatrixStack;Lcom/mojang/blaze3d/vertex/IVertexBuilder;IIFFFF)V func_225598_a_
+	renderAll (Lcom/mojang/blaze3d/matrix/MatrixStack;Lcom/mojang/blaze3d/vertex/IVertexBuilder;IIFFFF)V func_228249_b_
+	setBookState (FFFF)V func_228247_a_
 net/minecraft/client/renderer/entity/model/CatModel net/minecraft/client/renderer/entity/model/CatModel
 	field_217155_m field_217155_m
 	field_217156_n field_217156_n
@@ -17647,9 +17647,9 @@ net/minecraft/client/renderer/entity/model/VexModel net/minecraft/client/rendere
 	setRotationAngles (Lnet/minecraft/entity/LivingEntity;FFFFF)V func_225597_a_
 	setRotationAngles (Lnet/minecraft/entity/monster/VexEntity;FFFFF)V func_225597_a_
 net/minecraft/client/renderer/entity/model/VillagerModel net/minecraft/client/renderer/entity/model/VillagerModel
-	field_217151_b field_217151_b
-	field_217152_f field_217152_f
-	field_217153_h field_217153_h
+	clothing field_217153_h
+	hat field_217151_b
+	hatBrim field_217152_f
 	leftVillagerLeg field_78188_e
 	rightVillagerLeg field_78187_d
 	villagerArms field_78190_c
@@ -18668,7 +18668,7 @@ net/minecraft/client/renderer/texture/Stitcher net/minecraft/client/renderer/tex
 	getCurrentHeight ()I func_110936_b
 	getCurrentWidth ()I func_110935_a
 	getMipmapDimension (II)I func_147969_b
-	getStichSlots (Lnet/minecraft/client/renderer/texture/Stitcher$ISpriteLoader;)V func_229209_a_
+	getStitchSlots (Lnet/minecraft/client/renderer/texture/Stitcher$ISpriteLoader;)V func_229209_a_
 net/minecraft/client/renderer/texture/Stitcher$Holder net/minecraft/client/renderer/texture/Stitcher$Holder
 	height field_94201_d
 	spriteInfo field_229213_a_
@@ -18819,8 +18819,8 @@ net/minecraft/client/renderer/tileentity/BannerTileEntityRenderer net/minecraft/
 	field_228833_a_ field_228833_a_
 	field_228834_c_ field_228834_c_
 	field_228835_d_ field_228835_d_
-	func_228836_a_ ()Lnet/minecraft/client/renderer/model/ModelRenderer; func_228836_a_
 	func_230180_a_ (Lcom/mojang/blaze3d/matrix/MatrixStack;Lnet/minecraft/client/renderer/IRenderTypeBuffer;IILnet/minecraft/client/renderer/model/ModelRenderer;Lnet/minecraft/client/renderer/model/Material;ZLjava/util/List;)V func_230180_a_
+	getModelRender ()Lnet/minecraft/client/renderer/model/ModelRenderer; func_228836_a_
 	render (Lnet/minecraft/tileentity/BannerTileEntity;FLcom/mojang/blaze3d/matrix/MatrixStack;Lnet/minecraft/client/renderer/IRenderTypeBuffer;II)V func_225616_a_
 	render (Lnet/minecraft/tileentity/TileEntity;FLcom/mojang/blaze3d/matrix/MatrixStack;Lnet/minecraft/client/renderer/IRenderTypeBuffer;II)V func_225616_a_
 net/minecraft/client/renderer/tileentity/BeaconTileEntityRenderer net/minecraft/client/renderer/tileentity/BeaconTileEntityRenderer
@@ -23243,7 +23243,7 @@ net/minecraft/data/TagsProvider net/minecraft/data/TagsProvider
 	setCollection (Lnet/minecraft/tags/TagCollection;)V func_200429_a
 net/minecraft/data/advancements/AdventureAdvancements net/minecraft/data/advancements/AdventureAdvancements
 	EXPLORATION_BIOMES field_204286_a
-	field_218459_b field_218459_b
+	MOB_ENTITIES field_218459_b
 	accept (Ljava/lang/Object;)V accept
 	accept (Ljava/util/function/Consumer;)V accept
 	makeBiomeAdvancement (Lnet/minecraft/advancements/Advancement$Builder;)Lnet/minecraft/advancements/Advancement$Builder; func_204285_b
@@ -23643,13 +23643,13 @@ net/minecraft/enchantment/EnchantmentHelper net/minecraft/enchantment/Enchantmen
 	areAllCompatibleWith (Ljava/util/Collection;Lnet/minecraft/enchantment/Enchantment;)Z func_201840_a
 	buildEnchantmentList (Ljava/util/Random;Lnet/minecraft/item/ItemStack;IZ)Ljava/util/List; func_77513_b
 	calcItemStackEnchantability (Ljava/util/Random;IILnet/minecraft/item/ItemStack;)I func_77514_a
+	deserializeEnchantments (Lnet/minecraft/nbt/ListNBT;)Ljava/util/Map; func_226652_a_
 	func_212573_a (Lorg/apache/commons/lang3/mutable/MutableFloat;Lnet/minecraft/entity/CreatureAttribute;Lnet/minecraft/enchantment/Enchantment;I)V func_212573_a
 	func_212574_a (Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/enchantment/Enchantment;I)V func_212574_a
 	func_212575_b (Lnet/minecraft/entity/LivingEntity;Lnet/minecraft/entity/Entity;Lnet/minecraft/enchantment/Enchantment;I)V func_212575_b
 	func_212576_a (Lorg/apache/commons/lang3/mutable/MutableInt;Lnet/minecraft/util/DamageSource;Lnet/minecraft/enchantment/Enchantment;I)V func_212576_a
 	func_222184_a (Lnet/minecraft/enchantment/EnchantmentHelper$IEnchantmentVisitor;ILnet/minecraft/enchantment/Enchantment;)V func_222184_a
 	func_226651_a_ (Ljava/util/Map;Lnet/minecraft/nbt/CompoundNBT;Lnet/minecraft/enchantment/Enchantment;)V func_226651_a_
-	func_226652_a_ (Lnet/minecraft/nbt/ListNBT;)Ljava/util/Map; func_226652_a_
 	getDepthStriderModifier (Lnet/minecraft/entity/LivingEntity;)I func_185294_d
 	getEfficiencyModifier (Lnet/minecraft/entity/LivingEntity;)I func_185293_e
 	getEnchantmentDatas (ILnet/minecraft/item/ItemStack;Z)Ljava/util/List; func_185291_a
@@ -23919,15 +23919,15 @@ net/minecraft/entity/AgeableEntity net/minecraft/entity/AgeableEntity
 	setGrowingAge (I)V func_70873_a
 	writeAdditional (Lnet/minecraft/nbt/CompoundNBT;)V func_213281_b
 net/minecraft/entity/AgeableEntity$AgeableData net/minecraft/entity/AgeableEntity$AgeableData
-	field_226254_a_ field_226254_a_
-	field_226255_b_ field_226255_b_
-	field_226256_c_ field_226256_c_
-	func_226257_a_ ()I func_226257_a_
-	func_226258_a_ (F)V func_226258_a_
-	func_226259_a_ (Z)V func_226259_a_
-	func_226260_b_ ()V func_226260_b_
-	func_226261_c_ ()Z func_226261_c_
-	func_226262_d_ ()F func_226262_d_
+	babySpawnProbability field_226256_c_
+	canBabySpawn field_226255_b_
+	indexInGroup field_226254_a_
+	canBabySpawn ()Z func_226261_c_
+	getBabySpawnProbability ()F func_226262_d_
+	getIndexInGroup ()I func_226257_a_
+	incrementIndexInGroup ()V func_226260_b_
+	setBabySpawnProbability (F)V func_226258_a_
+	setCanBabySpawn (Z)V func_226259_a_
 net/minecraft/entity/AreaEffectCloudEntity net/minecraft/entity/AreaEffectCloudEntity
 	COLOR field_184499_b
 	IGNORE_RADIUS field_184500_c
@@ -24597,13 +24597,12 @@ net/minecraft/entity/EntityType net/minecraft/entity/EntityType
 	create (Lnet/minecraft/world/World;Lnet/minecraft/nbt/CompoundNBT;Lnet/minecraft/util/text/ITextComponent;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/entity/SpawnReason;ZZ)Lnet/minecraft/entity/Entity; func_220349_b
 	func_206831_d ()Lorg/apache/logging/log4j/Logger; func_206831_d
 	func_208051_a (Lnet/minecraft/world/IWorldReader;Lnet/minecraft/util/math/BlockPos;ZLnet/minecraft/util/math/AxisAlignedBB;)D func_208051_a
-	func_220328_a (DDD)Lnet/minecraft/util/math/AxisAlignedBB; func_220328_a
 	func_220329_a (Lnet/minecraft/nbt/CompoundNBT;Lnet/minecraft/entity/Entity;)V func_220329_a
-	func_220335_a (Lnet/minecraft/nbt/CompoundNBT;Lnet/minecraft/world/World;Ljava/util/function/Function;)Lnet/minecraft/entity/Entity; func_220335_a
 	func_220336_b (Lnet/minecraft/nbt/CompoundNBT;)V func_220336_b
 	func_220337_b (Lnet/minecraft/world/World;Lnet/minecraft/entity/EntityType;)Lnet/minecraft/entity/Entity; func_220337_b
 	func_220346_a (Lnet/minecraft/nbt/CompoundNBT;Lnet/minecraft/world/World;Ljava/util/function/Function;Lnet/minecraft/entity/Entity;)Lnet/minecraft/entity/Entity; func_220346_a
 	func_225437_d ()Z func_225437_d
+	getBoundingBoxWithSizeApplied (DDD)Lnet/minecraft/util/math/AxisAlignedBB; func_220328_a
 	getClassification ()Lnet/minecraft/entity/EntityClassification; func_220339_d
 	getHeight ()F func_220344_i
 	getKey (Lnet/minecraft/entity/EntityType;)Lnet/minecraft/util/ResourceLocation; func_200718_a
@@ -24619,6 +24618,7 @@ net/minecraft/entity/EntityType net/minecraft/entity/EntityType
 	isSerializable ()Z func_200715_a
 	isSummonable ()Z func_200720_b
 	loadEntity (Lnet/minecraft/nbt/CompoundNBT;Lnet/minecraft/world/World;)Ljava/util/Optional; func_220343_b
+	loadEntityAndExecute (Lnet/minecraft/nbt/CompoundNBT;Lnet/minecraft/world/World;Ljava/util/function/Function;)Lnet/minecraft/entity/Entity; func_220335_a
 	loadEntityUnchecked (Lnet/minecraft/nbt/CompoundNBT;Lnet/minecraft/world/World;)Ljava/util/Optional; func_220330_a
 	readEntityType (Lnet/minecraft/nbt/CompoundNBT;)Ljava/util/Optional; func_220347_a
 	register (Ljava/lang/String;Lnet/minecraft/entity/EntityType$Builder;)Lnet/minecraft/entity/EntityType; func_200712_a
@@ -26227,9 +26227,9 @@ net/minecraft/entity/ai/goal/AvoidEntityGoal net/minecraft/entity/ai/goal/AvoidE
 	startExecuting ()V func_75249_e
 	tick ()V func_75246_d
 net/minecraft/entity/ai/goal/BegGoal net/minecraft/entity/ai/goal/BegGoal
-	field_220688_f field_220688_f
 	minPlayerDistance field_75383_d
 	player field_75385_b
+	playerPredicate field_220688_f
 	timeoutCounter field_75384_e
 	wolf field_75387_a
 	world field_75386_c
@@ -26346,7 +26346,7 @@ net/minecraft/entity/ai/goal/EatGrassGoal net/minecraft/entity/ai/goal/EatGrassG
 	startExecuting ()V func_75249_e
 	tick ()V func_75246_d
 net/minecraft/entity/ai/goal/FindWaterGoal net/minecraft/entity/ai/goal/FindWaterGoal
-	field_205152_a field_205152_a
+	creature field_205152_a
 	shouldExecute ()Z func_75250_a
 	startExecuting ()V func_75249_e
 net/minecraft/entity/ai/goal/FleeSunGoal net/minecraft/entity/ai/goal/FleeSunGoal
@@ -26357,7 +26357,7 @@ net/minecraft/entity/ai/goal/FleeSunGoal net/minecraft/entity/ai/goal/FleeSunGoa
 	shelterZ field_75368_d
 	world field_75367_f
 	findPossibleShelter ()Lnet/minecraft/util/math/Vec3d; func_75366_f
-	func_220702_g ()Z func_220702_g
+	isPossibleShelter ()Z func_220702_g
 	shouldContinueExecuting ()Z func_75253_b
 	shouldExecute ()Z func_75250_a
 	startExecuting ()V func_75249_e
@@ -26389,7 +26389,6 @@ net/minecraft/entity/ai/goal/FollowMobGoal net/minecraft/entity/ai/goal/FollowMo
 	startExecuting ()V func_75249_e
 	tick ()V func_75246_d
 net/minecraft/entity/ai/goal/FollowOwnerGoal net/minecraft/entity/ai/goal/FollowOwnerGoal
-	field_226326_j_ field_226326_j_
 	followSpeed field_75336_f
 	maxDist field_75340_b
 	minDist field_75341_c
@@ -26397,17 +26396,18 @@ net/minecraft/entity/ai/goal/FollowOwnerGoal net/minecraft/entity/ai/goal/Follow
 	oldWaterCost field_75344_i
 	owner field_75339_e
 	tameable field_75338_d
+	teleportToLeaves field_226326_j_
 	timeToRecalcPath field_75343_h
 	world field_75342_a
-	func_226327_a_ (II)I func_226327_a_
-	func_226328_a_ (III)Z func_226328_a_
-	func_226329_a_ (Lnet/minecraft/util/math/BlockPos;)Z func_226329_a_
-	func_226330_g_ ()V func_226330_g_
+	getRandomNumber (II)I func_226327_a_
+	isTeleportFriendlyBlock (Lnet/minecraft/util/math/BlockPos;)Z func_226329_a_
 	resetTask ()V func_75251_c
 	shouldContinueExecuting ()Z func_75253_b
 	shouldExecute ()Z func_75250_a
 	startExecuting ()V func_75249_e
 	tick ()V func_75246_d
+	tryToTeleportNearEntity ()V func_226330_g_
+	tryToTeleportToLocation (III)Z func_226328_a_
 net/minecraft/entity/ai/goal/FollowParentGoal net/minecraft/entity/ai/goal/FollowParentGoal
 	childAnimal field_75348_a
 	delayCounter field_75345_d
@@ -28328,6 +28328,7 @@ net/minecraft/entity/monster/AbstractRaiderEntity net/minecraft/entity/monster/A
 	field_213666_c field_213666_c
 	raid field_213667_d
 	wave field_213668_bz
+	applyWaveBonus (IZ)V func_213660_a
 	attackEntityFrom (Lnet/minecraft/util/DamageSource;F)Z func_70097_a
 	canDespawn (D)Z func_213397_c
 	func_213623_ec ()V func_213623_ec
@@ -28346,7 +28347,6 @@ net/minecraft/entity/monster/AbstractRaiderEntity net/minecraft/entity/monster/A
 	func_213656_en ()Z func_213656_en
 	func_213658_ej ()Z func_213658_ej
 	func_213659_b (Lnet/minecraft/entity/monster/AbstractRaiderEntity;)F func_213659_b
-	func_213660_a (IZ)V func_213660_a
 	func_213661_eo ()I func_213661_eo
 	func_213662_c (Lnet/minecraft/entity/monster/AbstractRaiderEntity;)F func_213662_c
 	getRaid ()Lnet/minecraft/world/raid/Raid; func_213663_ek
@@ -28667,7 +28667,7 @@ net/minecraft/entity/monster/EvokerEntity net/minecraft/entity/monster/EvokerEnt
 	access$700 (Lnet/minecraft/entity/monster/EvokerEntity;)Ljava/util/Random; access$700
 	access$800 (Lnet/minecraft/entity/monster/EvokerEntity;)Ljava/util/Random; access$800
 	access$900 (Lnet/minecraft/entity/monster/EvokerEntity;Lnet/minecraft/entity/passive/SheepEntity;)V access$900
-	func_213660_a (IZ)V func_213660_a
+	applyWaveBonus (IZ)V func_213660_a
 	getAmbientSound ()Lnet/minecraft/util/SoundEvent; func_184639_G
 	getDeathSound ()Lnet/minecraft/util/SoundEvent; func_184615_bR
 	getHurtSound (Lnet/minecraft/util/DamageSource;)Lnet/minecraft/util/SoundEvent; func_184601_bQ
@@ -28840,8 +28840,8 @@ net/minecraft/entity/monster/IMob net/minecraft/entity/monster/IMob
 net/minecraft/entity/monster/IllusionerEntity net/minecraft/entity/monster/IllusionerEntity
 	ghostTime field_193099_c
 	renderLocations field_193100_bx
+	applyWaveBonus (IZ)V func_213660_a
 	attackEntityWithRangedAttack (Lnet/minecraft/entity/LivingEntity;F)V func_82196_d
-	func_213660_a (IZ)V func_213660_a
 	getAmbientSound ()Lnet/minecraft/util/SoundEvent; func_184639_G
 	getArmPose ()Lnet/minecraft/entity/monster/AbstractIllagerEntity$ArmPose; func_193077_p
 	getDeathSound ()Lnet/minecraft/util/SoundEvent; func_184615_bR
@@ -29050,8 +29050,8 @@ net/minecraft/entity/monster/PhantomEntity$SweepAttackGoal net/minecraft/entity/
 net/minecraft/entity/monster/PillagerEntity net/minecraft/entity/monster/PillagerEntity
 	DATA_CHARGING_STATE field_213676_b
 	inventory field_213677_bz
+	applyWaveBonus (IZ)V func_213660_a
 	attackEntityWithRangedAttack (Lnet/minecraft/entity/LivingEntity;F)V func_82196_d
-	func_213660_a (IZ)V func_213660_a
 	func_213672_b (Lnet/minecraft/item/Item;)Z func_213672_b
 	func_213673_a (Lnet/minecraft/util/math/Vec3d;F)Lnet/minecraft/client/renderer/Vector3f; func_213673_a
 	func_213674_eg ()Lnet/minecraft/inventory/Inventory; func_213674_eg
@@ -29080,13 +29080,13 @@ net/minecraft/entity/monster/RavagerEntity net/minecraft/entity/monster/RavagerE
 	field_213690_b field_213690_b
 	roarTick field_213689_bB
 	stunTick field_213692_bA
+	applyWaveBonus (IZ)V func_213660_a
 	attackEntityAsMob (Lnet/minecraft/entity/Entity;)Z func_70652_k
 	canBeLeader ()Z func_213637_dY
 	canBeSteered ()Z func_82171_bF
 	canEntityBeSeen (Lnet/minecraft/entity/Entity;)Z func_70685_l
 	constructKnockBackVector (Lnet/minecraft/entity/LivingEntity;)V func_213371_e
 	createNavigator (Lnet/minecraft/world/World;)Lnet/minecraft/pathfinding/PathNavigator; func_175447_b
-	func_213660_a (IZ)V func_213660_a
 	func_213682_eh ()V func_213682_eh
 	func_213683_l ()I func_213683_l
 	func_213684_dX ()I func_213684_dX
@@ -29454,7 +29454,7 @@ net/minecraft/entity/monster/VindicatorEntity net/minecraft/entity/monster/Vindi
 	field_213681_b field_213681_b
 	johnny field_190643_b
 	access$000 ()Ljava/util/function/Predicate; access$000
-	func_213660_a (IZ)V func_213660_a
+	applyWaveBonus (IZ)V func_213660_a
 	func_213678_a (Lnet/minecraft/world/Difficulty;)Z func_213678_a
 	func_213679_a (Lnet/minecraft/entity/monster/VindicatorEntity;)Ljava/util/Random; func_213679_a
 	func_213680_b (Lnet/minecraft/entity/monster/VindicatorEntity;)Z func_213680_b
@@ -29490,9 +29490,9 @@ net/minecraft/entity/monster/WitchEntity net/minecraft/entity/monster/WitchEntit
 	field_213695_bD field_213695_bD
 	potionUseTimer field_82200_e
 	applyPotionDamageCalculations (Lnet/minecraft/util/DamageSource;F)F func_70672_c
+	applyWaveBonus (IZ)V func_213660_a
 	attackEntityWithRangedAttack (Lnet/minecraft/entity/LivingEntity;F)V func_82196_d
 	canBeLeader ()Z func_213637_dY
-	func_213660_a (IZ)V func_213660_a
 	func_213693_h (Lnet/minecraft/entity/LivingEntity;)Z func_213693_h
 	getAmbientSound ()Lnet/minecraft/util/SoundEvent; func_184639_G
 	getDeathSound ()Lnet/minecraft/util/SoundEvent; func_184615_bR
@@ -32891,9 +32891,9 @@ net/minecraft/inventory/container/AbstractFurnaceContainer net/minecraft/invento
 	transferStackInSlot (Lnet/minecraft/entity/player/PlayerEntity;I)Lnet/minecraft/item/ItemStack; func_82846_b
 net/minecraft/inventory/container/BeaconContainer net/minecraft/inventory/container/BeaconContainer
 	beaconSlot field_82864_f
-	field_216971_e field_216971_e
 	field_216972_f field_216972_f
 	tileBeacon field_82866_e
+	worldPosCallable field_216971_e
 	canInteractWith (Lnet/minecraft/entity/player/PlayerEntity;)Z func_75145_c
 	func_216966_c (II)V func_216966_c
 	func_216967_f ()Lnet/minecraft/potion/Effect; func_216967_f
@@ -32933,11 +32933,11 @@ net/minecraft/inventory/container/BrewingStandContainer$PotionSlot net/minecraft
 	isItemValid (Lnet/minecraft/item/ItemStack;)Z func_75214_a
 	onTake (Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack; func_190901_a
 net/minecraft/inventory/container/CartographyContainer net/minecraft/inventory/container/CartographyContainer
-	field_216998_c field_216998_c
-	field_216999_d field_216999_d
 	field_217000_e field_217000_e
 	field_217001_f field_217001_f
 	field_226605_f_ field_226605_f_
+	tableInventory field_216998_c
+	worldPosCallable field_216999_d
 	canInteractWith (Lnet/minecraft/entity/player/PlayerEntity;)Z func_75145_c
 	canMergeSlot (Lnet/minecraft/item/ItemStack;Lnet/minecraft/inventory/container/Slot;)Z func_94530_a
 	func_216993_a (Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)V func_216993_a
@@ -33054,6 +33054,7 @@ net/minecraft/inventory/container/ContainerType net/minecraft/inventory/containe
 	BEACON field_221515_i
 	BLAST_FURNACE field_221516_j
 	BREWING_STAND field_221517_k
+	CARTOGRAPHY_TABLE field_226625_v_
 	CRAFTING field_221518_l
 	ENCHANTMENT field_221519_m
 	FURNACE field_221520_n
@@ -33073,7 +33074,6 @@ net/minecraft/inventory/container/ContainerType net/minecraft/inventory/containe
 	SMOKER field_221527_u
 	STONECUTTER field_221529_w
 	factory field_221530_x
-	field_226625_v_ field_226625_v_
 	create (ILnet/minecraft/entity/player/PlayerInventory;)Lnet/minecraft/inventory/container/Container; func_221506_a
 	func_221504_b (ILnet/minecraft/entity/player/PlayerInventory;)Lnet/minecraft/inventory/container/LecternContainer; func_221504_b
 	register (Ljava/lang/String;Lnet/minecraft/inventory/container/ContainerType$IFactory;)Lnet/minecraft/inventory/container/ContainerType; func_221505_a
@@ -33097,10 +33097,10 @@ net/minecraft/inventory/container/DispenserContainer net/minecraft/inventory/con
 net/minecraft/inventory/container/EnchantmentContainer net/minecraft/inventory/container/EnchantmentContainer
 	enchantClue field_185001_h
 	enchantLevels field_75167_g
-	field_217006_g field_217006_g
 	rand field_75169_l
 	tableInventory field_75168_e
 	worldClue field_185002_i
+	worldPosCallable field_217006_g
 	xpSeed field_178149_f
 	canInteractWith (Lnet/minecraft/entity/player/PlayerEntity;)Z func_75145_c
 	enchantItem (Lnet/minecraft/entity/player/PlayerEntity;I)Z func_75140_a
@@ -33199,8 +33199,8 @@ net/minecraft/inventory/container/IContainerProvider net/minecraft/inventory/con
 net/minecraft/inventory/container/INamedContainerProvider net/minecraft/inventory/container/INamedContainerProvider
 	getDisplayName ()Lnet/minecraft/util/text/ITextComponent; func_145748_c_
 net/minecraft/inventory/container/LecternContainer net/minecraft/inventory/container/LecternContainer
-	field_217018_c field_217018_c
 	field_217019_d field_217019_d
+	lecternInventory field_217018_c
 	canInteractWith (Lnet/minecraft/entity/player/PlayerEntity;)Z func_75145_c
 	enchantItem (Lnet/minecraft/entity/player/PlayerEntity;I)Z func_75140_a
 	getBook ()Lnet/minecraft/item/ItemStack; func_217016_e
@@ -33211,11 +33211,11 @@ net/minecraft/inventory/container/LecternContainer$1 net/minecraft/inventory/con
 	onSlotChanged ()V func_75218_e
 net/minecraft/inventory/container/LoomContainer net/minecraft/inventory/container/LoomContainer
 	field_217034_d field_217034_d
-	field_217035_e field_217035_e
-	field_217040_j field_217040_j
-	field_217041_k field_217041_k
 	field_226622_j_ field_226622_j_
+	inputInventory field_217040_j
 	output field_217039_i
+	outputInventory field_217041_k
+	runnable field_217035_e
 	slotBanner field_217036_f
 	slotDye field_217037_g
 	slotPattern field_217038_h
@@ -33328,12 +33328,12 @@ net/minecraft/inventory/container/PlayerContainer$1 net/minecraft/inventory/cont
 	field_185005_a field_185005_a
 	field_75235_b field_75235_b
 	canTakeStack (Lnet/minecraft/entity/player/PlayerEntity;)Z func_82869_a
-	func_225517_c_ ()Lcom/mojang/datafixers/util/Pair; func_225517_c_
+	getBackground ()Lcom/mojang/datafixers/util/Pair; func_225517_c_
 	getSlotStackLimit ()I func_75219_a
 	isItemValid (Lnet/minecraft/item/ItemStack;)Z func_75214_a
 net/minecraft/inventory/container/PlayerContainer$2 net/minecraft/inventory/container/PlayerContainer$2
 	field_185006_a field_185006_a
-	func_225517_c_ ()Lcom/mojang/datafixers/util/Pair; func_225517_c_
+	getBackground ()Lcom/mojang/datafixers/util/Pair; func_225517_c_
 net/minecraft/inventory/container/RecipeBookContainer net/minecraft/inventory/container/RecipeBookContainer
 	clear ()V func_201768_e
 	fillStackedContents (Lnet/minecraft/item/crafting/RecipeItemHelper;)V func_201771_a
@@ -33345,13 +33345,13 @@ net/minecraft/inventory/container/RecipeBookContainer net/minecraft/inventory/co
 	matches (Lnet/minecraft/item/crafting/IRecipe;)Z func_201769_a
 net/minecraft/inventory/container/RepairContainer net/minecraft/inventory/container/RepairContainer
 	LOGGER field_148326_f
-	field_216980_g field_216980_g
 	inputSlots field_82853_g
 	materialCost field_82856_l
 	maximumCost field_82854_e
 	outputSlot field_82852_f
 	player field_82855_n
 	repairedItemName field_82857_m
+	worldPosCallable field_216980_g
 	canInteractWith (Lnet/minecraft/entity/player/PlayerEntity;)Z func_75145_c
 	func_216973_b (Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)V func_216973_b
 	func_216974_a (Lnet/minecraft/inventory/container/RepairContainer;)Lnet/minecraft/util/IntReferenceHolder; func_216974_a
@@ -33397,7 +33397,7 @@ net/minecraft/inventory/container/Slot net/minecraft/inventory/container/Slot
 	yPos field_75221_f
 	canTakeStack (Lnet/minecraft/entity/player/PlayerEntity;)Z func_82869_a
 	decrStackSize (I)Lnet/minecraft/item/ItemStack; func_75209_a
-	func_225517_c_ ()Lcom/mojang/datafixers/util/Pair; func_225517_c_
+	getBackground ()Lcom/mojang/datafixers/util/Pair; func_225517_c_
 	getHasStack ()Z func_75216_d
 	getItemStackLimit (Lnet/minecraft/item/ItemStack;)I func_178170_b
 	getSlotStackLimit ()I func_75219_a
@@ -33456,13 +33456,12 @@ net/minecraft/inventory/container/StonecutterContainer$2 net/minecraft/inventory
 net/minecraft/inventory/container/WorkbenchContainer net/minecraft/inventory/container/WorkbenchContainer
 	craftMatrix field_75162_e
 	craftResult field_75160_f
-	field_217070_e field_217070_e
 	player field_192390_i
+	worldPosCallable field_217070_e
 	canInteractWith (Lnet/minecraft/entity/player/PlayerEntity;)Z func_75145_c
 	canMergeSlot (Lnet/minecraft/item/ItemStack;Lnet/minecraft/inventory/container/Slot;)Z func_94530_a
 	clear ()V func_201768_e
 	fillStackedContents (Lnet/minecraft/item/crafting/RecipeItemHelper;)V func_201771_a
-	func_217066_a (ILnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/inventory/CraftingInventory;Lnet/minecraft/inventory/CraftResultInventory;)V func_217066_a
 	func_217067_a (Lnet/minecraft/item/ItemStack;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)V func_217067_a
 	func_217068_a (Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)V func_217068_a
 	func_217069_a (Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)V func_217069_a
@@ -33474,6 +33473,7 @@ net/minecraft/inventory/container/WorkbenchContainer net/minecraft/inventory/con
 	onContainerClosed (Lnet/minecraft/entity/player/PlayerEntity;)V func_75134_a
 	onCraftMatrixChanged (Lnet/minecraft/inventory/IInventory;)V func_75130_a
 	transferStackInSlot (Lnet/minecraft/entity/player/PlayerEntity;I)Lnet/minecraft/item/ItemStack; func_82846_b
+	updateCraftingResult (ILnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/inventory/CraftingInventory;Lnet/minecraft/inventory/CraftResultInventory;)V func_217066_a
 net/minecraft/item/AbstractMapItem net/minecraft/item/AbstractMapItem
 	getUpdatePacket (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;)Lnet/minecraft/network/IPacket; func_150911_c
 	isComplex ()Z func_77643_m_
@@ -33545,10 +33545,10 @@ net/minecraft/item/BannerItem net/minecraft/item/BannerItem
 	appendHoverTextFromTileEntityTag (Lnet/minecraft/item/ItemStack;Ljava/util/List;)V func_185054_a
 	getColor ()Lnet/minecraft/item/DyeColor; func_195948_b
 net/minecraft/item/BannerPatternItem net/minecraft/item/BannerPatternItem
-	field_219982_a field_219982_a
+	pattern field_219982_a
 	addInformation (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Ljava/util/List;Lnet/minecraft/client/util/ITooltipFlag;)V func_77624_a
-	func_219980_b ()Lnet/minecraft/tileentity/BannerPattern; func_219980_b
-	func_219981_d ()Lnet/minecraft/util/text/ITextComponent; func_219981_d
+	getBannerPattern ()Lnet/minecraft/tileentity/BannerPattern; func_219980_b
+	getPatternDescription ()Lnet/minecraft/util/text/ITextComponent; func_219981_d
 net/minecraft/item/BedItem net/minecraft/item/BedItem
 	placeBlock (Lnet/minecraft/item/BlockItemUseContext;Lnet/minecraft/block/BlockState;)Z func_195941_b
 net/minecraft/item/BlockItem net/minecraft/item/BlockItem
@@ -33930,10 +33930,10 @@ net/minecraft/item/HoneyBottleItem net/minecraft/item/HoneyBottleItem
 	onItemRightClick (Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult; func_77659_a
 	onItemUseFinish (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Lnet/minecraft/entity/LivingEntity;)Lnet/minecraft/item/ItemStack; func_77654_b
 net/minecraft/item/HorseArmorItem net/minecraft/item/HorseArmorItem
-	field_219978_a field_219978_a
+	armorValue field_219978_a
 	field_219979_b field_219979_b
-	func_219976_d ()Lnet/minecraft/util/ResourceLocation; func_219976_d
-	func_219977_e ()I func_219977_e
+	getArmorTexture ()Lnet/minecraft/util/ResourceLocation; func_219976_d
+	getArmorValue ()I func_219977_e
 net/minecraft/item/IArmorMaterial net/minecraft/item/IArmorMaterial
 	getDamageReductionAmount (Lnet/minecraft/inventory/EquipmentSlotType;)I func_200902_b
 	getDurability (Lnet/minecraft/inventory/EquipmentSlotType;)I func_200896_a
@@ -35165,7 +35165,7 @@ net/minecraft/item/KnowledgeBookItem net/minecraft/item/KnowledgeBookItem
 	LOGGER field_194126_a
 	onItemRightClick (Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult; func_77659_a
 net/minecraft/item/LeadItem net/minecraft/item/LeadItem
-	func_226641_a_ (Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/ActionResultType; func_226641_a_
+	bindPlayerMobs (Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/world/World;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/ActionResultType; func_226641_a_
 	onItemUse (Lnet/minecraft/item/ItemUseContext;)Lnet/minecraft/util/ActionResultType; func_195939_a
 net/minecraft/item/LilyPadItem net/minecraft/item/LilyPadItem
 	onItemRightClick (Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult; func_77659_a
@@ -35403,9 +35403,9 @@ net/minecraft/item/WritableBookItem net/minecraft/item/WritableBookItem
 	onItemUse (Lnet/minecraft/item/ItemUseContext;)Lnet/minecraft/util/ActionResultType; func_195939_a
 net/minecraft/item/WrittenBookItem net/minecraft/item/WrittenBookItem
 	addInformation (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/World;Ljava/util/List;Lnet/minecraft/client/util/ITooltipFlag;)V func_77624_a
-	func_220049_j (Lnet/minecraft/item/ItemStack;)I func_220049_j
 	getDisplayName (Lnet/minecraft/item/ItemStack;)Lnet/minecraft/util/text/ITextComponent; func_200295_i
 	getGeneration (Lnet/minecraft/item/ItemStack;)I func_179230_h
+	getPageCount (Lnet/minecraft/item/ItemStack;)I func_220049_j
 	hasEffect (Lnet/minecraft/item/ItemStack;)Z func_77636_d
 	onItemRightClick (Lnet/minecraft/world/World;Lnet/minecraft/entity/player/PlayerEntity;Lnet/minecraft/util/Hand;)Lnet/minecraft/util/ActionResult; func_77659_a
 	onItemUse (Lnet/minecraft/item/ItemUseContext;)Lnet/minecraft/util/ActionResultType; func_195939_a
@@ -35621,42 +35621,42 @@ net/minecraft/item/crafting/MapExtendingRecipe net/minecraft/item/crafting/MapEx
 	matches (Lnet/minecraft/inventory/CraftingInventory;Lnet/minecraft/world/World;)Z func_77569_a
 	matches (Lnet/minecraft/inventory/IInventory;Lnet/minecraft/world/World;)Z func_77569_a
 net/minecraft/item/crafting/RecipeBook net/minecraft/item/crafting/RecipeBook
-	field_216763_g field_216763_g
-	field_216764_h field_216764_h
-	field_216765_i field_216765_i
-	field_216766_j field_216766_j
+	isBlastFurnaceFilteringCraftable field_216764_h
+	isBlastFurnaceGuiOpen field_216763_g
 	isFilteringCraftable field_192819_c
 	isFurnaceFilteringCraftable field_202886_f
 	isFurnaceGuiOpen field_202885_e
 	isGuiOpen field_192818_b
+	isSmokerFilteringCraftable field_216766_j
+	isSmokerGuiOpen field_216765_i
 	newRecipes field_194078_b
 	recipes field_194077_a
 	copyFrom (Lnet/minecraft/item/crafting/RecipeBook;)V func_193824_a
-	func_216755_e (Z)V func_216755_e
-	func_216756_f (Z)V func_216756_f
-	func_216757_g (Z)V func_216757_g
-	func_216758_e ()Z func_216758_e
-	func_216759_g ()Z func_216759_g
-	func_216760_h (Z)V func_216760_h
-	func_216761_f ()Z func_216761_f
-	func_216762_h ()Z func_216762_h
 	func_226144_b_ (Lnet/minecraft/util/ResourceLocation;)Z func_226144_b_
+	isBlastFurnaceFilteringCraftable ()Z func_216761_f
+	isBlastFurnaceGuiOpen ()Z func_216758_e
 	isFilteringCraftable ()Z func_192815_c
 	isFilteringCraftable (Lnet/minecraft/inventory/container/RecipeBookContainer;)Z func_203432_a
 	isFurnaceFilteringCraftable ()Z func_202884_d
 	isFurnaceGuiOpen ()Z func_202883_c
 	isGuiOpen ()Z func_192812_b
 	isNew (Lnet/minecraft/item/crafting/IRecipe;)Z func_194076_e
+	isSmokerFilteringCraftable ()Z func_216762_h
+	isSmokerGuiOpen ()Z func_216759_g
 	isUnlocked (Lnet/minecraft/item/crafting/IRecipe;)Z func_193830_f
 	lock (Lnet/minecraft/item/crafting/IRecipe;)V func_193831_b
 	lock (Lnet/minecraft/util/ResourceLocation;)V func_209119_b
 	markNew (Lnet/minecraft/item/crafting/IRecipe;)V func_193825_e
 	markNew (Lnet/minecraft/util/ResourceLocation;)V func_209120_c
 	markSeen (Lnet/minecraft/item/crafting/IRecipe;)V func_194074_f
+	setBlastFurnaceFilteringCraftable (Z)V func_216756_f
+	setBlastFurnaceGuiOpen (Z)V func_216755_e
 	setFilteringCraftable (Z)V func_192810_b
 	setFurnaceFilteringCraftable (Z)V func_202882_d
 	setFurnaceGuiOpen (Z)V func_202881_c
 	setGuiOpen (Z)V func_192813_a
+	setSmokerFilteringCraftable (Z)V func_216760_h
+	setSmokerGuiOpen (Z)V func_216757_g
 	unlock (Lnet/minecraft/item/crafting/IRecipe;)V func_194073_a
 	unlock (Lnet/minecraft/util/ResourceLocation;)V func_209118_a
 net/minecraft/item/crafting/RecipeItemHelper net/minecraft/item/crafting/RecipeItemHelper
@@ -36427,7 +36427,7 @@ net/minecraft/nbt/NBTSizeTracker$1 net/minecraft/nbt/NBTSizeTracker$1
 	read (J)V func_152450_a
 net/minecraft/nbt/NBTTypes net/minecraft/nbt/NBTTypes
 	field_229709_a_ field_229709_a_
-	func_229710_a_ (I)Lnet/minecraft/nbt/INBTType; func_229710_a_
+	getGetTypeByID (I)Lnet/minecraft/nbt/INBTType; func_229710_a_
 net/minecraft/nbt/NBTUtil net/minecraft/nbt/NBTUtil
 	LOGGER field_193591_a
 	areNBTEquals (Lnet/minecraft/nbt/INBT;Lnet/minecraft/nbt/INBT;Z)Z func_181123_a
@@ -37326,9 +37326,6 @@ net/minecraft/network/login/server/SLoginSuccessPacket net/minecraft/network/log
 	readPacketData (Lnet/minecraft/network/PacketBuffer;)V func_148837_a
 	writePacketData (Lnet/minecraft/network/PacketBuffer;)V func_148840_b
 net/minecraft/network/play/IServerPlayNetHandler net/minecraft/network/play/IServerPlayNetHandler
-	func_217261_a (Lnet/minecraft/network/play/client/CLockDifficultyPacket;)V func_217261_a
-	func_217262_a (Lnet/minecraft/network/play/client/CUpdateJigsawBlockPacket;)V func_217262_a
-	func_217263_a (Lnet/minecraft/network/play/client/CSetDifficultyPacket;)V func_217263_a
 	handleAnimation (Lnet/minecraft/network/play/client/CAnimateHandPacket;)V func_175087_a
 	handleRecipeBookUpdate (Lnet/minecraft/network/play/client/CRecipeInfoPacket;)V func_191984_a
 	handleResourcePackStatus (Lnet/minecraft/network/play/client/CResourcePackStatusPacket;)V func_175086_a
@@ -37349,6 +37346,7 @@ net/minecraft/network/play/IServerPlayNetHandler net/minecraft/network/play/ISer
 	processHeldItemChange (Lnet/minecraft/network/play/client/CHeldItemChangePacket;)V func_147355_a
 	processInput (Lnet/minecraft/network/play/client/CInputPacket;)V func_147358_a
 	processKeepAlive (Lnet/minecraft/network/play/client/CKeepAlivePacket;)V func_147353_a
+	processLockDifficulty (Lnet/minecraft/network/play/client/CLockDifficultyPacket;)V func_217261_a
 	processNBTQueryBlockEntity (Lnet/minecraft/network/play/client/CQueryTileEntityNBTPacket;)V func_211525_a
 	processNBTQueryEntity (Lnet/minecraft/network/play/client/CQueryEntityNBTPacket;)V func_211526_a
 	processPickItem (Lnet/minecraft/network/play/client/CPickItemPacket;)V func_210152_a
@@ -37358,6 +37356,7 @@ net/minecraft/network/play/IServerPlayNetHandler net/minecraft/network/play/ISer
 	processPlayerDigging (Lnet/minecraft/network/play/client/CPlayerDiggingPacket;)V func_147345_a
 	processRenameItem (Lnet/minecraft/network/play/client/CRenameItemPacket;)V func_210155_a
 	processSelectTrade (Lnet/minecraft/network/play/client/CSelectTradePacket;)V func_210159_a
+	processSetDifficulty (Lnet/minecraft/network/play/client/CSetDifficultyPacket;)V func_217263_a
 	processSteerBoat (Lnet/minecraft/network/play/client/CSteerBoatPacket;)V func_184340_a
 	processTabComplete (Lnet/minecraft/network/play/client/CTabCompletePacket;)V func_195518_a
 	processTryUseItem (Lnet/minecraft/network/play/client/CPlayerTryUseItemPacket;)V func_147346_a
@@ -37365,6 +37364,7 @@ net/minecraft/network/play/IServerPlayNetHandler net/minecraft/network/play/ISer
 	processUpdateBeacon (Lnet/minecraft/network/play/client/CUpdateBeaconPacket;)V func_210154_a
 	processUpdateCommandBlock (Lnet/minecraft/network/play/client/CUpdateCommandBlockPacket;)V func_210153_a
 	processUpdateCommandMinecart (Lnet/minecraft/network/play/client/CUpdateMinecartCommandBlockPacket;)V func_210158_a
+	processUpdateJigsawBlock (Lnet/minecraft/network/play/client/CUpdateJigsawBlockPacket;)V func_217262_a
 	processUpdateSign (Lnet/minecraft/network/play/client/CUpdateSignPacket;)V func_147343_a
 	processUpdateStructureBlock (Lnet/minecraft/network/play/client/CUpdateStructureBlockPacket;)V func_210157_a
 	processUseEntity (Lnet/minecraft/network/play/client/CUseEntityPacket;)V func_147340_a
@@ -37408,10 +37408,6 @@ net/minecraft/network/play/ServerPlayNetHandler net/minecraft/network/play/Serve
 	func_195519_a (Lnet/minecraft/network/play/client/CTabCompletePacket;Lcom/mojang/brigadier/suggestion/Suggestions;)V func_195519_a
 	func_210161_a (Lnet/minecraft/util/text/ITextComponent;Lio/netty/util/concurrent/Future;)V func_210161_a
 	func_210162_b (Lnet/minecraft/network/IPacket;)Ljava/lang/String; func_210162_b
-	func_217261_a (Lnet/minecraft/network/play/client/CLockDifficultyPacket;)V func_217261_a
-	func_217262_a (Lnet/minecraft/network/play/client/CUpdateJigsawBlockPacket;)V func_217262_a
-	func_217263_a (Lnet/minecraft/network/play/client/CSetDifficultyPacket;)V func_217263_a
-	func_217264_d ()Z func_217264_d
 	func_217265_a (Lnet/minecraft/network/play/client/CPlaceRecipePacket;Lnet/minecraft/item/crafting/IRecipe;)V func_217265_a
 	getNetworkManager ()Lnet/minecraft/network/NetworkManager; func_147298_b
 	handleAnimation (Lnet/minecraft/network/play/client/CAnimateHandPacket;)V func_175087_a
@@ -37423,6 +37419,7 @@ net/minecraft/network/play/ServerPlayNetHandler net/minecraft/network/play/Serve
 	isMovePlayerPacketInvalid (Lnet/minecraft/network/play/client/CPlayerPacket;)Z func_183006_b
 	isMoveVehiclePacketInvalid (Lnet/minecraft/network/play/client/CMoveVehiclePacket;)Z func_184341_b
 	isPlayerNotInBlock (Lnet/minecraft/world/IWorldReader;)Z func_223133_a
+	isServerOwner ()Z func_217264_d
 	onDisconnect (Lnet/minecraft/util/text/ITextComponent;)V func_147231_a
 	processChatMessage (Lnet/minecraft/network/play/client/CChatMessagePacket;)V func_147354_a
 	processClickWindow (Lnet/minecraft/network/play/client/CClickWindowPacket;)V func_147351_a
@@ -37439,6 +37436,7 @@ net/minecraft/network/play/ServerPlayNetHandler net/minecraft/network/play/Serve
 	processHeldItemChange (Lnet/minecraft/network/play/client/CHeldItemChangePacket;)V func_147355_a
 	processInput (Lnet/minecraft/network/play/client/CInputPacket;)V func_147358_a
 	processKeepAlive (Lnet/minecraft/network/play/client/CKeepAlivePacket;)V func_147353_a
+	processLockDifficulty (Lnet/minecraft/network/play/client/CLockDifficultyPacket;)V func_217261_a
 	processNBTQueryBlockEntity (Lnet/minecraft/network/play/client/CQueryTileEntityNBTPacket;)V func_211525_a
 	processNBTQueryEntity (Lnet/minecraft/network/play/client/CQueryEntityNBTPacket;)V func_211526_a
 	processPickItem (Lnet/minecraft/network/play/client/CPickItemPacket;)V func_210152_a
@@ -37448,6 +37446,7 @@ net/minecraft/network/play/ServerPlayNetHandler net/minecraft/network/play/Serve
 	processPlayerDigging (Lnet/minecraft/network/play/client/CPlayerDiggingPacket;)V func_147345_a
 	processRenameItem (Lnet/minecraft/network/play/client/CRenameItemPacket;)V func_210155_a
 	processSelectTrade (Lnet/minecraft/network/play/client/CSelectTradePacket;)V func_210159_a
+	processSetDifficulty (Lnet/minecraft/network/play/client/CSetDifficultyPacket;)V func_217263_a
 	processSteerBoat (Lnet/minecraft/network/play/client/CSteerBoatPacket;)V func_184340_a
 	processTabComplete (Lnet/minecraft/network/play/client/CTabCompletePacket;)V func_195518_a
 	processTryUseItem (Lnet/minecraft/network/play/client/CPlayerTryUseItemPacket;)V func_147346_a
@@ -37455,6 +37454,7 @@ net/minecraft/network/play/ServerPlayNetHandler net/minecraft/network/play/Serve
 	processUpdateBeacon (Lnet/minecraft/network/play/client/CUpdateBeaconPacket;)V func_210154_a
 	processUpdateCommandBlock (Lnet/minecraft/network/play/client/CUpdateCommandBlockPacket;)V func_210153_a
 	processUpdateCommandMinecart (Lnet/minecraft/network/play/client/CUpdateMinecartCommandBlockPacket;)V func_210158_a
+	processUpdateJigsawBlock (Lnet/minecraft/network/play/client/CUpdateJigsawBlockPacket;)V func_217262_a
 	processUpdateSign (Lnet/minecraft/network/play/client/CUpdateSignPacket;)V func_147343_a
 	processUpdateStructureBlock (Lnet/minecraft/network/play/client/CUpdateStructureBlockPacket;)V func_210157_a
 	processUseEntity (Lnet/minecraft/network/play/client/CUseEntityPacket;)V func_147340_a
@@ -37640,8 +37640,8 @@ net/minecraft/network/play/client/CKeepAlivePacket net/minecraft/network/play/cl
 	readPacketData (Lnet/minecraft/network/PacketBuffer;)V func_148837_a
 	writePacketData (Lnet/minecraft/network/PacketBuffer;)V func_148840_b
 net/minecraft/network/play/client/CLockDifficultyPacket net/minecraft/network/play/client/CLockDifficultyPacket
-	field_218777_a field_218777_a
-	func_218776_b ()Z func_218776_b
+	difficultyLocked field_218777_a
+	isDifficultyLocked ()Z func_218776_b
 	processPacket (Lnet/minecraft/network/INetHandler;)V func_148833_a
 	processPacket (Lnet/minecraft/network/play/IServerPlayNetHandler;)V func_148833_a
 	readPacketData (Lnet/minecraft/network/PacketBuffer;)V func_148837_a
@@ -37864,8 +37864,8 @@ net/minecraft/network/play/client/CSelectTradePacket net/minecraft/network/play/
 	readPacketData (Lnet/minecraft/network/PacketBuffer;)V func_148837_a
 	writePacketData (Lnet/minecraft/network/PacketBuffer;)V func_148840_b
 net/minecraft/network/play/client/CSetDifficultyPacket net/minecraft/network/play/client/CSetDifficultyPacket
-	field_218774_a field_218774_a
-	func_218773_b ()Lnet/minecraft/world/Difficulty; func_218773_b
+	difficulty field_218774_a
+	getDifficulty ()Lnet/minecraft/world/Difficulty; func_218773_b
 	processPacket (Lnet/minecraft/network/INetHandler;)V func_148833_a
 	processPacket (Lnet/minecraft/network/play/IServerPlayNetHandler;)V func_148833_a
 	readPacketData (Lnet/minecraft/network/PacketBuffer;)V func_148837_a
@@ -39738,8 +39738,8 @@ net/minecraft/pathfinding/PathNavigator net/minecraft/pathfinding/PathNavigator
 	currentPath field_75514_c
 	entity field_75515_a
 	field_225468_r field_225468_r
-	field_226333_p_ field_226333_p_
 	field_226334_s_ field_226334_s_
+	followRangeAttribute field_226333_p_
 	lastPosCheck field_75521_i
 	lastTimeUpdated field_188563_q
 	lastTimeoutCheck field_188559_m
@@ -40035,11 +40035,11 @@ net/minecraft/potion/PotionBrewing net/minecraft/potion/PotionBrewing
 	addMix (Lnet/minecraft/potion/Potion;Lnet/minecraft/item/Item;Lnet/minecraft/potion/Potion;)V func_193357_a
 	doReaction (Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Lnet/minecraft/item/ItemStack; func_185212_d
 	func_210319_d (Lnet/minecraft/item/ItemStack;)Z func_210319_d
-	func_222124_a (Lnet/minecraft/potion/Potion;)Z func_222124_a
 	hasConversions (Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Z func_185208_a
 	hasItemConversions (Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Z func_185206_b
 	hasTypeConversions (Lnet/minecraft/item/ItemStack;Lnet/minecraft/item/ItemStack;)Z func_185209_c
 	init ()V func_185207_a
+	isBrewablePotion (Lnet/minecraft/potion/Potion;)Z func_222124_a
 	isItemConversionReagent (Lnet/minecraft/item/ItemStack;)Z func_185203_b
 	isReagent (Lnet/minecraft/item/ItemStack;)Z func_185205_a
 	isTypeConversionReagent (Lnet/minecraft/item/ItemStack;)Z func_185211_c
@@ -42991,8 +42991,8 @@ net/minecraft/tags/EntityTypeTags net/minecraft/tags/EntityTypeTags
 	func_219758_a (Lnet/minecraft/util/ResourceLocation;)Ljava/util/Optional; func_219758_a
 	func_219760_c ()Lnet/minecraft/tags/TagCollection; func_219760_c
 	func_219761_b ()I func_219761_b
-	func_219763_a (Ljava/lang/String;)Lnet/minecraft/tags/Tag; func_219763_a
 	getCollection ()Lnet/minecraft/tags/TagCollection; func_219762_a
+	makeWrapperTag (Ljava/lang/String;)Lnet/minecraft/tags/Tag; func_219763_a
 	setCollection (Lnet/minecraft/tags/TagCollection;)V func_219759_a
 net/minecraft/tags/EntityTypeTags$Wrapper net/minecraft/tags/EntityTypeTags$Wrapper
 	cachedTag field_219744_b
@@ -43427,10 +43427,10 @@ net/minecraft/tileentity/AbstractFurnaceTileEntity net/minecraft/tileentity/Abst
 	burnTime field_214018_j
 	cookTime field_214020_l
 	cookTimeTotal field_214021_m
-	field_214022_n field_214022_n
 	furnaceData field_214013_b
 	items field_214012_a
 	recipeType field_214014_c
+	recipes field_214022_n
 	recipesUsed field_214019_k
 	addItemBurnTime (Ljava/util/Map;Lnet/minecraft/util/IItemProvider;I)V func_213996_a
 	addItemTagBurnTime (Ljava/util/Map;Lnet/minecraft/tags/Tag;I)V func_213992_a
@@ -44648,6 +44648,7 @@ net/minecraft/util/DamageSource net/minecraft/util/DamageSource
 	projectile field_76382_s
 	canHarmInCreative ()Z func_76357_e
 	causeArrowDamage (Lnet/minecraft/entity/projectile/AbstractArrowEntity;Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/DamageSource; func_76353_a
+	causeBeeStingDamage (Lnet/minecraft/entity/LivingEntity;)Lnet/minecraft/util/DamageSource; func_226252_a_
 	causeExplosionDamage (Lnet/minecraft/entity/LivingEntity;)Lnet/minecraft/util/DamageSource; func_188405_b
 	causeExplosionDamage (Lnet/minecraft/world/Explosion;)Lnet/minecraft/util/DamageSource; func_94539_a
 	causeFireballDamage (Lnet/minecraft/entity/projectile/DamagingProjectileEntity;Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/DamageSource; func_76362_a
@@ -44658,7 +44659,6 @@ net/minecraft/util/DamageSource net/minecraft/util/DamageSource
 	causeThornsDamage (Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/DamageSource; func_92087_a
 	causeThrownDamage (Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/DamageSource; func_76356_a
 	causeTridentDamage (Lnet/minecraft/entity/Entity;Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/DamageSource; func_203096_a
-	func_226252_a_ (Lnet/minecraft/entity/LivingEntity;)Lnet/minecraft/util/DamageSource; func_226252_a_
 	getDamageLocation ()Lnet/minecraft/util/math/Vec3d; func_188404_v
 	getDamageType ()Ljava/lang/String; func_76355_l
 	getDeathMessage (Lnet/minecraft/entity/LivingEntity;)Lnet/minecraft/util/text/ITextComponent; func_151519_b
@@ -44882,12 +44882,12 @@ net/minecraft/util/EnumTypeAdapterFactory$1 net/minecraft/util/EnumTypeAdapterFa
 net/minecraft/util/FastRandom net/minecraft/util/FastRandom
 	mix (JJ)J func_226162_a_
 net/minecraft/util/FileUtil net/minecraft/util/FileUtil
+	RESERVED_FILENAMES_PATTERN field_214997_b
 	field_214996_a field_214996_a
-	field_214997_b field_214997_b
-	func_214992_a (Ljava/nio/file/Path;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; func_214992_a
+	containsReservedName (Ljava/nio/file/Path;)Z func_214994_b
+	findAvailableName (Ljava/nio/file/Path;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; func_214992_a
 	func_214993_b (Ljava/nio/file/Path;Ljava/lang/String;Ljava/lang/String;)Ljava/nio/file/Path; func_214993_b
-	func_214994_b (Ljava/nio/file/Path;)Z func_214994_b
-	func_214995_a (Ljava/nio/file/Path;)Z func_214995_a
+	isNormalized (Ljava/nio/file/Path;)Z func_214995_a
 net/minecraft/util/FoodStats net/minecraft/util/FoodStats
 	foodExhaustionLevel field_75126_c
 	foodLevel field_75127_a
@@ -44983,7 +44983,7 @@ net/minecraft/util/IndirectEntityDamageSource net/minecraft/util/IndirectEntityD
 	getImmediateSource ()Lnet/minecraft/entity/Entity; func_76364_f
 	getTrueSource ()Lnet/minecraft/entity/Entity; func_76346_g
 net/minecraft/util/IntArray net/minecraft/util/IntArray
-	field_221479_a field_221479_a
+	array field_221479_a
 	get (I)I func_221476_a
 	set (II)V func_221477_a
 	size ()I func_221478_a
@@ -45030,7 +45030,7 @@ net/minecraft/util/IntReferenceHolder$3 net/minecraft/util/IntReferenceHolder$3
 	get ()I func_221495_b
 	set (I)V func_221494_a
 net/minecraft/util/JSONUtils net/minecraft/util/JSONUtils
-	field_212747_a field_212747_a
+	GSON field_212747_a
 	deserializeClass (Lcom/google/gson/JsonElement;Ljava/lang/String;Lcom/google/gson/JsonDeserializationContext;Ljava/lang/Class;)Ljava/lang/Object; func_188179_a
 	deserializeClass (Lcom/google/gson/JsonObject;Ljava/lang/String;Lcom/google/gson/JsonDeserializationContext;Ljava/lang/Class;)Ljava/lang/Object; func_188174_a
 	deserializeClass (Lcom/google/gson/JsonObject;Ljava/lang/String;Ljava/lang/Object;Lcom/google/gson/JsonDeserializationContext;Ljava/lang/Class;)Ljava/lang/Object; func_188177_a
@@ -45047,14 +45047,11 @@ net/minecraft/util/JSONUtils net/minecraft/util/JSONUtils
 	fromJson (Ljava/lang/String;)Lcom/google/gson/JsonObject; func_212745_a
 	fromJson (Ljava/lang/String;Z)Lcom/google/gson/JsonObject; func_212746_a
 	func_219793_a (Ljava/lang/String;Ljava/lang/String;)Lcom/google/gson/JsonSyntaxException; func_219793_a
-	func_219794_f (Lcom/google/gson/JsonElement;Ljava/lang/String;)J func_219794_f
-	func_219795_a (Lcom/google/gson/JsonObject;Ljava/lang/String;B)B func_219795_a
-	func_219796_a (Lcom/google/gson/JsonObject;Ljava/lang/String;J)J func_219796_a
-	func_226161_m_ (Lcom/google/gson/JsonObject;Ljava/lang/String;)J func_226161_m_
 	getBoolean (Lcom/google/gson/JsonElement;Ljava/lang/String;)Z func_151216_b
 	getBoolean (Lcom/google/gson/JsonObject;Ljava/lang/String;)Z func_151212_i
 	getBoolean (Lcom/google/gson/JsonObject;Ljava/lang/String;Z)Z func_151209_a
 	getByte (Lcom/google/gson/JsonElement;Ljava/lang/String;)B func_204332_h
+	getByte (Lcom/google/gson/JsonObject;Ljava/lang/String;B)B func_219795_a
 	getFloat (Lcom/google/gson/JsonElement;Ljava/lang/String;)F func_151220_d
 	getFloat (Lcom/google/gson/JsonObject;Ljava/lang/String;)F func_151217_k
 	getFloat (Lcom/google/gson/JsonObject;Ljava/lang/String;F)F func_151221_a
@@ -45069,6 +45066,9 @@ net/minecraft/util/JSONUtils net/minecraft/util/JSONUtils
 	getJsonObject (Lcom/google/gson/JsonElement;Ljava/lang/String;)Lcom/google/gson/JsonObject; func_151210_l
 	getJsonObject (Lcom/google/gson/JsonObject;Ljava/lang/String;)Lcom/google/gson/JsonObject; func_152754_s
 	getJsonObject (Lcom/google/gson/JsonObject;Ljava/lang/String;Lcom/google/gson/JsonObject;)Lcom/google/gson/JsonObject; func_151218_a
+	getLong (Lcom/google/gson/JsonElement;Ljava/lang/String;)J func_219794_f
+	getLong (Lcom/google/gson/JsonObject;Ljava/lang/String;)J func_226161_m_
+	getLong (Lcom/google/gson/JsonObject;Ljava/lang/String;J)J func_219796_a
 	getString (Lcom/google/gson/JsonElement;Ljava/lang/String;)Ljava/lang/String; func_151206_a
 	getString (Lcom/google/gson/JsonObject;Ljava/lang/String;)Ljava/lang/String; func_151200_h
 	getString (Lcom/google/gson/JsonObject;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String; func_151219_a
@@ -47725,6 +47725,7 @@ net/minecraft/util/math/BlockPos net/minecraft/util/math/BlockPos
 	add (DDD)Lnet/minecraft/util/math/BlockPos; func_177963_a
 	add (III)Lnet/minecraft/util/math/BlockPos; func_177982_a
 	add (Lnet/minecraft/util/math/Vec3i;)Lnet/minecraft/util/math/BlockPos; func_177971_a
+	atSectionBottomY (J)J func_218288_f
 	crossProduct (Lnet/minecraft/util/math/Vec3i;)Lnet/minecraft/util/math/BlockPos; func_177955_d
 	crossProduct (Lnet/minecraft/util/math/Vec3i;)Lnet/minecraft/util/math/Vec3i; func_177955_d
 	deserialize (Lcom/mojang/datafixers/Dynamic;)Lnet/minecraft/util/math/BlockPos; func_218286_a
@@ -47739,7 +47740,6 @@ net/minecraft/util/math/BlockPos net/minecraft/util/math/BlockPos
 	func_218280_b ([II)V func_218280_b
 	func_218284_a ([II)V func_218284_a
 	func_218285_c ([II)V func_218285_c
-	func_218288_f (J)J func_218288_f
 	getAllInBox (IIIIII)Ljava/util/stream/Stream; func_218287_a
 	getAllInBox (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;)Ljava/util/stream/Stream; func_218281_b
 	getAllInBox (Lnet/minecraft/util/math/MutableBoundingBox;)Ljava/util/stream/Stream; func_229383_a_
@@ -47778,14 +47778,14 @@ net/minecraft/util/math/BlockPos$1 net/minecraft/util/math/BlockPos$1
 	pos field_218297_b
 	tryAdvance (Ljava/util/function/Consumer;)Z tryAdvance
 net/minecraft/util/math/BlockPos$2 net/minecraft/util/math/BlockPos$2
+	coordinateIterator field_218298_a
 	field_191544_a field_191544_a
 	field_191545_b field_191545_b
 	field_191546_c field_191546_c
 	field_191547_d field_191547_d
 	field_191548_e field_191548_e
 	field_191549_f field_191549_f
-	field_218298_a field_218298_a
-	field_218299_b field_218299_b
+	mutablePos field_218299_b
 	computeNext ()Ljava/lang/Object; computeNext
 	computeNext ()Lnet/minecraft/util/math/BlockPos; computeNext
 net/minecraft/util/math/BlockPos$3 net/minecraft/util/math/BlockPos$3
@@ -48053,10 +48053,10 @@ net/minecraft/util/math/RayTraceContext net/minecraft/util/math/RayTraceContext
 	endVec field_222255_b
 	fluidMode field_222257_d
 	startVec field_222254_a
-	func_222250_a ()Lnet/minecraft/util/math/Vec3d; func_222250_a
-	func_222253_b ()Lnet/minecraft/util/math/Vec3d; func_222253_b
 	getBlockShape (Lnet/minecraft/block/BlockState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/shapes/VoxelShape; func_222251_a
+	getEndVec ()Lnet/minecraft/util/math/Vec3d; func_222250_a
 	getFluidShape (Lnet/minecraft/fluid/IFluidState;Lnet/minecraft/world/IBlockReader;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/shapes/VoxelShape; func_222252_a
+	getStartVec ()Lnet/minecraft/util/math/Vec3d; func_222253_b
 net/minecraft/util/math/RayTraceContext$BlockMode net/minecraft/util/math/RayTraceContext$BlockMode
 	$VALUES $VALUES
 	COLLIDER COLLIDER
@@ -48245,11 +48245,11 @@ net/minecraft/util/math/shapes/DoubleRangeList net/minecraft/util/math/shapes/Do
 	size ()I size
 net/minecraft/util/math/shapes/EntitySelectionContext net/minecraft/util/math/shapes/EntitySelectionContext
 	DUMMY field_216379_a
-	field_216381_c field_216381_c
-	field_227579_b_ field_227579_b_
 	item field_216382_d
+	posY field_216381_c
+	sneaking field_227579_b_
 	func_216378_a (Lnet/minecraft/util/math/shapes/VoxelShape;Lnet/minecraft/util/math/BlockPos;Z)Z func_216378_a
-	func_225581_b_ ()Z func_225581_b_
+	getPosY ()Z func_225581_b_
 	hasItem (Lnet/minecraft/item/Item;)Z func_216375_a
 net/minecraft/util/math/shapes/EntitySelectionContext$1 net/minecraft/util/math/shapes/EntitySelectionContext$1
 	func_216378_a (Lnet/minecraft/util/math/shapes/VoxelShape;Lnet/minecraft/util/math/BlockPos;Z)Z func_216378_a
@@ -48296,7 +48296,7 @@ net/minecraft/util/math/shapes/ISelectionContext net/minecraft/util/math/shapes/
 	dummy ()Lnet/minecraft/util/math/shapes/ISelectionContext; func_216377_a
 	forEntity (Lnet/minecraft/entity/Entity;)Lnet/minecraft/util/math/shapes/ISelectionContext; func_216374_a
 	func_216378_a (Lnet/minecraft/util/math/shapes/VoxelShape;Lnet/minecraft/util/math/BlockPos;Z)Z func_216378_a
-	func_225581_b_ ()Z func_225581_b_
+	getPosY ()Z func_225581_b_
 	hasItem (Lnet/minecraft/item/Item;)Z func_216375_a
 net/minecraft/util/math/shapes/IndirectMerger net/minecraft/util/math/shapes/IndirectMerger
 	field_197856_a field_197856_a
@@ -49601,8 +49601,8 @@ net/minecraft/world/GrassColors net/minecraft/world/GrassColors
 	get (DD)I func_77480_a
 	setGrassBiomeColorizer ([I)V func_77479_a
 net/minecraft/world/IBlockReader net/minecraft/world/IBlockReader
+	doRayTrace (Lnet/minecraft/util/math/RayTraceContext;Ljava/util/function/BiFunction;Ljava/util/function/Function;)Ljava/lang/Object; func_217300_a
 	func_217297_a (Lnet/minecraft/util/math/RayTraceContext;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/math/BlockRayTraceResult; func_217297_a
-	func_217300_a (Lnet/minecraft/util/math/RayTraceContext;Ljava/util/function/BiFunction;Ljava/util/function/Function;)Ljava/lang/Object; func_217300_a
 	func_217302_b (Lnet/minecraft/util/math/RayTraceContext;)Lnet/minecraft/util/math/BlockRayTraceResult; func_217302_b
 	getBlockState (Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState; func_180495_p
 	getFluidState (Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/fluid/IFluidState; func_204610_c
@@ -49615,7 +49615,6 @@ net/minecraft/world/IBlockReader net/minecraft/world/IBlockReader
 net/minecraft/world/ICollisionReader net/minecraft/world/ICollisionReader
 	checkNoEntityCollision (Lnet/minecraft/entity/Entity;)Z func_226668_i_
 	checkNoEntityCollision (Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/shapes/VoxelShape;)Z func_195585_a
-	func_226663_a_ (Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/shapes/ISelectionContext;)Z func_226663_a_
 	getBlockReader (II)Lnet/minecraft/world/IBlockReader; func_225522_c_
 	getCollisionShapes (Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/AxisAlignedBB;)Ljava/util/stream/Stream; func_226666_b_
 	getCollisionShapes (Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/AxisAlignedBB;Ljava/util/Set;)Ljava/util/stream/Stream; func_226667_c_
@@ -49625,6 +49624,7 @@ net/minecraft/world/ICollisionReader net/minecraft/world/ICollisionReader
 	hasNoCollisions (Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/AxisAlignedBB;)Z func_226665_a__
 	hasNoCollisions (Lnet/minecraft/entity/Entity;Lnet/minecraft/util/math/AxisAlignedBB;Ljava/util/Set;)Z func_226662_a_
 	hasNoCollisions (Lnet/minecraft/util/math/AxisAlignedBB;)Z func_226664_a_
+	placedBlockWouldCollide (Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/shapes/ISelectionContext;)Z func_226663_a_
 net/minecraft/world/ICollisionReader$1 net/minecraft/world/ICollisionReader$1
 	field_226670_a_ field_226670_a_
 	field_226671_b_ field_226671_b_
@@ -50564,10 +50564,10 @@ net/minecraft/world/biome/FrozenRiverBiome net/minecraft/world/biome/FrozenRiver
 net/minecraft/world/biome/FuzzedBiomeMagnifier net/minecraft/world/biome/FuzzedBiomeMagnifier
 	$VALUES $VALUES
 	INSTANCE INSTANCE
-	func_226843_a_ (D)D func_226843_a_
-	func_226844_a_ (J)D func_226844_a_
-	func_226845_a_ (JIIIDDD)D func_226845_a_
+	distanceToCorner (JIIIDDD)D func_226845_a_
 	getBiome (JIIILnet/minecraft/world/biome/BiomeManager$IBiomeReader;)Lnet/minecraft/world/biome/Biome; func_225532_a_
+	randomDouble (J)D func_226844_a_
+	square (D)D func_226843_a_
 	valueOf (Ljava/lang/String;)Lnet/minecraft/world/biome/FuzzedBiomeMagnifier; valueOf
 	values ()[Lnet/minecraft/world/biome/FuzzedBiomeMagnifier; values
 net/minecraft/world/biome/GiantSpruceTaigaBiome net/minecraft/world/biome/GiantSpruceTaigaBiome
@@ -50838,7 +50838,7 @@ net/minecraft/world/chunk/AbstractChunkProvider net/minecraft/world/chunk/Abstra
 	getChunk (IILnet/minecraft/world/chunk/ChunkStatus;Z)Lnet/minecraft/world/chunk/IChunk; func_212849_a_
 	getChunk (IIZ)Lnet/minecraft/world/chunk/Chunk; func_217205_a
 	getChunkForLight (II)Lnet/minecraft/world/IBlockReader; func_217202_b
-	getChunkWithoutLoading (II)Lnet/minecraft/world/chunk/Chunk; func_225313_a
+	getChunkNow (II)Lnet/minecraft/world/chunk/Chunk; func_225313_a
 	getLightManager ()Lnet/minecraft/world/lighting/WorldLightManager; func_212863_j_
 	isChunkLoaded (Lnet/minecraft/entity/Entity;)Z func_217204_a
 	isChunkLoaded (Lnet/minecraft/util/math/ChunkPos;)Z func_222865_a
@@ -50965,10 +50965,10 @@ net/minecraft/world/chunk/ChunkPrimer net/minecraft/world/chunk/ChunkPrimer
 	carvingMasks field_205769_s
 	deferredTileEntities field_201660_h
 	entities field_201662_j
-	field_217334_e field_217334_e
 	hasLight field_217335_u
 	heightmaps field_201657_e
 	inhabitedTime field_209217_s
+	lightManager field_217334_e
 	lightPositions field_201663_k
 	modified field_201655_c
 	packedPositions field_201665_m
@@ -50995,7 +50995,6 @@ net/minecraft/world/chunk/ChunkPrimer net/minecraft/world/chunk/ChunkPrimer
 	func_205766_a (Lnet/minecraft/fluid/Fluid;)Z func_205766_a
 	func_208302_e (Ljava/lang/String;)Lit/unimi/dsi/fastutil/longs/LongSet; func_208302_e
 	func_217333_d (Lnet/minecraft/world/gen/Heightmap$Type;)Lnet/minecraft/world/gen/Heightmap; func_217333_d
-	func_225548_a_ (Lnet/minecraft/world/biome/BiomeContainer;)V func_225548_a_
 	getBiomes ()Lnet/minecraft/world/biome/BiomeContainer; func_225549_i_
 	getBlockState (Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState; func_180495_p
 	getBlocksToBeTicked ()Lnet/minecraft/world/ITickList; func_205218_i_
@@ -51034,6 +51033,7 @@ net/minecraft/world/chunk/ChunkPrimer net/minecraft/world/chunk/ChunkPrimer
 	packToLocal (Lnet/minecraft/util/math/BlockPos;)S func_201651_i
 	putStructureStart (Ljava/lang/String;Lnet/minecraft/world/gen/feature/structure/StructureStart;)V func_201584_a
 	removeTileEntity (Lnet/minecraft/util/math/BlockPos;)V func_177425_e
+	setBiomes (Lnet/minecraft/world/biome/BiomeContainer;)V func_225548_a_
 	setBlockState (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Z)Lnet/minecraft/block/BlockState; func_177436_a
 	setCarvingMask (Lnet/minecraft/world/gen/GenerationStage$Carving;Ljava/util/BitSet;)V func_205767_a
 	setHeightmap (Lnet/minecraft/world/gen/Heightmap$Type;[J)V func_201607_a
@@ -51067,7 +51067,6 @@ net/minecraft/world/chunk/ChunkPrimerWrapper net/minecraft/world/chunk/ChunkPrim
 	func_209219_a (Lnet/minecraft/block/Block;)Z func_209219_a
 	func_209532_c (Lnet/minecraft/world/gen/Heightmap$Type;)Lnet/minecraft/world/gen/Heightmap$Type; func_209532_c
 	func_217336_u ()Lnet/minecraft/world/chunk/Chunk; func_217336_u
-	func_225548_a_ (Lnet/minecraft/world/biome/BiomeContainer;)V func_225548_a_
 	getBiomes ()Lnet/minecraft/world/biome/BiomeContainer; func_225549_i_
 	getBlockState (Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/block/BlockState; func_180495_p
 	getBlocksToBeTicked ()Lnet/minecraft/world/ITickList; func_205218_i_
@@ -51095,6 +51094,7 @@ net/minecraft/world/chunk/ChunkPrimerWrapper net/minecraft/world/chunk/ChunkPrim
 	markBlockForPostprocessing (Lnet/minecraft/util/math/BlockPos;)V func_201594_d
 	putStructureStart (Ljava/lang/String;Lnet/minecraft/world/gen/feature/structure/StructureStart;)V func_201584_a
 	removeTileEntity (Lnet/minecraft/util/math/BlockPos;)V func_177425_e
+	setBiomes (Lnet/minecraft/world/biome/BiomeContainer;)V func_225548_a_
 	setBlockState (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Z)Lnet/minecraft/block/BlockState; func_177436_a
 	setHeightmap (Lnet/minecraft/world/gen/Heightmap$Type;[J)V func_201607_a
 	setLastSaveTime (J)V func_177432_b
@@ -51760,19 +51760,19 @@ net/minecraft/world/gen/ChunkGenerator net/minecraft/world/gen/ChunkGenerator
 	world field_222540_a
 	decorate (Lnet/minecraft/world/gen/WorldGenRegion;)V func_202092_b
 	findNearestStructure (Lnet/minecraft/world/World;Ljava/lang/String;Lnet/minecraft/util/math/BlockPos;IZ)Lnet/minecraft/util/math/BlockPos; func_211403_a
-	func_222529_a (IILnet/minecraft/world/gen/Heightmap$Type;)I func_222529_a
-	func_222531_c (IILnet/minecraft/world/gen/Heightmap$Type;)I func_222531_c
-	func_222532_b (IILnet/minecraft/world/gen/Heightmap$Type;)I func_222532_b
-	func_225550_a_ (Lnet/minecraft/world/biome/BiomeManager;Lnet/minecraft/world/chunk/IChunk;Lnet/minecraft/world/gen/GenerationStage$Carving;)V func_225550_a_
 	func_227059_b_ (Lnet/minecraft/world/biome/BiomeManager;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/world/biome/Biome; func_227059_b_
 	generateBiomes (Lnet/minecraft/world/chunk/IChunk;)V func_222539_a
+	generateCarvers (Lnet/minecraft/world/biome/BiomeManager;Lnet/minecraft/world/chunk/IChunk;Lnet/minecraft/world/gen/GenerationStage$Carving;)V func_225550_a_
 	generateStructureStarts (Lnet/minecraft/world/IWorld;Lnet/minecraft/world/chunk/IChunk;)V func_222528_a
 	generateStructures (Lnet/minecraft/world/biome/BiomeManager;Lnet/minecraft/world/chunk/IChunk;Lnet/minecraft/world/gen/ChunkGenerator;Lnet/minecraft/world/gen/feature/template/TemplateManager;)V func_227058_a_
 	generateSurface (Lnet/minecraft/world/gen/WorldGenRegion;Lnet/minecraft/world/chunk/IChunk;)V func_225551_a_
 	getBiome (Lnet/minecraft/world/biome/BiomeManager;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/world/biome/Biome; func_225552_a_
 	getBiomeProvider ()Lnet/minecraft/world/biome/provider/BiomeProvider; func_202090_b
 	getGroundHeight ()I func_205470_d
+	getHeight (IILnet/minecraft/world/gen/Heightmap$Type;)I func_222529_a
 	getMaxHeight ()I func_207511_e
+	getNoiseHeight (IILnet/minecraft/world/gen/Heightmap$Type;)I func_222532_b
+	getNoiseHeightMinusOne (IILnet/minecraft/world/gen/Heightmap$Type;)I func_222531_c
 	getPossibleCreatures (Lnet/minecraft/entity/EntityClassification;Lnet/minecraft/util/math/BlockPos;)Ljava/util/List; func_177458_a
 	getSeaLevel ()I func_222530_f
 	getSeed ()J func_202089_c
@@ -51803,11 +51803,11 @@ net/minecraft/world/gen/DebugChunkGenerator net/minecraft/world/gen/DebugChunkGe
 	GRID_WIDTH field_177462_b
 	decorate (Lnet/minecraft/world/gen/WorldGenRegion;)V func_202092_b
 	func_199812_a (Lnet/minecraft/block/Block;)Ljava/util/stream/Stream; func_199812_a
-	func_222529_a (IILnet/minecraft/world/gen/Heightmap$Type;)I func_222529_a
-	func_225550_a_ (Lnet/minecraft/world/biome/BiomeManager;Lnet/minecraft/world/chunk/IChunk;Lnet/minecraft/world/gen/GenerationStage$Carving;)V func_225550_a_
+	generateCarvers (Lnet/minecraft/world/biome/BiomeManager;Lnet/minecraft/world/chunk/IChunk;Lnet/minecraft/world/gen/GenerationStage$Carving;)V func_225550_a_
 	generateSurface (Lnet/minecraft/world/gen/WorldGenRegion;Lnet/minecraft/world/chunk/IChunk;)V func_225551_a_
 	getBlockStateFor (II)Lnet/minecraft/block/BlockState; func_177461_b
 	getGroundHeight ()I func_205470_d
+	getHeight (IILnet/minecraft/world/gen/Heightmap$Type;)I func_222529_a
 	makeBase (Lnet/minecraft/world/IWorld;Lnet/minecraft/world/chunk/IChunk;)V func_222537_b
 net/minecraft/world/gen/DebugGenerationSettings net/minecraft/world/gen/DebugGenerationSettings
 net/minecraft/world/gen/EndChunkGenerator net/minecraft/world/gen/EndChunkGenerator
@@ -51829,10 +51829,10 @@ net/minecraft/world/gen/FlatChunkGenerator net/minecraft/world/gen/FlatChunkGene
 	phantomSpawner field_203229_i
 	findNearestStructure (Lnet/minecraft/world/World;Ljava/lang/String;Lnet/minecraft/util/math/BlockPos;IZ)Lnet/minecraft/util/math/BlockPos; func_211403_a
 	func_202099_e ()Lnet/minecraft/world/biome/Biome; func_202099_e
-	func_222529_a (IILnet/minecraft/world/gen/Heightmap$Type;)I func_222529_a
 	generateSurface (Lnet/minecraft/world/gen/WorldGenRegion;Lnet/minecraft/world/chunk/IChunk;)V func_225551_a_
 	getBiome (Lnet/minecraft/world/biome/BiomeManager;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/world/biome/Biome; func_225552_a_
 	getGroundHeight ()I func_205470_d
+	getHeight (IILnet/minecraft/world/gen/Heightmap$Type;)I func_222529_a
 	getStructureConfig (Lnet/minecraft/world/biome/Biome;Lnet/minecraft/world/gen/feature/structure/Structure;)Lnet/minecraft/world/gen/feature/IFeatureConfig; func_202087_b
 	hasStructure (Lnet/minecraft/world/biome/Biome;Lnet/minecraft/world/gen/feature/structure/Structure;)Z func_202094_a
 	makeBase (Lnet/minecraft/world/IWorld;Lnet/minecraft/world/chunk/IChunk;)V func_222537_b
@@ -52026,11 +52026,11 @@ net/minecraft/world/gen/Heightmap$Usage net/minecraft/world/gen/Heightmap$Usage
 net/minecraft/world/gen/IChunkGeneratorFactory net/minecraft/world/gen/IChunkGeneratorFactory
 	create (Lnet/minecraft/world/World;Lnet/minecraft/world/biome/provider/BiomeProvider;Lnet/minecraft/world/gen/GenerationSettings;)Lnet/minecraft/world/gen/ChunkGenerator; create
 net/minecraft/world/gen/IExtendedNoiseRandom net/minecraft/world/gen/IExtendedNoiseRandom
-	func_212859_a_ (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;Lnet/minecraft/world/gen/area/IArea;)Lnet/minecraft/world/gen/area/IArea; func_212859_a_
-	func_212861_a_ (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;)Lnet/minecraft/world/gen/area/IArea; func_212861_a_
-	func_215714_a (IIII)I func_215714_a
-	func_215715_a (II)I func_215715_a
+	makeArea (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;)Lnet/minecraft/world/gen/area/IArea; func_212861_a_
+	makeArea (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;Lnet/minecraft/world/gen/area/IArea;)Lnet/minecraft/world/gen/area/IArea; func_212859_a_
 	makeArea (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;Lnet/minecraft/world/gen/area/IArea;Lnet/minecraft/world/gen/area/IArea;)Lnet/minecraft/world/gen/area/IArea; func_212860_a_
+	pickRandom (II)I func_215715_a
+	pickRandom (IIII)I func_215714_a
 	setPosition (JJ)V func_202698_a
 net/minecraft/world/gen/INoiseGenerator net/minecraft/world/gen/INoiseGenerator
 	noiseAt (DDDD)D func_215460_a
@@ -52052,17 +52052,17 @@ net/minecraft/world/gen/ImprovedNoiseGenerator net/minecraft/world/gen/ImprovedN
 	getPermutValue (I)I func_215458_a
 net/minecraft/world/gen/LazyAreaLayerContext net/minecraft/world/gen/LazyAreaLayerContext
 	cache field_202703_b
-	field_215718_b field_215718_b
-	field_215719_e field_215719_e
-	field_215720_f field_215720_f
 	maxCacheSize field_202704_c
-	func_212859_a_ (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;Lnet/minecraft/world/gen/area/IArea;)Lnet/minecraft/world/gen/area/IArea; func_212859_a_
-	func_212859_a_ (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;Lnet/minecraft/world/gen/area/LazyArea;)Lnet/minecraft/world/gen/area/LazyArea; func_212859_a_
-	func_212861_a_ (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;)Lnet/minecraft/world/gen/area/IArea; func_212861_a_
-	func_212861_a_ (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;)Lnet/minecraft/world/gen/area/LazyArea; func_212861_a_
-	func_227471_b_ (JJ)J func_227471_b_
+	noise field_215718_b
+	positionSeed field_215720_f
+	seed field_215719_e
 	getNoiseGenerator ()Lnet/minecraft/world/gen/ImprovedNoiseGenerator; func_205589_a
+	hash (JJ)J func_227471_b_
+	makeArea (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;)Lnet/minecraft/world/gen/area/IArea; func_212861_a_
+	makeArea (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;)Lnet/minecraft/world/gen/area/LazyArea; func_212861_a_
+	makeArea (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;Lnet/minecraft/world/gen/area/IArea;)Lnet/minecraft/world/gen/area/IArea; func_212859_a_
 	makeArea (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;Lnet/minecraft/world/gen/area/IArea;Lnet/minecraft/world/gen/area/IArea;)Lnet/minecraft/world/gen/area/IArea; func_212860_a_
+	makeArea (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;Lnet/minecraft/world/gen/area/LazyArea;)Lnet/minecraft/world/gen/area/LazyArea; func_212859_a_
 	makeArea (Lnet/minecraft/world/gen/layer/traits/IPixelTransformer;Lnet/minecraft/world/gen/area/LazyArea;Lnet/minecraft/world/gen/area/LazyArea;)Lnet/minecraft/world/gen/area/LazyArea; func_212860_a_
 	random (I)I func_202696_a
 	setPosition (JJ)V func_202698_a
@@ -52096,7 +52096,6 @@ net/minecraft/world/gen/NoiseChunkGenerator net/minecraft/world/gen/NoiseChunkGe
 	verticalNoiseGranularity field_222563_j
 	calcNoiseColumn ([DIIDDDDII)V func_222546_a
 	fillNoiseColumn ([DII)V func_222548_a
-	func_222529_a (IILnet/minecraft/world/gen/Heightmap$Type;)I func_222529_a
 	func_222545_a (DDI)D func_222545_a
 	func_222547_b (II)[D func_222547_b
 	func_222551_g ()D func_222551_g
@@ -52107,6 +52106,7 @@ net/minecraft/world/gen/NoiseChunkGenerator net/minecraft/world/gen/NoiseChunkGe
 	func_222557_a ([F)V func_222557_a
 	generateSurface (Lnet/minecraft/world/gen/WorldGenRegion;Lnet/minecraft/world/chunk/IChunk;)V func_225551_a_
 	getBiomeNoiseColumn (II)[D func_222549_a
+	getHeight (IILnet/minecraft/world/gen/Heightmap$Type;)I func_222529_a
 	makeBase (Lnet/minecraft/world/IWorld;Lnet/minecraft/world/chunk/IChunk;)V func_222537_b
 	makeBedrock (Lnet/minecraft/world/chunk/IChunk;Ljava/util/Random;)V func_222555_a
 	noiseSizeY ()I func_222550_i
@@ -52292,18 +52292,18 @@ net/minecraft/world/gen/blockstateprovider/WeightedBlockStateProvider net/minecr
 	serialize (Lcom/mojang/datafixers/types/DynamicOps;)Ljava/lang/Object; func_218175_a
 net/minecraft/world/gen/carver/CanyonWorldCarver net/minecraft/world/gen/carver/CanyonWorldCarver
 	field_202536_i field_202536_i
+	carveRegion (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/Random;IIIIILjava/util/BitSet;Lnet/minecraft/world/gen/carver/ICarverConfig;)Z func_225555_a_
+	carveRegion (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/Random;IIIIILjava/util/BitSet;Lnet/minecraft/world/gen/feature/ProbabilityConfig;)Z func_225555_a_
 	func_222708_a (DDDI)Z func_222708_a
-	func_225555_a_ (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/Random;IIIIILjava/util/BitSet;Lnet/minecraft/world/gen/carver/ICarverConfig;)Z func_225555_a_
-	func_225555_a_ (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/Random;IIIIILjava/util/BitSet;Lnet/minecraft/world/gen/feature/ProbabilityConfig;)Z func_225555_a_
 	func_227204_a_ (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;JIIIDDDFFFIIDLjava/util/BitSet;)V func_227204_a_
 	shouldCarve (Ljava/util/Random;IILnet/minecraft/world/gen/carver/ICarverConfig;)Z func_212868_a_
 	shouldCarve (Ljava/util/Random;IILnet/minecraft/world/gen/feature/ProbabilityConfig;)Z func_212868_a_
 net/minecraft/world/gen/carver/CaveWorldCarver net/minecraft/world/gen/carver/CaveWorldCarver
+	carveRegion (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/Random;IIIIILjava/util/BitSet;Lnet/minecraft/world/gen/carver/ICarverConfig;)Z func_225555_a_
+	carveRegion (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/Random;IIIIILjava/util/BitSet;Lnet/minecraft/world/gen/feature/ProbabilityConfig;)Z func_225555_a_
 	func_222708_a (DDDI)Z func_222708_a
 	func_222724_a ()I func_222724_a
 	func_222725_b ()D func_222725_b
-	func_225555_a_ (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/Random;IIIIILjava/util/BitSet;Lnet/minecraft/world/gen/carver/ICarverConfig;)Z func_225555_a_
-	func_225555_a_ (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/Random;IIIIILjava/util/BitSet;Lnet/minecraft/world/gen/feature/ProbabilityConfig;)Z func_225555_a_
 	func_227205_a_ (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;JIIIDDDFDLjava/util/BitSet;)V func_227205_a_
 	func_227206_a_ (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;JIIIDDDFFFIIDLjava/util/BitSet;)V func_227206_a_
 	generateCaveRadius (Ljava/util/Random;)F func_222722_a
@@ -52313,24 +52313,24 @@ net/minecraft/world/gen/carver/CaveWorldCarver net/minecraft/world/gen/carver/Ca
 net/minecraft/world/gen/carver/ConfiguredCarver net/minecraft/world/gen/carver/ConfiguredCarver
 	carver field_222732_a
 	config field_222733_b
-	func_227207_a_ (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/Random;IIIIILjava/util/BitSet;)Z func_227207_a_
+	carveRegion (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/Random;IIIIILjava/util/BitSet;)Z func_227207_a_
 	shouldCarve (Ljava/util/Random;II)Z func_222730_a
 net/minecraft/world/gen/carver/EmptyCarverConfig net/minecraft/world/gen/carver/EmptyCarverConfig
 net/minecraft/world/gen/carver/ICarverConfig net/minecraft/world/gen/carver/ICarverConfig
 	field_214644_a field_214644_a
 net/minecraft/world/gen/carver/NetherCaveWorldCarver net/minecraft/world/gen/carver/NetherCaveWorldCarver
+	carveBlock (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/BitSet;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;IIIIIIIILjava/util/concurrent/atomic/AtomicBoolean;)Z func_225556_a_
 	func_222724_a ()I func_222724_a
 	func_222725_b ()D func_222725_b
-	func_225556_a_ (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/BitSet;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;IIIIIIIILjava/util/concurrent/atomic/AtomicBoolean;)Z func_225556_a_
 	generateCaveRadius (Ljava/util/Random;)F func_222722_a
 	generateCaveStartY (Ljava/util/Random;)I func_222726_b
 net/minecraft/world/gen/carver/UnderwaterCanyonWorldCarver net/minecraft/world/gen/carver/UnderwaterCanyonWorldCarver
+	carveBlock (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/BitSet;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;IIIIIIIILjava/util/concurrent/atomic/AtomicBoolean;)Z func_225556_a_
 	func_222700_a (Lnet/minecraft/world/chunk/IChunk;IIIIIIII)Z func_222700_a
-	func_225556_a_ (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/BitSet;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;IIIIIIIILjava/util/concurrent/atomic/AtomicBoolean;)Z func_225556_a_
 net/minecraft/world/gen/carver/UnderwaterCaveWorldCarver net/minecraft/world/gen/carver/UnderwaterCaveWorldCarver
+	carveBlock (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/BitSet;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;IIIIIIIILjava/util/concurrent/atomic/AtomicBoolean;)Z func_225556_a_
 	func_222700_a (Lnet/minecraft/world/chunk/IChunk;IIIIIIII)Z func_222700_a
 	func_222728_a (Lnet/minecraft/world/gen/carver/WorldCarver;Lnet/minecraft/world/chunk/IChunk;Ljava/util/BitSet;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos$Mutable;IIIIIIII)Z func_222728_a
-	func_225556_a_ (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/BitSet;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;IIIIIIIILjava/util/concurrent/atomic/AtomicBoolean;)Z func_225556_a_
 net/minecraft/world/gen/carver/WorldCarver net/minecraft/world/gen/carver/WorldCarver
 	AIR field_222714_f
 	CANYON field_222711_c
@@ -52346,12 +52346,12 @@ net/minecraft/world/gen/carver/WorldCarver net/minecraft/world/gen/carver/WorldC
 	config field_222721_m
 	maxHeight field_222720_l
 	canCarveBlock (Lnet/minecraft/block/BlockState;Lnet/minecraft/block/BlockState;)Z func_222707_a
+	carveBlock (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/BitSet;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;IIIIIIIILjava/util/concurrent/atomic/AtomicBoolean;)Z func_225556_a_
+	carveRegion (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/Random;IIIIILjava/util/BitSet;Lnet/minecraft/world/gen/carver/ICarverConfig;)Z func_225555_a_
 	func_222700_a (Lnet/minecraft/world/chunk/IChunk;IIIIIIII)Z func_222700_a
 	func_222702_a (IIDDIIF)Z func_222702_a
 	func_222704_c ()I func_222704_c
 	func_222708_a (DDDI)Z func_222708_a
-	func_225555_a_ (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/Random;IIIIILjava/util/BitSet;Lnet/minecraft/world/gen/carver/ICarverConfig;)Z func_225555_a_
-	func_225556_a_ (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;Ljava/util/BitSet;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;Lnet/minecraft/util/math/BlockPos$Mutable;IIIIIIIILjava/util/concurrent/atomic/AtomicBoolean;)Z func_225556_a_
 	func_227208_a_ (Lnet/minecraft/world/chunk/IChunk;Ljava/util/function/Function;JIIIDDDDDLjava/util/BitSet;)Z func_227208_a_
 	isCarvable (Lnet/minecraft/block/BlockState;)Z func_222706_a
 	isOnEdge (IIIIII)Z func_222701_a
@@ -52370,16 +52370,12 @@ net/minecraft/world/gen/feature/AbstractSmallTreeFeature net/minecraft/world/gen
 	func_227213_a_ (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;ILnet/minecraft/util/math/BlockPos;ILjava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/TreeFeatureConfig;)V func_227213_a_
 net/minecraft/world/gen/feature/AbstractTreeFeature net/minecraft/world/gen/feature/AbstractTreeFeature
 	canBeReplacedByLogs (Lnet/minecraft/world/gen/IWorldGenerationBaseReader;Lnet/minecraft/util/math/BlockPos;)Z func_214587_a
-	func_208521_b (Lnet/minecraft/world/IWorldWriter;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)V func_208521_b
 	func_214573_h (Lnet/minecraft/block/BlockState;)Z func_214573_h
 	func_214583_f (Lnet/minecraft/block/BlockState;)Z func_214583_f
 	func_214590_g (Lnet/minecraft/block/BlockState;)Z func_214590_g
 	func_227214_a_ (Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/MutableBoundingBox;Ljava/util/Set;Ljava/util/Set;)Lnet/minecraft/util/math/shapes/VoxelShapePart; func_227214_a_
 	func_227215_a_ (Lnet/minecraft/world/IWorld;Ljava/util/Random;Ljava/util/List;Ljava/util/List;Ljava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/treedecorator/TreeDecorator;)V func_227215_a_
-	func_227216_a_ (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Ljava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/BaseTreeFeatureConfig;)Z func_227216_a_
-	func_227217_a_ (Lnet/minecraft/world/IWorldWriter;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/MutableBoundingBox;)V func_227217_a_
 	func_227218_a_ (Lnet/minecraft/block/BlockState;)Z func_227218_a_
-	func_227219_b_ (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Ljava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/BaseTreeFeatureConfig;)Z func_227219_b_
 	func_227220_b_ (Lnet/minecraft/block/BlockState;)Z func_227220_b_
 	func_227221_c_ (Lnet/minecraft/block/BlockState;)Z func_227221_c_
 	func_227223_d_ (Lnet/minecraft/block/BlockState;)Z func_227223_d_
@@ -52396,7 +52392,11 @@ net/minecraft/world/gen/feature/AbstractTreeFeature net/minecraft/world/gen/feat
 	place (Lnet/minecraft/world/IWorld;Lnet/minecraft/world/gen/ChunkGenerator;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/IFeatureConfig;)Z func_212245_a
 	place (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Ljava/util/Set;Ljava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/BaseTreeFeatureConfig;)Z func_225557_a_
 	setBlockState (Lnet/minecraft/world/IWorldWriter;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)V func_202278_a
+	setBlockState (Lnet/minecraft/world/IWorldWriter;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;Lnet/minecraft/util/math/MutableBoundingBox;)V func_227217_a_
+	setBlockStateNoReaction (Lnet/minecraft/world/IWorldWriter;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/block/BlockState;)V func_208521_b
 	setDirt (Lnet/minecraft/world/gen/IWorldGenerationReader;Lnet/minecraft/util/math/BlockPos;)V func_214584_a
+	setLeaf (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Ljava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/BaseTreeFeatureConfig;)Z func_227219_b_
+	setLog (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Ljava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/BaseTreeFeatureConfig;)Z func_227216_a_
 net/minecraft/world/gen/feature/AcaciaFeature net/minecraft/world/gen/feature/AcaciaFeature
 	place (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Ljava/util/Set;Ljava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/BaseTreeFeatureConfig;)Z func_225557_a_
 	place (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Ljava/util/Set;Ljava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/TreeFeatureConfig;)Z func_225557_a_
@@ -52561,14 +52561,14 @@ net/minecraft/world/gen/feature/DecoratedFeatureConfig net/minecraft/world/gen/f
 	toString ()Ljava/lang/String; toString
 net/minecraft/world/gen/feature/DecoratedFlowerFeature net/minecraft/world/gen/feature/DecoratedFlowerFeature
 net/minecraft/world/gen/feature/DefaultFlowersFeature net/minecraft/world/gen/feature/DefaultFlowersFeature
-	func_225559_a_ (Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/BlockClusterFeatureConfig;)Z func_225559_a_
-	func_225559_a_ (Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/IFeatureConfig;)Z func_225559_a_
-	func_225560_a_ (Lnet/minecraft/world/gen/feature/BlockClusterFeatureConfig;)I func_225560_a_
-	func_225560_a_ (Lnet/minecraft/world/gen/feature/IFeatureConfig;)I func_225560_a_
+	getFlowerCount (Lnet/minecraft/world/gen/feature/BlockClusterFeatureConfig;)I func_225560_a_
+	getFlowerCount (Lnet/minecraft/world/gen/feature/IFeatureConfig;)I func_225560_a_
 	getFlowerToPlace (Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/BlockClusterFeatureConfig;)Lnet/minecraft/block/BlockState; func_225562_b_
 	getFlowerToPlace (Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/IFeatureConfig;)Lnet/minecraft/block/BlockState; func_225562_b_
 	getNearbyPos (Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/BlockClusterFeatureConfig;)Lnet/minecraft/util/math/BlockPos; func_225561_a_
 	getNearbyPos (Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/IFeatureConfig;)Lnet/minecraft/util/math/BlockPos; func_225561_a_
+	isValidPosition (Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/BlockClusterFeatureConfig;)Z func_225559_a_
+	isValidPosition (Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/IFeatureConfig;)Z func_225559_a_
 net/minecraft/world/gen/feature/DesertWellsFeature net/minecraft/world/gen/feature/DesertWellsFeature
 	IS_SAND field_175913_a
 	sandSlab field_175911_b
@@ -52651,13 +52651,13 @@ net/minecraft/world/gen/feature/FancyTreeFeature net/minecraft/world/gen/feature
 	func_227232_a_ (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;ILnet/minecraft/util/math/BlockPos;Ljava/util/List;Ljava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/TreeFeatureConfig;)V func_227232_a_
 	func_227233_a_ (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;FLjava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/TreeFeatureConfig;)V func_227233_a_
 	func_227234_a_ (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;ILjava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/TreeFeatureConfig;)V func_227234_a_
-	func_227235_a_ (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;ZLjava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/TreeFeatureConfig;)I func_227235_a_
 	func_227236_a_ (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Ljava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/TreeFeatureConfig;)V func_227236_a_
 	func_227237_a_ (Lnet/minecraft/util/math/BlockPos;)I func_227237_a_
 	func_227238_a_ (Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;)Lnet/minecraft/util/Direction$Axis; func_227238_a_
 	func_227239_b_ (II)Z func_227239_b_
 	func_227240_b_ (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;ILnet/minecraft/util/math/BlockPos;Ljava/util/List;Ljava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/TreeFeatureConfig;)V func_227240_b_
 	func_227241_b_ (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;ILjava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/TreeFeatureConfig;)I func_227241_b_
+	makeBranch (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/util/math/BlockPos;ZLjava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/TreeFeatureConfig;)I func_227235_a_
 	place (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Ljava/util/Set;Ljava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/BaseTreeFeatureConfig;)Z func_225557_a_
 	place (Lnet/minecraft/world/gen/IWorldGenerationReader;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Ljava/util/Set;Ljava/util/Set;Lnet/minecraft/util/math/MutableBoundingBox;Lnet/minecraft/world/gen/feature/TreeFeatureConfig;)Z func_225557_a_
 net/minecraft/world/gen/feature/FancyTreeFeature$ExtendedPos net/minecraft/world/gen/feature/FancyTreeFeature$ExtendedPos
@@ -52755,10 +52755,10 @@ net/minecraft/world/gen/feature/FillLayerFeature net/minecraft/world/gen/feature
 	place (Lnet/minecraft/world/IWorld;Lnet/minecraft/world/gen/ChunkGenerator;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/FillLayerConfig;)Z func_212245_a
 	place (Lnet/minecraft/world/IWorld;Lnet/minecraft/world/gen/ChunkGenerator;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/IFeatureConfig;)Z func_212245_a
 net/minecraft/world/gen/feature/FlowersFeature net/minecraft/world/gen/feature/FlowersFeature
-	func_225559_a_ (Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/IFeatureConfig;)Z func_225559_a_
-	func_225560_a_ (Lnet/minecraft/world/gen/feature/IFeatureConfig;)I func_225560_a_
+	getFlowerCount (Lnet/minecraft/world/gen/feature/IFeatureConfig;)I func_225560_a_
 	getFlowerToPlace (Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/IFeatureConfig;)Lnet/minecraft/block/BlockState; func_225562_b_
 	getNearbyPos (Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/IFeatureConfig;)Lnet/minecraft/util/math/BlockPos; func_225561_a_
+	isValidPosition (Lnet/minecraft/world/IWorld;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/IFeatureConfig;)Z func_225559_a_
 	place (Lnet/minecraft/world/IWorld;Lnet/minecraft/world/gen/ChunkGenerator;Ljava/util/Random;Lnet/minecraft/util/math/BlockPos;Lnet/minecraft/world/gen/feature/IFeatureConfig;)Z func_212245_a
 net/minecraft/world/gen/feature/FossilsFeature net/minecraft/world/gen/feature/FossilsFeature
 	FOSSILS field_189906_q
@@ -52976,7 +52976,7 @@ net/minecraft/world/gen/feature/TreeFeatureConfig net/minecraft/world/gen/featur
 	trunkHeightRandom field_227331_f_
 	trunkTopOffset field_227332_g_
 	trunkTopOffsetRandom field_227333_h_
-	func_227338_a_ (Lcom/mojang/datafixers/Dynamic;)Lnet/minecraft/world/gen/feature/TreeFeatureConfig; func_227338_a_
+	deserializeFoliage (Lcom/mojang/datafixers/Dynamic;)Lnet/minecraft/world/gen/feature/TreeFeatureConfig; func_227338_a_
 	serialize (Lcom/mojang/datafixers/types/DynamicOps;)Lcom/mojang/datafixers/Dynamic; func_214634_a
 net/minecraft/world/gen/feature/TreeFeatureConfig$Builder net/minecraft/world/gen/feature/TreeFeatureConfig$Builder
 	baseHeight field_227341_e_
@@ -54694,50 +54694,50 @@ net/minecraft/world/gen/layer/ZoomLayer net/minecraft/world/gen/layer/ZoomLayer
 	$VALUES $VALUES
 	FUZZY FUZZY
 	NORMAL NORMAL
-	func_202715_a (Lnet/minecraft/world/gen/IExtendedNoiseRandom;IIII)I func_202715_a
-	func_215721_a (I)I func_215721_a
-	func_215722_b (I)I func_215722_b
-	func_215728_a (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IArea;II)I func_215728_a
+	apply (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IArea;II)I func_215728_a
+	getOffsetX (I)I func_215721_a
+	getOffsetZ (I)I func_215722_b
+	pickZoomed (Lnet/minecraft/world/gen/IExtendedNoiseRandom;IIII)I func_202715_a
 	valueOf (Ljava/lang/String;)Lnet/minecraft/world/gen/layer/ZoomLayer; valueOf
 	values ()[Lnet/minecraft/world/gen/layer/ZoomLayer; values
 net/minecraft/world/gen/layer/ZoomLayer$1 net/minecraft/world/gen/layer/ZoomLayer$1
-	func_202715_a (Lnet/minecraft/world/gen/IExtendedNoiseRandom;IIII)I func_202715_a
+	pickZoomed (Lnet/minecraft/world/gen/IExtendedNoiseRandom;IIII)I func_202715_a
 net/minecraft/world/gen/layer/traits/IAreaTransformer0 net/minecraft/world/gen/layer/traits/IAreaTransformer0
 	apply (Lnet/minecraft/world/gen/IExtendedNoiseRandom;)Lnet/minecraft/world/gen/area/IAreaFactory; func_202823_a
 	apply (Lnet/minecraft/world/gen/INoiseRandom;II)I func_215735_a
 	func_202820_a (Lnet/minecraft/world/gen/IExtendedNoiseRandom;II)I func_202820_a
 	func_215734_b (Lnet/minecraft/world/gen/IExtendedNoiseRandom;)Lnet/minecraft/world/gen/area/IArea; func_215734_b
 net/minecraft/world/gen/layer/traits/IAreaTransformer1 net/minecraft/world/gen/layer/traits/IAreaTransformer1
+	apply (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IArea;II)I func_215728_a
 	apply (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IAreaFactory;)Lnet/minecraft/world/gen/area/IAreaFactory; func_202713_a
 	func_202711_b (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IArea;II)I func_202711_b
 	func_215726_a (Lnet/minecraft/world/gen/area/IAreaFactory;Lnet/minecraft/world/gen/IExtendedNoiseRandom;)Lnet/minecraft/world/gen/area/IArea; func_215726_a
-	func_215728_a (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IArea;II)I func_215728_a
 net/minecraft/world/gen/layer/traits/IAreaTransformer2 net/minecraft/world/gen/layer/traits/IAreaTransformer2
 	apply (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IAreaFactory;Lnet/minecraft/world/gen/area/IAreaFactory;)Lnet/minecraft/world/gen/area/IAreaFactory; func_202707_a
 	apply (Lnet/minecraft/world/gen/INoiseRandom;Lnet/minecraft/world/gen/area/IArea;Lnet/minecraft/world/gen/area/IArea;II)I func_215723_a
 	func_215724_a (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IArea;Lnet/minecraft/world/gen/area/IArea;II)I func_215724_a
 	func_215725_a (Lnet/minecraft/world/gen/area/IAreaFactory;Lnet/minecraft/world/gen/area/IAreaFactory;Lnet/minecraft/world/gen/IExtendedNoiseRandom;)Lnet/minecraft/world/gen/area/IArea; func_215725_a
 net/minecraft/world/gen/layer/traits/IBishopTransformer net/minecraft/world/gen/layer/traits/IBishopTransformer
+	apply (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IArea;II)I func_215728_a
 	apply (Lnet/minecraft/world/gen/INoiseRandom;IIIII)I func_202792_a
-	func_215728_a (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IArea;II)I func_215728_a
 net/minecraft/world/gen/layer/traits/IC0Transformer net/minecraft/world/gen/layer/traits/IC0Transformer
+	apply (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IArea;II)I func_215728_a
 	apply (Lnet/minecraft/world/gen/INoiseRandom;I)I func_202726_a
-	func_215728_a (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IArea;II)I func_215728_a
 net/minecraft/world/gen/layer/traits/IC1Transformer net/minecraft/world/gen/layer/traits/IC1Transformer
+	apply (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IArea;II)I func_215728_a
 	apply (Lnet/minecraft/world/gen/INoiseRandom;I)I func_202716_a
-	func_215728_a (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IArea;II)I func_215728_a
 net/minecraft/world/gen/layer/traits/ICastleTransformer net/minecraft/world/gen/layer/traits/ICastleTransformer
+	apply (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IArea;II)I func_215728_a
 	apply (Lnet/minecraft/world/gen/INoiseRandom;IIIII)I func_202748_a
-	func_215728_a (Lnet/minecraft/world/gen/IExtendedNoiseRandom;Lnet/minecraft/world/gen/area/IArea;II)I func_215728_a
 net/minecraft/world/gen/layer/traits/IDimOffset0Transformer net/minecraft/world/gen/layer/traits/IDimOffset0Transformer
-	func_215721_a (I)I func_215721_a
-	func_215722_b (I)I func_215722_b
+	getOffsetX (I)I func_215721_a
+	getOffsetZ (I)I func_215722_b
 net/minecraft/world/gen/layer/traits/IDimOffset1Transformer net/minecraft/world/gen/layer/traits/IDimOffset1Transformer
-	func_215721_a (I)I func_215721_a
-	func_215722_b (I)I func_215722_b
+	getOffsetX (I)I func_215721_a
+	getOffsetZ (I)I func_215722_b
 net/minecraft/world/gen/layer/traits/IDimTransformer net/minecraft/world/gen/layer/traits/IDimTransformer
-	func_215721_a (I)I func_215721_a
-	func_215722_b (I)I func_215722_b
+	getOffsetX (I)I func_215721_a
+	getOffsetZ (I)I func_215722_b
 net/minecraft/world/gen/layer/traits/IPixelTransformer net/minecraft/world/gen/layer/traits/IPixelTransformer
 	apply (II)I apply
 net/minecraft/world/gen/placement/AtHeight64 net/minecraft/world/gen/placement/AtHeight64
@@ -55278,7 +55278,7 @@ net/minecraft/world/lighting/LightEngine net/minecraft/world/lighting/LightEngin
 	func_215619_a ()Z func_215619_a
 	func_215620_a (Lnet/minecraft/util/math/ChunkPos;Z)V func_215620_a
 	func_215623_a (Lnet/minecraft/util/math/BlockPos;I)V func_215623_a
-	func_227468_a_ (JLorg/apache/commons/lang3/mutable/MutableInt;)Lnet/minecraft/block/BlockState; func_227468_a_
+	getBlockAndOpacity (JLorg/apache/commons/lang3/mutable/MutableInt;)Lnet/minecraft/block/BlockState; func_227468_a_
 	getChunkReader (II)Lnet/minecraft/world/IBlockReader; func_215615_a
 	getData (Lnet/minecraft/util/math/SectionPos;)Lnet/minecraft/world/chunk/NibbleArray; func_215612_a
 	getDebugString (J)Ljava/lang/String; func_215614_b
@@ -55314,10 +55314,8 @@ net/minecraft/world/lighting/SectionLightStorage net/minecraft/world/lighting/Se
 	noLightSections field_215547_n
 	type field_215545_l
 	uncachedLightData field_215538_e
+	addSection (J)V func_215524_j
 	cancelSectionUpdates (Lnet/minecraft/world/lighting/LightEngine;J)V func_215528_a
-	func_215523_k (J)V func_215523_k
-	func_215524_j (J)V func_215524_j
-	func_215526_b (JZ)V func_215526_b
 	func_227469_a_ (JJ)Z func_227469_a_
 	getArray (J)Lnet/minecraft/world/chunk/NibbleArray; func_222858_h
 	getArray (JZ)Lnet/minecraft/world/chunk/NibbleArray; func_215520_a
@@ -55330,7 +55328,9 @@ net/minecraft/world/lighting/SectionLightStorage net/minecraft/world/lighting/Se
 	hasSection (J)Z func_215518_g
 	hasSectionsToUpdate ()Z func_215527_a
 	processAllLevelUpdates ()V func_215532_c
+	removeSection (J)V func_215523_k
 	retainChunkData (JZ)V func_223113_c
+	setColumnEnabled (JZ)V func_215526_b
 	setData (JLnet/minecraft/world/chunk/NibbleArray;)V func_215529_a
 	setLevel (JI)V func_215476_a
 	setLight (JI)V func_215517_b
@@ -55348,31 +55348,31 @@ net/minecraft/world/lighting/SkyLightEngine net/minecraft/world/lighting/SkyLigh
 	notifyNeighbors (JIZ)V func_215478_a
 	scheduleUpdate (J)V func_215473_f
 net/minecraft/world/lighting/SkyLightStorage net/minecraft/world/lighting/SkyLightStorage
-	field_215553_p field_215553_p
+	enabledColumns field_215558_o
 	field_215554_k field_215554_k
-	field_215555_l field_215555_l
-	field_215556_m field_215556_m
-	field_215557_n field_215557_n
-	field_215558_o field_215558_o
-	func_215523_k (J)V func_215523_k
-	func_215524_j (J)V func_215524_j
-	func_215526_b (JZ)V func_215526_b
-	func_215548_n (J)Z func_215548_n
-	func_215549_m (J)Z func_215549_m
-	func_215550_a (I)Z func_215550_a
+	hasPendingUpdates field_215553_p
+	pendingAdditions field_215556_m
+	pendingRemovals field_215557_n
+	sectionsWithLight field_215555_l
+	addSection (J)V func_215524_j
 	func_215551_l (J)Z func_215551_l
-	func_215552_e ()V func_215552_e
-	func_223403_p (J)V func_223403_p
-	func_223404_q (J)V func_223404_q
 	getLightOrDefault (J)I func_215525_d
 	getOrCreateArray (J)Lnet/minecraft/world/chunk/NibbleArray; func_215530_i
 	hasSectionsToUpdate ()Z func_215527_a
+	isAboveBottom (I)Z func_215550_a
+	isAboveWorld (J)Z func_215549_m
+	isSectionEnabled (J)Z func_215548_n
+	removeSection (J)V func_215523_k
+	scheduleFullUpdate (J)V func_223404_q
+	scheduleSurfaceUpdate (J)V func_223403_p
+	setColumnEnabled (JZ)V func_215526_b
+	updateHasPendingUpdates ()V func_215552_e
 	updateSections (Lnet/minecraft/world/lighting/LightEngine;ZZ)V func_215522_a
 net/minecraft/world/lighting/SkyLightStorage$1 net/minecraft/world/lighting/SkyLightStorage$1
 	field_215661_a field_215661_a
 net/minecraft/world/lighting/SkyLightStorage$StorageMap net/minecraft/world/lighting/SkyLightStorage$StorageMap
-	field_215652_b field_215652_b
-	field_215653_c field_215653_c
+	minY field_215652_b
+	surfaceSections field_215653_c
 	copy ()Lnet/minecraft/world/lighting/LightDataMap; func_212858_b_
 	copy ()Lnet/minecraft/world/lighting/SkyLightStorage$StorageMap; func_212858_b_
 	func_215649_a (Lnet/minecraft/world/lighting/SkyLightStorage$StorageMap;I)I func_215649_a
@@ -55624,8 +55624,10 @@ net/minecraft/world/server/ChunkManager net/minecraft/world/server/ChunkManager
 	viewDistance field_219247_A
 	world field_219255_i
 	cannotGenerateChunks (Lnet/minecraft/entity/player/ServerPlayerEntity;)Z func_219187_b
+	chunkGenerate (Lnet/minecraft/world/server/ChunkHolder;Lnet/minecraft/world/chunk/ChunkStatus;)Ljava/util/concurrent/CompletableFuture; func_223156_b
+	chunkLoad (Lnet/minecraft/util/math/ChunkPos;)Ljava/util/concurrent/CompletableFuture; func_223172_f
+	chunkSave (Lnet/minecraft/world/chunk/IChunk;)Z func_219229_a
 	close ()V close
-	func_219170_a (Lnet/minecraft/util/math/ChunkPos;)Ljava/lang/String; func_219170_a
 	func_219172_b_ (I)Lnet/minecraft/world/chunk/ChunkStatus; func_219172_b_
 	func_219173_a (Lnet/minecraft/util/math/ChunkPos;Lnet/minecraft/entity/player/ServerPlayerEntity;Z)I func_219173_a
 	func_219174_c ()I func_219174_c
@@ -55657,7 +55659,6 @@ net/minecraft/world/server/ChunkManager net/minecraft/world/server/ChunkManager
 	func_219224_a_ (Lnet/minecraft/util/math/ChunkPos;I[Lnet/minecraft/network/IPacket;Lnet/minecraft/entity/player/ServerPlayerEntity;)V func_219224_a_
 	func_219227_a (IIILjava/util/List;)Lcom/mojang/datafixers/util/Either; func_219227_a
 	func_219228_d_ (Lnet/minecraft/world/server/ChunkHolder;Ljava/lang/Runnable;)V func_219228_d_
-	func_219229_a (Lnet/minecraft/world/chunk/IChunk;)Z func_219229_a
 	func_219230_c_ (Lnet/minecraft/world/server/ChunkHolder;Ljava/lang/Runnable;)V func_219230_c_
 	func_219233_a_ ([Lnet/minecraft/network/IPacket;Lnet/minecraft/world/chunk/Chunk;Lnet/minecraft/entity/player/ServerPlayerEntity;)V func_219233_a_
 	func_219235_a_ (Lnet/minecraft/util/math/ChunkPos;Lnet/minecraft/world/server/ChunkHolder;Lnet/minecraft/world/chunk/ChunkStatus;Lcom/mojang/datafixers/util/Either;)Ljava/util/concurrent/CompletionStage; func_219235_a_
@@ -55679,11 +55680,9 @@ net/minecraft/world/server/ChunkManager net/minecraft/world/server/ChunkManager
 	func_222974_f (Lnet/minecraft/world/server/ChunkHolder;)Lnet/minecraft/world/chunk/IChunk; func_222974_f
 	func_222976_a_ (Lcom/mojang/datafixers/util/Either;)Lcom/mojang/datafixers/util/Either; func_222976_a_
 	func_223148_a_ (Lnet/minecraft/util/math/ChunkPos;Lnet/minecraft/world/server/ChunkHolder;Lnet/minecraft/world/chunk/ChunkStatus;Ljava/util/List;)Ljava/util/concurrent/CompletableFuture; func_223148_a_
-	func_223156_b (Lnet/minecraft/world/server/ChunkHolder;Lnet/minecraft/world/chunk/ChunkStatus;)Ljava/util/concurrent/CompletableFuture; func_223156_b
 	func_223161_i ()Z func_223161_i
 	func_223170_j (Lnet/minecraft/util/math/ChunkPos;)Lcom/mojang/datafixers/util/Either; func_223170_j
 	func_223171_a (Lnet/minecraft/world/server/ChunkHolder;Ljava/lang/Void;Ljava/lang/Throwable;)V func_223171_a
-	func_223172_f (Lnet/minecraft/util/math/ChunkPos;)Ljava/util/concurrent/CompletableFuture; func_223172_f
 	func_223175_b (Lnet/minecraft/world/server/ChunkHolder;Lnet/minecraft/world/chunk/IChunk;)Ljava/util/concurrent/CompletableFuture; func_223175_b
 	func_223180_a (Lnet/minecraft/world/chunk/ChunkStatus;Lnet/minecraft/util/math/ChunkPos;Lnet/minecraft/world/server/ChunkHolder;Lcom/mojang/datafixers/util/Either;)Ljava/util/concurrent/CompletionStage; func_223180_a
 	func_223489_c (Lnet/minecraft/entity/player/ServerPlayerEntity;)Lnet/minecraft/util/math/SectionPos; func_223489_c
@@ -55700,6 +55699,7 @@ net/minecraft/world/server/ChunkManager net/minecraft/world/server/ChunkManager
 	func_230218_h_ (Lnet/minecraft/util/math/ChunkPos;)Ljava/lang/String; func_230218_h_
 	func_230219_i_ (Lnet/minecraft/util/math/ChunkPos;)V func_230219_i_
 	getChunkDistance (Lnet/minecraft/util/math/ChunkPos;II)I func_219232_a
+	getDebugInfo (Lnet/minecraft/util/math/ChunkPos;)Ljava/lang/String; func_219170_a
 	getDistanceSquaredToChunk (Lnet/minecraft/util/math/ChunkPos;Lnet/minecraft/entity/Entity;)D func_219217_a
 	getLightManager ()Lnet/minecraft/world/server/ServerWorldLightManager; func_219207_a
 	getLoadedChunkCount ()I func_219194_d
@@ -55749,10 +55749,10 @@ net/minecraft/world/server/ChunkManager$EntityTracker net/minecraft/world/server
 	func_219394_a (Lnet/minecraft/world/server/ChunkManager$EntityTracker;)Lnet/minecraft/entity/Entity; func_219394_a
 	func_219395_a (Lnet/minecraft/world/server/ChunkManager$EntityTracker;Lnet/minecraft/util/math/SectionPos;)Lnet/minecraft/util/math/SectionPos; func_219395_a
 	func_219398_b (Lnet/minecraft/world/server/ChunkManager$EntityTracker;)Lnet/minecraft/util/math/SectionPos; func_219398_b
-	func_219399_a (Lnet/minecraft/entity/player/ServerPlayerEntity;)V func_219399_a
 	func_229843_b_ ()I func_229843_b_
 	hashCode ()I hashCode
 	removeAllTrackers ()V func_219396_a
+	removeTracker (Lnet/minecraft/entity/player/ServerPlayerEntity;)V func_219399_a
 	sendToAllTracking (Lnet/minecraft/network/IPacket;)V func_219391_a
 	sendToTrackingAndSelf (Lnet/minecraft/network/IPacket;)V func_219392_b
 	updateTrackingState (Ljava/util/List;)V func_219397_a
@@ -55760,7 +55760,7 @@ net/minecraft/world/server/ChunkManager$EntityTracker net/minecraft/world/server
 net/minecraft/world/server/ChunkManager$ProxyTicketManager net/minecraft/world/server/ChunkManager$ProxyTicketManager
 	field_219390_a field_219390_a
 	contains (J)Z func_219371_a
-	func_219335_b (J)Lnet/minecraft/world/server/ChunkHolder; func_219335_b
+	getChunkHolder (J)Lnet/minecraft/world/server/ChunkHolder; func_219335_b
 	setChunkLevel (JILnet/minecraft/world/server/ChunkHolder;I)Lnet/minecraft/world/server/ChunkHolder; func_219372_a
 net/minecraft/world/server/ServerBossInfo net/minecraft/world/server/ServerBossInfo
 	players field_186762_h
@@ -55802,12 +55802,10 @@ net/minecraft/world/server/ServerChunkProvider net/minecraft/world/server/Server
 	close ()V close
 	driveOneTask ()Z func_217234_d
 	forceChunk (Lnet/minecraft/util/math/ChunkPos;Z)V func_217206_a
-	func_217208_a (Lnet/minecraft/util/math/ChunkPos;)Ljava/lang/String; func_217208_a
 	func_217211_a (Ljava/util/concurrent/CompletableFuture;)Ljava/util/concurrent/CompletionStage; func_217211_a
 	func_217212_a (Lnet/minecraft/world/server/ServerChunkProvider;)Ljava/lang/Thread; func_217212_a
 	func_217213_a (J)Lnet/minecraft/world/server/ChunkHolder; func_217213_a
 	func_217224_a (Lnet/minecraft/world/server/ChunkHolder;I)Z func_217224_a
-	func_217229_b ()I func_217229_b
 	func_217232_b (IILnet/minecraft/world/chunk/ChunkStatus;Z)Ljava/util/concurrent/CompletableFuture; func_217232_b
 	func_217233_c (IILnet/minecraft/world/chunk/ChunkStatus;Z)Ljava/util/concurrent/CompletableFuture; func_217233_c
 	func_217235_l ()Z func_217235_l
@@ -55826,10 +55824,12 @@ net/minecraft/world/server/ServerChunkProvider net/minecraft/world/server/Server
 	getChunk (IILnet/minecraft/world/chunk/ChunkStatus;Z)Lnet/minecraft/world/chunk/IChunk; func_212849_a_
 	getChunkForLight (II)Lnet/minecraft/world/IBlockReader; func_217202_b
 	getChunkGenerator ()Lnet/minecraft/world/gen/ChunkGenerator; func_201711_g
-	getChunkWithoutLoading (II)Lnet/minecraft/world/chunk/Chunk; func_225313_a
+	getChunkNow (II)Lnet/minecraft/world/chunk/Chunk; func_225313_a
+	getDebugInfo (Lnet/minecraft/util/math/ChunkPos;)Ljava/lang/String; func_217208_a
 	getLightManager ()Lnet/minecraft/world/lighting/WorldLightManager; func_212863_j_
 	getLightManager ()Lnet/minecraft/world/server/ServerWorldLightManager; func_212863_j_
 	getLoadedChunkCount ()I func_73152_e
+	getLoadedChunksCount ()I func_217229_b
 	getPointOfInterestManager ()Lnet/minecraft/village/PointOfInterestManager; func_217231_i
 	getSavedData ()Lnet/minecraft/world/storage/DimensionSavedDataManager; func_217227_h
 	getWorld ()Lnet/minecraft/world/IBlockReader; func_212864_k_
@@ -56095,11 +56095,11 @@ net/minecraft/world/server/TicketManager net/minecraft/world/server/TicketManage
 	LOGGER field_219373_a
 	PLAYER_TICKET_LEVEL field_219374_b
 	chunkHolders field_219383_k
+	chunkPositions field_219387_o
 	currentTime field_219389_q
 	field_219384_l field_219384_l
 	field_219385_m field_219385_m
 	field_219386_n field_219386_n
-	field_219387_o field_219387_o
 	field_219388_p field_219388_p
 	playerChunkTracker field_219381_i
 	playerTicketTracker field_219382_j
@@ -56109,7 +56109,6 @@ net/minecraft/world/server/TicketManager net/minecraft/world/server/TicketManage
 	contains (J)Z func_219371_a
 	forceChunk (Lnet/minecraft/util/math/ChunkPos;Z)V func_219364_a
 	func_219330_a (Lnet/minecraft/world/server/TicketManager;)Lit/unimi/dsi/fastutil/longs/Long2ObjectMap; func_219330_a
-	func_219335_b (J)Lnet/minecraft/world/server/ChunkHolder; func_219335_b
 	func_219342_h (J)V func_219342_h
 	func_219343_a (Lnet/minecraft/world/server/ChunkManager;Lnet/minecraft/world/server/ChunkHolder;)V func_219343_a
 	func_219348_f ()V func_219348_f
@@ -56122,7 +56121,6 @@ net/minecraft/world/server/TicketManager net/minecraft/world/server/TicketManage
 	func_223501_d ()I func_223501_d
 	func_225412_c ()Ljava/lang/String; func_225412_c
 	func_225413_c (J)Ljava/lang/String; func_225413_c
-	func_229844_a_ (Lnet/minecraft/util/SortedArraySet;)I func_229844_a_
 	func_229845_a_ (Lnet/minecraft/world/server/TicketManager;JLnet/minecraft/world/server/Ticket;)V func_229845_a_
 	func_229846_b_ (Lnet/minecraft/world/server/TicketManager;)Lnet/minecraft/util/concurrent/ITaskExecutor; func_229846_b_
 	func_229847_d_ (Lnet/minecraft/world/server/TicketManager;)Lnet/minecraft/world/chunk/ChunkTaskPriorityQueueSorter; func_229847_d_
@@ -56131,6 +56129,8 @@ net/minecraft/world/server/TicketManager net/minecraft/world/server/TicketManage
 	func_229851_g_ (J)Lnet/minecraft/util/SortedArraySet; func_229851_g_
 	func_229852_g_ (Lnet/minecraft/world/server/TicketManager;)Lit/unimi/dsi/fastutil/longs/Long2ObjectOpenHashMap; func_229852_g_
 	func_229853_h_ (Lnet/minecraft/world/server/TicketManager;)Ljava/util/Set; func_229853_h_
+	getChunkHolder (J)Lnet/minecraft/world/server/ChunkHolder; func_219335_b
+	getLevel (Lnet/minecraft/util/SortedArraySet;)I func_229844_a_
 	getSpawningChunksCount ()I func_219358_b
 	getTicketSet (J)Lnet/minecraft/util/SortedArraySet; func_229848_e_
 	isOutsideSpawningRadius (J)Z func_223494_d
@@ -57985,19 +57985,19 @@ net/minecraft/world/storage/loot/functions/SetAttributes$Serializer net/minecraf
 	serialize (Lcom/google/gson/JsonObject;Lnet/minecraft/world/storage/loot/functions/SetAttributes;Lcom/google/gson/JsonSerializationContext;)V func_186532_a
 net/minecraft/world/storage/loot/functions/SetContents net/minecraft/world/storage/loot/functions/SetContents
 	field_215924_a field_215924_a
+	builder ()Lnet/minecraft/world/storage/loot/functions/SetContents$Builder; func_215920_b
 	doApply (Lnet/minecraft/item/ItemStack;Lnet/minecraft/world/storage/loot/LootContext;)Lnet/minecraft/item/ItemStack; func_215859_a
-	func_215920_b ()Lnet/minecraft/world/storage/loot/functions/SetContents$Builder; func_215920_b
 	func_215921_a (Lnet/minecraft/world/storage/loot/LootContext;Lnet/minecraft/util/NonNullList;Lnet/minecraft/world/storage/loot/LootEntry;)V func_215921_a
 	func_215922_a (Lnet/minecraft/util/NonNullList;Lnet/minecraft/world/storage/loot/LootContext;Lnet/minecraft/world/storage/loot/ILootGenerator;)V func_215922_a
 	func_215923_a (Lnet/minecraft/world/storage/loot/functions/SetContents;)Ljava/util/List; func_215923_a
 	func_225580_a_ (Lnet/minecraft/world/storage/loot/ValidationTracker;)V func_225580_a_
 net/minecraft/world/storage/loot/functions/SetContents$1 net/minecraft/world/storage/loot/functions/SetContents$1
 net/minecraft/world/storage/loot/functions/SetContents$Builder net/minecraft/world/storage/loot/functions/SetContents$Builder
-	field_216076_a field_216076_a
+	lootEntries field_216076_a
+	addLootEntry (Lnet/minecraft/world/storage/loot/LootEntry$Builder;)Lnet/minecraft/world/storage/loot/functions/SetContents$Builder; func_216075_a
 	build ()Lnet/minecraft/world/storage/loot/functions/ILootFunction; func_216052_b
 	doCast ()Lnet/minecraft/world/storage/loot/LootFunction$Builder; func_212826_d_
 	doCast ()Lnet/minecraft/world/storage/loot/functions/SetContents$Builder; func_212826_d_
-	func_216075_a (Lnet/minecraft/world/storage/loot/LootEntry$Builder;)Lnet/minecraft/world/storage/loot/functions/SetContents$Builder; func_216075_a
 net/minecraft/world/storage/loot/functions/SetContents$Serializer net/minecraft/world/storage/loot/functions/SetContents$Serializer
 	deserialize (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;[Lnet/minecraft/world/storage/loot/conditions/ILootCondition;)Lnet/minecraft/world/storage/loot/LootFunction; func_186530_b
 	deserialize (Lcom/google/gson/JsonObject;Lcom/google/gson/JsonDeserializationContext;[Lnet/minecraft/world/storage/loot/conditions/ILootCondition;)Lnet/minecraft/world/storage/loot/functions/SetContents; func_186530_b
