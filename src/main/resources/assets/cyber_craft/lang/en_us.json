@@ -1,9 +1,14 @@
 {
-  "itemGroup.CyberCraft": "CyberCraft",
+  "itemGroup.CyberCraft": "CPMCmod: Asphalt",
   "block.cyber_craft.asphalt_road": "Asphalt Road",
   "block.cyber_craft.white_road_line": "White Road Line",
   "block.cyber_craft.yellow_road_line": "Yellow Road Line",
   "block.cyber_craft.white_double_road_lines": "White Double Road Lines",
   "block.cyber_craft.white_road_line_straight": "White Straight Road Line(No connect textures)",
-  "block.cyber_craft.test": "Test"
+  "block.cyber_craft.white_road_line_turn_1": "White Road Line(Turn Type 1, No connect textures)",
+  "block.cyber_craft.white_road_line_turn_2": "White Road Line(Turn Type 2, No connect textures)",
+  "block.cyber_craft.white_road_line_cross_1": "White Road Line(Cross Type 1, No connect textures)",
+  "block.cyber_craft.white_road_line_cross_2": "White Road Line(Cross Type 2, No connect textures)",
+  "block.cyber_craft.yellow_road_line_turn_1": "Yellow Road Line(Turn Type 1, No connect textures)",
+  "block.cyber_craft.yellow_road_line_turn_2": "Yellow Road Line(Turn Type 2, No connect textures)"
 }

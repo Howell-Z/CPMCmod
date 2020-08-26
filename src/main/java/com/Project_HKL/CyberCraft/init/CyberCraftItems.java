@@ -19,4 +19,16 @@ public class CyberCraftItems
             () -> new BlockItemBase(CyberCraftBlocks.WHITE_DOUBLE_ROAD_LINES.get()));
     public static final RegistryObject<Item> WHITE_ROAD_LINE_STRAIGHT_ITEM = ITEMS.register("white_road_line_straight",
             () -> new BlockItemBase(CyberCraftBlocks.WHITE_ROAD_LINE_STRAIGHT.get()));
+    public static final RegistryObject<Item> WHITE_ROAD_LINE_TURN_1_ITEM = ITEMS.register("white_road_line_turn_1",
+            () -> new BlockItemBase(CyberCraftBlocks.WHITE_ROAD_LINE_TURN_1.get()));
+    public static final RegistryObject<Item> WHITE_ROAD_LINE_TURN_2_ITEM = ITEMS.register("white_road_line_turn_2",
+            () -> new BlockItemBase(CyberCraftBlocks.WHITE_ROAD_LINE_TURN_2.get()));
+    public static final RegistryObject<Item> WHITE_ROAD_LINE_CROSS_1_ITEM = ITEMS.register("white_road_line_cross_1",
+            () -> new BlockItemBase(CyberCraftBlocks.WHITE_ROAD_LINE_CROSS_1.get()));
+    public static final RegistryObject<Item> WHITE_ROAD_LINE_CROSS_2_ITEM = ITEMS.register("white_road_line_cross_2",
+            () -> new BlockItemBase(CyberCraftBlocks.WHITE_ROAD_LINE_CROSS_2.get()));
+    public static final RegistryObject<Item> YELLOW_ROAD_LINE_TURN_1_ITEM = ITEMS.register("yellow_road_line_turn_1",
+            () -> new BlockItemBase(CyberCraftBlocks.YELLOW_ROAD_LINE_TURN_1.get()));
+    public static final RegistryObject<Item> YELLOW_ROAD_LINE_TURN_2_ITEM = ITEMS.register("yellow_road_line_turn_2",
+            () -> new BlockItemBase(CyberCraftBlocks.YELLOW_ROAD_LINE_TURN_2.get()));
 }

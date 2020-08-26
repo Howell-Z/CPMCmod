@@ -1,9 +1,14 @@
 {
-  "itemGroup.CyberCraft": "赛博工艺",
+  "itemGroup.CyberCraft": "CPMCmod：马路",
   "block.cyber_craft.asphalt_road": "柏油马路",
   "block.cyber_craft.white_road_line": "柏油马路：白色实线",
   "block.cyber_craft.yellow_road_line": "柏油马路：黄色实线",
   "block.cyber_craft.white_double_road_lines": "柏油马路：白色双线",
   "block.cyber_craft.white_road_line_straight": "柏油马路：白色直线（无连接纹理）",
-  "block.cyber_craft.test": "Test"
+  "block.cyber_craft.white_road_line_turn_1": "柏油马路：白色实线（圆角转弯、无连接纹理）",
+  "block.cyber_craft.white_road_line_turn_2": "柏油马路：白色实线（直角转弯、无连接纹理）",
+  "block.cyber_craft.white_road_line_cross_1": "柏油马路：白色实线（丁字、无连接纹理）",
+  "block.cyber_craft.white_road_line_cross_2": "柏油马路：白色实线（十字、无连接纹理）",
+  "block.cyber_craft.yellow_road_line_turn_1": "柏油马路：黄色实线（圆角转弯、无连接纹理）",
+  "block.cyber_craft.yellow_road_line_turn_2": "柏油马路：黄色实线（直角转弯、无连接纹理）"
 }
