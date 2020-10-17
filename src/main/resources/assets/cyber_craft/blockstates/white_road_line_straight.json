@@ -1,8 +1,8 @@
 {
   "variants": {
-    "facing=north": { "model": "cyber_craft:block/white_road_line_straight" },
-    "facing=south": { "model": "cyber_craft:block/white_road_line_straight", "y":  180},
-    "facing=west": { "model": "cyber_craft:block/white_road_line_straight", "y":  270},
-    "facing=east": { "model": "cyber_craft:block/white_road_line_straight", "y":  90}
+    "facing=north": { "model": "cyber_craft:block/asphalt_road" },
+    "facing=south": { "model": "cyber_craft:block/asphalt_road", "y":  180},
+    "facing=west": { "model": "cyber_craft:block/asphalt_road", "y":  270},
+    "facing=east": { "model": "cyber_craft:block/asphalt_road", "y":  90}
   }
 }

@@ -1,4 +1,4 @@
-package com.Project_HKL.CyberCraft.blocks;
+package com.Project_HKL.CyberCraft.blocks.Blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.HorizontalBlock;
@@ -16,17 +16,16 @@ import net.minecraft.world.IBlockReader;
 import net.minecraftforge.common.ToolType;
 
 import javax.annotation.Nullable;
-
-public class WhiteRoadLineTurn2 extends Block
+public class Asphalt extends Block
 {
     private static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
     private static final VoxelShape SHAPE_N = Block.makeCuboidShape(0, 0, 0, 16, 13, 16);
     private static final VoxelShape SHAPE_E = Block.makeCuboidShape(0, 0, 0, 16, 13, 16);
     private static final VoxelShape SHAPE_S = Block.makeCuboidShape(0, 0, 0, 16, 13, 16);
     private static final VoxelShape SHAPE_W = Block.makeCuboidShape(0, 0, 0, 16, 13, 16);
-    public WhiteRoadLineTurn2()
+    public Asphalt()
     {
-        super(Properties.create(Material.ROCK)
+        super(Block.Properties.create(Material.ROCK)
             .hardnessAndResistance(1.5F, 30.0F)
             .sound(SoundType.STONE)
             .harvestLevel(1)

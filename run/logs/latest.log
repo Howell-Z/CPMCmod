@@ -1,109 +1,110 @@
-[25Aug2020 22:15:56.491] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20200515.085601, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 31.2.0, --version, MOD_DEV, --assetIndex, 1.15, --assetsDir, /Users/howellzhu/.gradle/caches/forge_gradle/assets, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
-[25Aug2020 22:15:56.497] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.1.2+70+master.2845bb9 starting: java version 1.8.0_265 by Amazon.com Inc.
-[25Aug2020 22:15:56.884] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
-[25Aug2020 22:16:00.399] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /Users/howellzhu/.gradle/caches/forge_gradle/assets, --assetIndex, 1.15, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
-[25Aug2020 22:16:06.351] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
-[25Aug2020 22:16:34.269] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.1 build 12
-[25Aug2020 22:16:36.152] [modloading-worker-3/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.2.0, for MC 1.15.2 with MCP 20200515.085601
-[25Aug2020 22:16:36.153] [modloading-worker-3/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.2.0 Initialized
-[25Aug2020 22:16:37.413] [Render thread/WARN] [net.minecraft.client.GameSettings/]: Removed resource pack file/CPMMmod_ResourcePack_0.0.1 from options because it doesn't seem to exist anymore
-[25Aug2020 22:16:44.183] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
-[25Aug2020 22:16:44.907] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [cyber_craft] Starting version check at http://myurl.me/
-[25Aug2020 22:16:45.109] [Forge Version Check/WARN] [net.minecraftforge.fml.VersionChecker/]: Failed to process update information
-java.io.IOException: Server returned HTTP response code: 403 for URL: http://myurl.me/
+[15Sep2020 21:02:37.542] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--gameDir, ., --launchTarget, fmluserdevclient, --fml.mcpVersion, 20200515.085601, --fml.mcVersion, 1.15.2, --fml.forgeGroup, net.minecraftforge, --fml.forgeVersion, 31.2.0, --version, MOD_DEV, --assetIndex, 1.15, --assetsDir, /Users/howellzhu/.gradle/caches/forge_gradle/assets, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
+[15Sep2020 21:02:37.548] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 5.1.2+70+master.2845bb9 starting: java version 1.8.0_265 by Amazon.com Inc.
+[15Sep2020 21:02:37.920] [main/INFO] [net.minecraftforge.fml.loading.FixSSL/CORE]: Added Lets Encrypt root certificates as additional trust
+[15Sep2020 21:02:40.614] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'fmluserdevclient' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, /Users/howellzhu/.gradle/caches/forge_gradle/assets, --assetIndex, 1.15, --username, Dev, --accessToken, ❄❄❄❄❄❄❄❄, --userProperties, {}]
+[15Sep2020 21:02:45.910] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[15Sep2020 21:03:04.938] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.2.1 build 12
+[15Sep2020 21:03:06.245] [modloading-worker-3/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 31.2.0, for MC 1.15.2 with MCP 20200515.085601
+[15Sep2020 21:03:06.245] [modloading-worker-3/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v31.2.0 Initialized
+[15Sep2020 21:03:06.469] [modloading-worker-1/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Failed to create mod instance. ModID: cyber_craft, class com.Project_HKL.CyberCraft.CyberCraft
+java.lang.ExceptionInInitializerError: null
+	at com.Project_HKL.CyberCraft.CyberCraft.<init>(CyberCraft.java:23) ~[?:?]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_265]
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_265]
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_265]
 	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_265]
-	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1950) ~[?:1.8.0_265]
-	at sun.net.www.protocol.http.HttpURLConnection$10.run(HttpURLConnection.java:1945) ~[?:1.8.0_265]
-	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_265]
-	at sun.net.www.protocol.http.HttpURLConnection.getChainedException(HttpURLConnection.java:1944) ~[?:1.8.0_265]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1514) ~[?:1.8.0_265]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498) ~[?:1.8.0_265]
-	at net.minecraftforge.fml.VersionChecker$1.openUrlStream(VersionChecker.java:189) ~[?:?]
-	at net.minecraftforge.fml.VersionChecker$1.process(VersionChecker.java:206) ~[?:?]
-	at java.lang.Iterable.forEach(Iterable.java:75) [?:1.8.0_265]
-	at net.minecraftforge.fml.VersionChecker$1.run(VersionChecker.java:157) [?:?]
-Caused by: java.io.IOException: Server returned HTTP response code: 403 for URL: http://myurl.me/
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1900) ~[?:1.8.0_265]
-	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498) ~[?:1.8.0_265]
-	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480) ~[?:1.8.0_265]
-	at net.minecraftforge.fml.VersionChecker$1.openUrlStream(VersionChecker.java:173) ~[?:?]
-	... 3 more
-[25Aug2020 22:16:45.111] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/maven/net/minecraftforge/forge/promotions_slim.json
-[25Aug2020 22:16:46.273] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: UP_TO_DATE Current: 31.2.0 Target: null
-[25Aug2020 22:17:02.916] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
-[25Aug2020 22:17:02.923] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
-[25Aug2020 22:17:04.714] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[25Aug2020 22:17:04.743] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x4 minecraft:textures/atlas/signs.png-atlas
-[25Aug2020 22:17:04.744] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[25Aug2020 22:17:04.746] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[25Aug2020 22:17:04.748] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[25Aug2020 22:17:04.749] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[25Aug2020 22:17:04.751] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[25Aug2020 22:17:05.595] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[25Aug2020 22:17:05.597] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[25Aug2020 22:17:05.599] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[25Aug2020 22:17:06.133] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: Invalid session id
-[25Aug2020 22:17:58.212] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[25Aug2020 22:17:58.213] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[25Aug2020 22:17:58.214] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
-[25Aug2020 22:17:58.216] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
-[25Aug2020 22:17:58.217] [Render thread/WARN] [net.minecraft.command.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
-[25Aug2020 22:17:58.400] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Starting integrated minecraft server version 1.15.2
-[25Aug2020 22:17:58.400] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Generating keypair
-[25Aug2020 22:17:58.852] [Server thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this SERVER instance
-[25Aug2020 22:17:58.923] [Server thread/INFO] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry Block: Found a missing id from the world cyber_craft:test
-[25Aug2020 22:17:58.924] [Server thread/INFO] [net.minecraftforge.registries.ForgeRegistry/REGISTRIES]: Registry Block: Found a missing id from the world cyber_craft:white_road_line_side
-[25Aug2020 22:17:59.475] [Server thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, main, forge-1.15.2-31.2.0_mapped_snapshot_20200813-1.15.1-recomp.jar
-[25Aug2020 22:18:03.276] [Server thread/INFO] [net.minecraft.item.crafting.RecipeManager/]: Loaded 6 recipes
-[25Aug2020 22:18:06.262] [Server thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 825 advancements
-[25Aug2020 22:18:07.315] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
-[25Aug2020 22:18:09.034] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: 准备生成区域中：0%
-[25Aug2020 22:18:09.056] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: 准备生成区域中：0%
-[25Aug2020 22:18:09.056] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: 准备生成区域中：0%
-[25Aug2020 22:18:09.056] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: 准备生成区域中：0%
-[25Aug2020 22:18:09.432] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: 准备生成区域中：51%
-[25Aug2020 22:18:09.738] [Render thread/INFO] [net.minecraft.world.chunk.listener.LoggingChunkStatusListener/]: Time elapsed: 2419 ms
-[25Aug2020 22:18:10.051] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
-[25Aug2020 22:18:10.053] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
-[25Aug2020 22:18:10.057] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Changing view distance to 7, from 10
-[25Aug2020 22:18:11.868] [Netty Local Client IO #0/INFO] [net.minecraftforge.fml.network.NetworkHooks/]: Connected to a modded server.
-[25Aug2020 22:18:12.018] [Server thread/INFO] [net.minecraftforge.common.AdvancementLoadFix/]: Using new advancement loading for net.minecraft.advancements.PlayerAdvancements@761b0de1
-[25Aug2020 22:18:12.076] [Server thread/INFO] [net.minecraft.server.management.PlayerList/]: Dev[local:E:3f33e154] logged in with entity id 1 at (110.89389018002535, 4.0, -21.77826198056093)
-[25Aug2020 22:18:12.318] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev加入了游戏
-[25Aug2020 22:18:12.692] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[25Aug2020 22:18:12.717] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'Test World'/minecraft:overworld
-[25Aug2020 22:18:12.987] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 0 advancements
-[25Aug2020 22:18:26.166] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[25Aug2020 22:18:26.178] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'Test World'/minecraft:overworld
-[25Aug2020 22:18:41.788] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
-[25Aug2020 22:18:44.133] [Server-Worker-12/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: cyber_craft:blockstates/white_road_line_side.json: java.io.FileNotFoundException: cyber_craft:blockstates/white_road_line_side.json
-[25Aug2020 22:18:44.134] [Server-Worker-12/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'cyber_craft:blockstates/white_road_line_side.json' missing model for variant: 'cyber_craft:white_road_line_side#'
-[25Aug2020 22:18:44.140] [Server-Worker-12/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: cyber_craft:blockstates/test.json: java.io.FileNotFoundException: cyber_craft:blockstates/test.json
-[25Aug2020 22:18:44.141] [Server-Worker-12/WARN] [net.minecraft.client.renderer.model.ModelBakery/]: Exception loading blockstate definition: 'cyber_craft:blockstates/test.json' missing model for variant: 'cyber_craft:test#'
-[25Aug2020 22:18:46.425] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
-[25Aug2020 22:18:46.426] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
-[25Aug2020 22:18:46.707] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
-[25Aug2020 22:18:46.713] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x4 minecraft:textures/atlas/signs.png-atlas
-[25Aug2020 22:18:46.713] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
-[25Aug2020 22:18:46.715] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
-[25Aug2020 22:18:46.716] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
-[25Aug2020 22:18:46.716] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
-[25Aug2020 22:18:46.717] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
-[25Aug2020 22:18:47.260] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
-[25Aug2020 22:18:47.261] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
-[25Aug2020 22:18:47.261] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
-[25Aug2020 22:20:39.171] [Server thread/INFO] [net.minecraft.server.integrated.IntegratedServer/]: Saving and pausing game...
-[25Aug2020 22:20:39.182] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'Test World'/minecraft:overworld
-[25Aug2020 22:20:40.621] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Dev lost connection: Disconnected
-[25Aug2020 22:20:40.622] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
-[25Aug2020 22:20:40.632] [Server thread/INFO] [net.minecraft.network.play.ServerPlayNetHandler/]: Stopping singleplayer server as player logged out
-[25Aug2020 22:20:40.688] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
-[25Aug2020 22:20:40.689] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
-[25Aug2020 22:20:40.689] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
-[25Aug2020 22:20:40.689] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'Test World'/minecraft:overworld
-[25Aug2020 22:20:40.695] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (Test World): All chunks are saved
-[25Aug2020 22:20:40.708] [Server thread/INFO] [net.minecraft.world.server.ChunkManager/]: ThreadedAnvilChunkStorage (Test World): All chunks are saved
-[25Aug2020 22:20:41.586] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
+	at java.lang.Class.newInstance(Class.java:442) ~[?:1.8.0_265]
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:131) ~[?:31.2]
+	at java.util.function.Consumer.lambda$andThen$0(Consumer.java:65) ~[?:1.8.0_265]
+	at java.util.function.Consumer.lambda$andThen$0(Consumer.java:65) ~[?:1.8.0_265]
+	at net.minecraftforge.fml.ModContainer.transitionState(ModContainer.java:112) ~[?:?]
+	at net.minecraftforge.fml.ModList.lambda$null$10(ModList.java:135) ~[?:?]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183) ~[?:1.8.0_265]
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1384) ~[?:1.8.0_265]
+	at java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:482) ~[?:1.8.0_265]
+	at java.util.stream.ForEachOps$ForEachTask.compute(ForEachOps.java:290) ~[?:1.8.0_265]
+	at java.util.concurrent.CountedCompleter.exec(CountedCompleter.java:731) ~[?:1.8.0_265]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) ~[?:1.8.0_265]
+	at java.util.concurrent.ForkJoinTask.doInvoke(ForkJoinTask.java:401) ~[?:1.8.0_265]
+	at java.util.concurrent.ForkJoinTask.invoke(ForkJoinTask.java:734) ~[?:1.8.0_265]
+	at java.util.stream.ForEachOps$ForEachOp.evaluateParallel(ForEachOps.java:159) ~[?:1.8.0_265]
+	at java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateParallel(ForEachOps.java:173) ~[?:1.8.0_265]
+	at java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:233) ~[?:1.8.0_265]
+	at java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:485) ~[?:1.8.0_265]
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:650) ~[?:1.8.0_265]
+	at net.minecraftforge.fml.ModList.lambda$dispatchParallelEvent$11(ModList.java:135) ~[?:?]
+	at java.util.concurrent.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1386) [?:1.8.0_265]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) [?:1.8.0_265]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) [?:1.8.0_265]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692) [?:1.8.0_265]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175) [?:1.8.0_265]
+Caused by: net.minecraft.util.ResourceLocationException: Non [a-z0-9/._-] character in path of location: cyber_craft:yellow_road_line_Straight
+	at net.minecraft.util.ResourceLocation.<init>(ResourceLocation.java:30) ~[?:?]
+	at net.minecraft.util.ResourceLocation.<init>(ResourceLocation.java:39) ~[?:?]
+	at net.minecraftforge.registries.DeferredRegister.register(DeferredRegister.java:82) ~[?:?]
+	at com.Project_HKL.CyberCraft.init.CyberCraftItems.<clinit>(CyberCraftItems.java:34) ~[?:?]
+	... 30 more
+[15Sep2020 21:03:06.891] [Render thread/FATAL] [net.minecraftforge.fml.ModLoader/LOADING]: Failed to complete lifecycle event CONSTRUCT, 1 errors found
+[15Sep2020 21:03:06.893] [Render thread/FATAL] [net.minecraftforge.eventbus.EventBus/EVENTBUS]: EventBus 0 shutting down - future events will not be posted.
+java.lang.Exception: stacktrace
+	at net.minecraftforge.eventbus.EventBus.shutdown(EventBus.java:278) ~[eventbus-2.2.0-service.jar:?]
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:115) ~[forge-1.15.2-31.2.0_mapped_snapshot_20200813-1.15.1-recomp.jar:?]
+	at net.minecraftforge.fml.client.ClientModLoader.begin(ClientModLoader.java:97) ~[forge-1.15.2-31.2.0_mapped_snapshot_20200813-1.15.1-recomp.jar:?]
+	at net.minecraft.client.Minecraft.<init>(Minecraft.java:397) ~[forge-1.15.2-31.2.0_mapped_snapshot_20200813-1.15.1-recomp.jar:?]
+	at net.minecraft.client.main.Main.main(Main.java:141) ~[forge-1.15.2-31.2.0_mapped_snapshot_20200813-1.15.1-recomp.jar:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_265]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_265]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_265]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_265]
+	at net.minecraftforge.userdev.FMLUserdevClientLaunchProvider.lambda$launchService$0(FMLUserdevClientLaunchProvider.java:55) ~[forge-1.15.2-31.2.0_mapped_snapshot_20200813-1.15.1-recomp.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-5.1.2.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-5.1.2.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-5.1.2.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:81) [modlauncher-5.1.2.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:65) [modlauncher-5.1.2.jar:?]
+	at net.minecraftforge.userdev.LaunchTesting.main(LaunchTesting.java:102) [forge-1.15.2-31.2.0_mapped_snapshot_20200813-1.15.1-recomp.jar:?]
+[15Sep2020 21:03:07.277] [Render thread/WARN] [net.minecraft.client.GameSettings/]: Removed resource pack file/CPMMmod_ResourcePack_0.0.1 from options because it doesn't seem to exist anymore
+[15Sep2020 21:03:12.776] [Render thread/INFO] [net.minecraft.resources.SimpleReloadableResourceManager/]: Reloading ResourceManager: Default, Mod Resources
+[15Sep2020 21:03:13.119] [Server-Worker-3/ERROR] [net.minecraftforge.fml.ModLoader/LOADING]: Skipping lifecycle event SETUP, 1 errors found.
+[15Sep2020 21:03:13.120] [Server-Worker-3/FATAL] [net.minecraftforge.fml.ModLoader/LOADING]: Failed to complete lifecycle event SETUP, 1 errors found
+[15Sep2020 21:03:13.120] [Server-Worker-3/FATAL] [net.minecraftforge.eventbus.EventBus/EVENTBUS]: EventBus 0 shutting down - future events will not be posted.
+java.lang.Exception: stacktrace
+	at net.minecraftforge.eventbus.EventBus.shutdown(EventBus.java:278) ~[eventbus-2.2.0-service.jar:?]
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:115) ~[?:?]
+	at net.minecraftforge.fml.client.ClientModLoader.startModLoading(ClientModLoader.java:123) ~[?:?]
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$onreload$3(ClientModLoader.java:105) ~[?:?]
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:113) ~[?:?]
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1640) [?:1.8.0_265]
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1632) [?:1.8.0_265]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) [?:1.8.0_265]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) [?:1.8.0_265]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692) [?:1.8.0_265]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175) [?:1.8.0_265]
+[15Sep2020 21:03:28.029] [Server-Worker-2/ERROR] [net.minecraftforge.fml.ModLoader/LOADING]: Skipping lifecycle event ENQUEUE_IMC, 1 errors found.
+[15Sep2020 21:03:28.029] [Server-Worker-2/FATAL] [net.minecraftforge.fml.ModLoader/LOADING]: Failed to complete lifecycle event ENQUEUE_IMC, 1 errors found
+[15Sep2020 21:03:28.030] [Server-Worker-2/FATAL] [net.minecraftforge.eventbus.EventBus/EVENTBUS]: EventBus 0 shutting down - future events will not be posted.
+java.lang.Exception: stacktrace
+	at net.minecraftforge.eventbus.EventBus.shutdown(EventBus.java:278) ~[eventbus-2.2.0-service.jar:?]
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$createRunnableWithCatch$5(ClientModLoader.java:115) ~[?:?]
+	at net.minecraftforge.fml.client.ClientModLoader.finishModLoading(ClientModLoader.java:137) ~[?:?]
+	at net.minecraftforge.fml.client.ClientModLoader.lambda$onreload$4(ClientModLoader.java:107) ~[?:?]
+	at java.util.concurrent.CompletableFuture.uniRun(CompletableFuture.java:719) [?:1.8.0_265]
+	at java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:701) [?:1.8.0_265]
+	at java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:457) [?:1.8.0_265]
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289) [?:1.8.0_265]
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056) [?:1.8.0_265]
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692) [?:1.8.0_265]
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:175) [?:1.8.0_265]
+[15Sep2020 21:03:28.467] [Render thread/INFO] [net.minecraft.client.audio.SoundSystem/]: OpenAL initialized.
+[15Sep2020 21:03:28.472] [Render thread/INFO] [net.minecraft.client.audio.SoundEngine/SOUNDS]: Sound engine started
+[15Sep2020 21:03:28.809] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[15Sep2020 21:03:28.838] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x4 minecraft:textures/atlas/signs.png-atlas
+[15Sep2020 21:03:28.839] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[15Sep2020 21:03:28.842] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[15Sep2020 21:03:28.844] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[15Sep2020 21:03:28.845] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[15Sep2020 21:03:28.846] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[15Sep2020 21:03:29.766] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/particles.png-atlas
+[15Sep2020 21:03:29.769] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[15Sep2020 21:03:29.769] [Render thread/INFO] [net.minecraft.client.renderer.texture.AtlasTexture/]: Created: 128x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[15Sep2020 21:03:52.535] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!

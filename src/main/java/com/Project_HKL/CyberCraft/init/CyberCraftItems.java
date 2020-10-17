@@ -31,4 +31,6 @@ public class CyberCraftItems
             () -> new BlockItemBase(CyberCraftBlocks.YELLOW_ROAD_LINE_TURN_1.get()));
     public static final RegistryObject<Item> YELLOW_ROAD_LINE_TURN_2_ITEM = ITEMS.register("yellow_road_line_turn_2",
             () -> new BlockItemBase(CyberCraftBlocks.YELLOW_ROAD_LINE_TURN_2.get()));
+    public static final RegistryObject<Item> YELLOW_ROAD_LINE_STRAIGHT_ITEM = ITEMS.register("yellow_road_line_Straight",
+            () -> new BlockItemBase(CyberCraftBlocks.YELLOW_ROAD_LINE_STRAIGHT.get()));
 }

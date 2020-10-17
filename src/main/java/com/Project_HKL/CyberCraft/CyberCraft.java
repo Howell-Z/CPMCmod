@@ -28,7 +28,7 @@ public class CyberCraft
     private void doClientStuff(final FMLClientSetupEvent event)
     {}
     //Custom ItemGroup Tab
-    public static final ItemGroup TAB = new ItemGroup("CyberCraft")
+    public static final ItemGroup TAB = new ItemGroup("CPMCmod:Asphalt")
     {
         @Override
         public ItemStack createIcon()

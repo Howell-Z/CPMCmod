@@ -1,5 +1,5 @@
 {
   "variants": {
-    "": { "model": "cyber_craft:block/white_road_line" }
+    "": { "model": "cyber_craft:block/asphalt_road" }
   }
 }
